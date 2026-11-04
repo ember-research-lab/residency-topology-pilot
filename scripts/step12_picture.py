@@ -33,16 +33,16 @@ a.set_yticks(y); a.set_yticklabels([r_[0] for r_ in rows], fontsize=8)
 # 2 lambda_lin
 a = ax[1]; a.set_title("lambda_lin\n(linear share of D)", fontsize=9); a.barh(y, [r_[1]["lambda_lin"] for r_ in rows], color=[col(r_[3]) for r_ in rows])
 # 3 dPR_cov with N4' band
-a = ax[2]; a.set_title("Delta PR_cov (N4' 5-95 band)", fontsize=9)
+a = ax[2]; a.set_title("Delta PR_cov\n(N4' 5-95 band)", fontsize=9)
 for yi, r_ in zip(y, rows):
     q = r_[1]["null_q"]["dPR_cov"]; a.plot([q[0], q[2]], [yi, yi], color="#c9c9c9", lw=8, solid_capstyle="butt"); a.plot(r_[1]["dPR_cov"], yi, "o", color=col(r_[3]))
 # 4 dclust with band
-a = ax[3]; a.set_title("Delta clustering (N4' 5-95 band)", fontsize=9)
+a = ax[3]; a.set_title("Delta clustering\n(N4' 5-95 band)", fontsize=9)
 for yi, r_ in zip(y, rows):
     q = r_[1]["null_q"]["dclust"]; a.plot([q[0], q[2]], [yi, yi], color="#c9c9c9", lw=8, solid_capstyle="butt"); a.plot(r_[1]["dclust"], yi, "o", color=col(r_[3]))
 a.axvline(0, color="k", lw=.6)
 # 5 d_O with eps band (ingredient drift)
-a = ax[4]; a.set_title(f"d_O (grey ribbon: ingredient drift eps={eps_dO:.3f})", fontsize=9)
+a = ax[4]; a.set_title(f"d_O\n(ribbon: eps={eps_dO:.3f})", fontsize=9)
 a.axvspan(0, eps_dO, color="#c9c9c9", alpha=.8); a.barh(y, [r_[1]["d_O"] for r_ in rows], color=[col(r_[3]) for r_ in rows]); a.set_xlim(0, 1)
 # 6 t_hat_k bars (k=1..5)
 a = ax[5]; a.set_title("t_hat_k, k = 1..5 (low modes)", fontsize=9)

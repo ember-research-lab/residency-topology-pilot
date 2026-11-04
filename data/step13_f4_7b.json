@@ -1,0 +1,127 @@
+{
+ "definition": "PREREG line 249: fires if (a) C1 shows the same verdict pattern with comparable percentile, (b) base layer-0 low band overlaps the l*=16 low band with O>0.8, (c) |Spearman(u2, Zipf or token count)|>0.6",
+ "nouns": {
+  "norm_D": 3.2706489755389385,
+  "norm_H": 296.11697491615234,
+  "ratio": 0.011045124908712331,
+  "lambda_lin": 0.31927839770805033,
+  "f_low": 0.0008011985663286049,
+  "f_low_null_median": 0.00045068830627086526,
+  "p_blue": 1.0,
+  "p_red": 0.001,
+  "reff_R": 277.35369264613206,
+  "d_O": 1.364062832198698e-05,
+  "theta_max": 0.2930506006546811,
+  "d_NP": 0.006199999999999983,
+  "R_P": 8.42027963487979e-06,
+  "CKA": 0.9999855304464269,
+  "PR_cov_b": 100.66844966094526,
+  "PR_cov_s": 100.84767567278512,
+  "dPR_cov": 0.17922601183985876,
+  "clust_b": 0.2802349199808323,
+  "clust_s": 0.27994756218519323,
+  "dclust": -0.00028735779563904273,
+  "jaccard": 0.9893187066974596,
+  "E_low_base_graph_b": 0.1572709076738869,
+  "E_low_base_graph_s": 0.15714133897437751,
+  "dE_low_base_graph": -0.00012956869950939143,
+  "E_low_own_s": 0.15715276215230245,
+  "C": 0.3945325019813351,
+  "m": 5,
+  "r": 50,
+  "percentile_f_low": 0.999,
+  "holm2_p_blue": 1.0,
+  "holm2_p_red": 0.002,
+  "verdict": "red",
+  "geo_reference": {
+   "m": 4,
+   "r": 50,
+   "p_red": 0.001,
+   "ratio": 0.0104,
+   "note": "RL-Zero on geography, step 11"
+  }
+ },
+ "nonce": {
+  "norm_D": 3.4595611074884918,
+  "norm_H": 262.436858310908,
+  "ratio": 0.01318245131326013,
+  "lambda_lin": 0.28890333840129656,
+  "f_low": 0.00012606310153017176,
+  "f_low_null_median": 9.26074462455013e-05,
+  "p_blue": 1.0,
+  "p_red": 0.001,
+  "reff_R": 214.68553953112684,
+  "d_O": 2.6738685279692476e-05,
+  "theta_max": 0.3604362344663021,
+  "d_NP": 0.007600000000000051,
+  "R_P": 1.865392315969494e-05,
+  "CKA": 0.9999726391421648,
+  "PR_cov_b": 64.17126373444343,
+  "PR_cov_s": 64.47685334043614,
+  "dPR_cov": 0.3055896059927079,
+  "clust_b": 0.27105130079773504,
+  "clust_s": 0.2716531319526756,
+  "dclust": 0.0006018311549405575,
+  "jaccard": 0.9859701492537314,
+  "E_low_base_graph_b": 0.18003401971316915,
+  "E_low_base_graph_s": 0.17956815681563437,
+  "dE_low_base_graph": -0.00046586289753478005,
+  "E_low_own_s": 0.17956997329264346,
+  "C": 0.41081733832316464,
+  "m": 4,
+  "r": 50,
+  "percentile_f_low": 0.999,
+  "holm2_p_blue": 1.0,
+  "holm2_p_red": 0.002,
+  "verdict": "red",
+  "geo_reference": {
+   "m": 4,
+   "r": 50,
+   "p_red": 0.001,
+   "ratio": 0.0104,
+   "note": "RL-Zero on geography, step 11"
+  }
+ },
+ "a_fires": true,
+ "b_layer0_overlap": {
+  "last_token": {
+   "error": "LinAlgError('SVD did not converge')",
+   "duplicate_rows": 134
+  },
+  "mean_name_tokens": {
+   "O": 0.18782286003246418,
+   "duplicate_rows": 0,
+   "m": 4
+  },
+  "note": "layer 0 = embedding output. The preregistered last-token vector is the embedding of the final name subword, identical across templates and shared by entities with the same last subword (duplicate rows make the self-tuning graph singular); the mean over name-token embeddings is the fallback representation (deviation, labelled)"
+ },
+ "b_fires": false,
+ "c_spearman_u2": {
+  "rho_zipf": 0.3781971369542204,
+  "p_zipf": 1.898379202401777e-18,
+  "rho_token_count": 0.014497939924688997,
+  "p_token_count": 0.7464003593734626,
+  "low_band_all_modes": {
+   "u2": {
+    "rho_zipf": 0.3781971369542204,
+    "rho_ntok": 0.014497939924688997
+   },
+   "u3": {
+    "rho_zipf": 0.7602199830800027,
+    "rho_ntok": -0.3058539633017924
+   },
+   "u4": {
+    "rho_zipf": 0.2791636395723176,
+    "rho_ntok": -0.24358658951708922
+   },
+   "u5": {
+    "rho_zipf": -0.2795180556279287,
+    "rho_ntok": 0.24170197600338802
+   }
+  },
+  "zipf_note": "wordfreq zipf_frequency(name,'en'), 0 for OOV; token count = n_tok_space (frozen CSV)"
+ },
+ "c_fires": false,
+ "F4_fires": true,
+ "wall_s": 13
+}

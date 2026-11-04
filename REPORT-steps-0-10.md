@@ -193,6 +193,22 @@ Step 6: sft 475 s, dpo 469 s, rlvr1 491 s, instruct 488 s. Step 7: ing1 593 s, i
 ## Step 12 picture
 runs/picture-2026-11-04.png and .pdf (force-added; runs/ is gitignored).
 
+## Step 13: F4 and P2 cost on the 7B pair (T1 measured; extraction under the cgroup cap)
+
+Extraction (scripts/step13_extract.py, streaming bf16): nonce C2 (4000 prompts) and figures (2400, TEMPLATES_GEO as validated at freeze) at l*=16 on both checkpoints, plus layer-0 embeddings of all four sets on the base. C1 (nouns) and geography were already saved in step 11. Dry run VmHWM 10.25 / 11.28 GB; full run VmHWM **13.88 GB (base, includes the layer-0 pass) and 13.51 GB (RL-Zero)**, under the 16 GB cap; the dry-run gate (< 12 GB) was met by the dry runs, the full run (batch 256 on long prompts) peaked higher and is reported as such. Closure 5.7e-7. data/step13_rss.json.
+
+### F4 (PREREG line 249): **FIRES** via (a)  [data/step13_f4_7b.json]
+- (a) C1 nouns vs own N4' (P=999, r=50, m=5 by the gap rule): ||D||/||H|| 0.0110, f_low 8.01e-04 vs null median 4.51e-04, percentile 99.9, p_red 0.001, Holm (family of 2) 0.002, verdict **red**. Same pattern and percentile as geography RL-Zero (red, 99.9, ratio 0.0104). C2 nonce (secondary): also red, 99.9, ratio 0.0132. Not stability-bootstrapped (point reading).
+- (b) base layer-0 vs l*=16 low band: last-token layer 0 is degenerate (134 duplicate rows, entities sharing a last subword; graph singular, not computable). Fallback mean-over-name-token embeddings (deviation, labelled): O = 0.188 (m=4) < 0.8: does not fire.
+- (c) |Spearman(u2, Zipf)| = 0.378, |Spearman(u2, token count)| = 0.014: both < 0.6, does not fire.
+- **Reading (as the driver specified):** F4 fires, so the RL-Zero red reading of step 11 is a token-statistics artefact, not a world-structure claim: the same displacement structure appears on matched non-entity strings. (b) and (c) alone would not have fired it.
+
+### P2 cost readout (PREREG lines 256-257)  [data/step13_cost_7b.json]
+- C1 geography 5-fold ridge R2: base 0.8454, RL-Zero 0.8453, delta -0.00013, CI95 [-0.00031, +0.00008], Holm(2) p_drop 0.208.
+- C2 death-year (300 figures): base 0.6091, RL-Zero 0.6092, delta +0.00004, CI95 [-0.00066, +0.00080], Holm(2) p_drop 0.533.
+- Band: eps = 0.00849 (eps_A ingredients 0.00849, eps_N6 RL steps 0.00030), **borrowed from 1B (geography ridge, l=12), T3**; no 7B ingredient or figures activations exist, so the same eps is used for C2. Bootstrap: entities resampled over out-of-fold predictions, B=1000.
+- **P2 verdict: FALSIFIED** by the preregistered rule (a red reward stage, and neither C1 nor C2 drops beyond the band). Caveats: the "red" premise is itself F4-artefactual; the band is large relative to the CIs, and the drop/p_drop operationalisation is mine (stated in the JSON rule).
+
 # VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
 
 # REPORT steps 0-10 (residency-topology-pilot), 2026-11-03/04 (steps 0-5 sections retained below, steps 6-10 appended at the end)

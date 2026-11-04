@@ -1,0 +1,67 @@
+{
+ "epsilon": {
+  "eps": 0.00848649976519052,
+  "eps_A": 0.00848649976519052,
+  "eps_N6": 0.00030064554261138296,
+  "pairs_A": {
+   "ing1|ing2": {
+    "delta": -0.002034380995828644,
+    "abs_boot_p95": 0.007721082578801258
+   },
+   "ing1|ing3": {
+    "delta": -0.0001107702740013039,
+    "abs_boot_p95": 0.006301867261291966
+   },
+   "ing2|ing3": {
+    "delta": 0.0019236107218273402,
+    "abs_boot_p95": 0.00848649976519052
+   }
+  },
+  "pairs_N6": {
+   "inst_step200|inst_step800": {
+    "delta": -9.609694377232803e-05,
+    "abs_boot_p95": 0.00021828962037276356
+   },
+   "inst_step800|inst_step1600": {
+    "delta": 0.00012248841119244513,
+    "abs_boot_p95": 0.00030064554261138296
+   },
+   "inst_step1600|inst_step2600": {
+    "delta": 4.367813081773697e-05,
+    "abs_boot_p95": 0.00023134975133456967
+   }
+  },
+  "unit": "delta R2, 1B OLMo-2 geography ridge at l=12, 95th bootstrap percentile of |delta| per pair, max over pairs",
+  "label": "epsilon borrowed from 1B (no 7B ingredient or RL-step activations exist), T3; also used for C2 (no figures activations exist for any 1B run)"
+ },
+ "C1_geography": {
+  "r2_base": 0.8454455065645996,
+  "r2_stage": 0.8453154744280269,
+  "delta": -0.00013003213657269974,
+  "ci95": [
+   -0.0003131958897997555,
+   7.601370517068826e-05
+  ],
+  "p_drop": 0.1038961038961039,
+  "holm2_p_drop": 0.2077922077922078,
+  "drops_beyond_band": false,
+  "improves_beyond_band": false
+ },
+ "C2_death_year": {
+  "r2_base": 0.6091302832806238,
+  "r2_stage": 0.6091657981609243,
+  "delta": 3.551488030051342e-05,
+  "ci95": [
+   -0.0006558104847998542,
+   0.0007959992269276322
+  ],
+  "p_drop": 0.5334665334665335,
+  "holm2_p_drop": 0.5334665334665335,
+  "drops_beyond_band": false,
+  "improves_beyond_band": false
+ },
+ "F1_condition": "RL-Zero red, Holm p_red 0.008, stability 1.0 (step 11)",
+ "P2_verdict": "FALSIFIED (no cost beyond band, or an improvement beyond band)",
+ "rule": "drop beyond band := Holm(2) one-sided p_drop <= 0.05 and CI95 upper < -eps; improvement := CI95 lower > +eps; falsified if no drop or any improvement (PREREG line 257)",
+ "wall_s": 15
+}
