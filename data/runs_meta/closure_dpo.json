@@ -1,0 +1,26 @@
+{
+ "0": {
+  "closure_rel": 0.0,
+  "closure_max_abs": 0.0,
+  "reextract_rel": 0.0,
+  "reextract_max_abs": 0.0
+ },
+ "4": {
+  "closure_rel": 6.192875048327551e-07,
+  "closure_max_abs": 8.940696716308594e-07,
+  "reextract_rel": 6.192875048327551e-07,
+  "reextract_max_abs": 8.940696716308594e-07
+ },
+ "8": {
+  "closure_rel": 6.965257739466324e-07,
+  "closure_max_abs": 1.1622905731201172e-06,
+  "reextract_rel": 6.965257739466324e-07,
+  "reextract_max_abs": 1.1622905731201172e-06
+ },
+ "12": {
+  "closure_rel": 6.706932822453382e-07,
+  "closure_max_abs": 1.9669532775878906e-06,
+  "reextract_rel": 6.706932822453382e-07,
+  "reextract_max_abs": 1.9669532775878906e-06
+ }
+}

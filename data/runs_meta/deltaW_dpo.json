@@ -1,0 +1,8 @@
+{
+ "model.layers.0.mlp.up_proj.weight": 1.1280943155288696,
+ "model.layers.0.self_attn.q_proj.weight": 1.0613319873809814,
+ "model.layers.11.mlp.up_proj.weight": 1.123108983039856,
+ "model.layers.11.self_attn.q_proj.weight": 1.1224104166030884,
+ "model.layers.5.mlp.up_proj.weight": 1.1264318227767944,
+ "model.layers.5.self_attn.q_proj.weight": 1.0973055362701416
+}

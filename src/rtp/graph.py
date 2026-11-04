@@ -29,14 +29,18 @@ def laplacian(X: np.ndarray, k_self: int = 7, alpha: float = 1.0) -> np.ndarray:
     Invariant to a global rescale of X (s_i rescales with it) and to orthogonal rotations.
     """
     X = centre(np.asarray(X, dtype=np.float64))
-    d2 = sq_dists(X)
+    return laplacian_from_d2(sq_dists(X), k_self, alpha)
+
+
+def laplacian_from_d2(d2: np.ndarray, k_self: int = 7, alpha: float = 1.0) -> np.ndarray:
+    """Same Laplacian from a squared-distance matrix (lets callers reuse a Gram matrix)."""
     s = np.sqrt(np.sort(d2, axis=1)[:, k_self])
     W = np.exp(-d2 / (s[:, None] * s[None]))
     np.fill_diagonal(W, 0.0)
     q = W.sum(1)
     Kt = W / np.outer(q**alpha, q**alpha)
     d = Kt.sum(1)
-    return np.eye(len(X)) - Kt / np.sqrt(np.outer(d, d))
+    return np.eye(len(d2)) - Kt / np.sqrt(np.outer(d, d))
 
 
 def eigh_sorted(L: np.ndarray) -> tuple[np.ndarray, np.ndarray]:

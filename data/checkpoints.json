@@ -1,0 +1,47 @@
+{
+ "sft": {
+  "repo": "allenai/OLMo-2-0425-1B-SFT",
+  "revision": "main",
+  "sha": "0d85a3d037876ce6ac7d4311d994400fc66ac27f",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-SFT/snapshots/0d85a3d037876ce6ac7d4311d994400fc66ac27f",
+  "sha_note": "",
+  "fetch_s": 34,
+  "total_s": 475,
+  "rc": 0
+ },
+ "precision_ratio_sft": {
+  "D_SFT": 358.126953125,
+  "D_prec": 1.6011468172073364,
+  "ratio": 0.004470891784876585
+ },
+ "dpo": {
+  "repo": "allenai/OLMo-2-0425-1B-DPO",
+  "revision": "main",
+  "sha": "c4b0485961ab24c2433b090f3b922f0913a9290f",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-DPO/snapshots/c4b0485961ab24c2433b090f3b922f0913a9290f",
+  "sha_note": "",
+  "fetch_s": 31,
+  "total_s": 469,
+  "rc": 0
+ },
+ "rlvr1": {
+  "repo": "allenai/OLMo-2-0425-1B-RLVR1",
+  "revision": "main",
+  "sha": "12cb33498d26b411c38ac3ca9df27180a1d291b8",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-RLVR1/snapshots/12cb33498d26b411c38ac3ca9df27180a1d291b8",
+  "sha_note": "",
+  "fetch_s": 44,
+  "total_s": 491,
+  "rc": 0
+ },
+ "instruct": {
+  "repo": "allenai/OLMo-2-0425-1B-Instruct",
+  "revision": "main",
+  "sha": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/48d788eca847d4d7548f375ad03d3c9312f6139e",
+  "sha_note": "",
+  "fetch_s": 39,
+  "total_s": 488,
+  "rc": 0
+ }
+}

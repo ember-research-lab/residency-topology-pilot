@@ -9,6 +9,7 @@ from rtp import extract as X
 
 snap, sha, out, prec = sys.argv[1:5]
 skip = "--skip-closure" in sys.argv
+base_snap = sys.argv[sys.argv.index("--base-snap") + 1] if "--base-snap" in sys.argv else None
 LAYERS = [0, 4, 8, 12]
 t0 = time.time()
 tok = Tokenizer.from_file(f"{snap}/tokenizer.json")
@@ -18,6 +19,21 @@ recs = X.build_prompts(tok, sets)                       # raises on any hooked-t
 print("prompts", len(recs), "hooked-token assertion OK on every prompt", flush=True)
 model = X.load_model(snap, round_bf16=(prec == "bf16"))
 print("loaded", round(time.time() - t0), "s", flush=True)
+if base_snap:   # BROKEN-if: stage weights identical to base (wrong repo/branch)
+    import torch, glob
+    from safetensors import safe_open
+    sd = model.state_dict(); dw = {}
+    for f in sorted(glob.glob(f"{base_snap}/*.safetensors")):
+        with safe_open(f, "pt") as g:
+            for k in g.keys():
+                if any(f"layers.{i}." in k for i in (0, 5, 11)) and ("q_proj" in k or "up_proj" in k):
+                    b = g.get_tensor(k).to(torch.bfloat16).float()
+                    dw[k] = float((sd[k] - b).norm() / b.norm())
+    pathlib.Path(out).mkdir(parents=True, exist_ok=True)
+    pathlib.Path(out, "deltaW.json").write_text(json.dumps(dw, indent=1))
+    print("DELTAW max rel", max(dw.values()), "n", len(dw), flush=True)
+    if not dw or max(dw.values()) == 0.0:
+        sys.exit("BROKEN: stage weights identical to base")
 rel = lambda a, b: float(np.linalg.norm(a - b) / np.linalg.norm(b))
 if not skip:
     rng = np.random.default_rng(0)
