@@ -14,3 +14,4 @@
 - step 9: all measures + N4' (P=999) + Holm over the preregistered family; results in data/step9_results.json.
 - step 10: bootstrap B=1000 with verdict stability, epsilon floor, legacy P1 (DEGENERATE) row; REPORT-steps-0-10.md.
 - base diagnosis: hub main of OLMo-2-0425-1B is uncorrelated with its stage-2 ingredients (not a load bug); verdicts held as DEGENERATE-pending.
+- lineage gate (src/rtp/lineage.py, scripts/lineage_check.py): weights-only parent/child check, fail closed in extract/step9/step10; main a1847dff FAILs (regression case).

@@ -1,0 +1,19 @@
+{
+ "parent": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/f83cd641d4f00954eb25c781e0ac360debb3239e",
+ "child": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/b51c5f1b7c83a96b9a80bdaf14a2077c672fbccd",
+ "n_parent": 179,
+ "n_child": 179,
+ "keys_equal": true,
+ "shapes_equal": true,
+ "median_rel": 0.11570330709218979,
+ "median_cos": 0.9933051729669055,
+ "min_cos": 0.9,
+ "max_rel": 0.20007763803005219,
+ "n_tensors": 179,
+ "passed": true,
+ "reason": "PASS",
+ "parent_sha": "f83cd641d4f00954eb25c781e0ac360debb3239e",
+ "child_sha": "b51c5f1b7c83a96b9a80bdaf14a2077c672fbccd",
+ "label": "allenai/OLMo-2-0425-1B@stage2-ingredient3-step23852-tokens51B -> allenai/OLMo-2-0425-1B@stage2-ingredient2-step23852-tokens51B",
+ "max_dist": 0.5
+}

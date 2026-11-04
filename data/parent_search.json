@@ -1,0 +1,70 @@
+{
+ "main_a1847dff": {
+  "median_rel": 2.165607213973999,
+  "min_rel": 0.11197818070650101,
+  "max_rel": 2.9804556369781494,
+  "cos": {
+   "embed_tokens.weight": 0.006202062126249075,
+   "layers.5.mlp.up_proj.weight": -0.00013078455231152475,
+   "layers.5.self_attn.q_proj.weight": 0.0002777681511361152,
+   "lm_head.weight": -0.006227891426533461
+  }
+ },
+ "stage1_final_9d3e4365": {
+  "median_rel": 0.23823612928390503,
+  "min_rel": 0.007752798497676849,
+  "max_rel": 0.3695410192012787,
+  "cos": {
+   "embed_tokens.weight": 1.0583090782165527,
+   "layers.5.mlp.up_proj.weight": 0.9680920839309692,
+   "layers.5.self_attn.q_proj.weight": 0.9538114070892334,
+   "lm_head.weight": 1.031063199043274
+  }
+ },
+ "ing1_ada39260": {
+  "median_rel": 0.1470727026462555,
+  "min_rel": 0.004693151451647282,
+  "max_rel": 0.22969302535057068,
+  "cos": {
+   "embed_tokens.weight": 1.0585107803344727,
+   "layers.5.mlp.up_proj.weight": 0.9833412766456604,
+   "layers.5.self_attn.q_proj.weight": 0.9758957624435425,
+   "lm_head.weight": 1.0516467094421387
+  }
+ },
+ "ing2_b51c5f1b": {
+  "median_rel": 0.14729124307632446,
+  "min_rel": 0.004780408460646868,
+  "max_rel": 0.22939737141132355,
+  "cos": {
+   "embed_tokens.weight": 1.0585073232650757,
+   "layers.5.mlp.up_proj.weight": 0.9833318591117859,
+   "layers.5.self_attn.q_proj.weight": 0.9757981300354004,
+   "lm_head.weight": 1.0516417026519775
+  }
+ },
+ "ing3_f83cd641": {
+  "median_rel": 0.08775819092988968,
+  "min_rel": 0.004508077632635832,
+  "max_rel": 0.13334181904792786,
+  "cos": {
+   "embed_tokens.weight": 1.0587002038955688,
+   "layers.5.mlp.up_proj.weight": 0.9967333674430847,
+   "layers.5.self_attn.q_proj.weight": 0.9932893514633179,
+   "lm_head.weight": 1.0560611486434937
+  }
+ },
+ "uniform_soup_ing123": {
+  "median_rel": 0.1127808466553688,
+  "min_rel": 0.004578068386763334,
+  "max_rel": 0.16434438526630402,
+  "cos": {
+   "embed_tokens.weight": 1.0586315393447876,
+   "layers.5.mlp.up_proj.weight": 0.9923549890518188,
+   "layers.5.self_attn.q_proj.weight": 0.9876021146774292,
+   "lm_head.weight": 1.0546621084213257
+  }
+ },
+ "main_vs_ing3_median_rel": 2.175075054168701,
+ "main_vs_soup_median_rel": 2.182542085647583
+}

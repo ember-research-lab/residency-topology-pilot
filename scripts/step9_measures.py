@@ -6,6 +6,11 @@ from scipy import stats
 from rtp import analysis as A
 
 t0 = time.time()
+from rtp import lineage
+_ck = json.load(open("data/checkpoints.json")); _base = tomllib.load(open("configs/pilot.toml", "rb"))["hosts"]["olmo2_1b"]["base"]["sha"]
+for _k, _v in _ck.items():                     # lineage gate: every compared checkpoint needs a PASS record against the base
+    if isinstance(_v, dict) and "sha" in _v:
+        lineage.require_pass(_base, _v["sha"])
 cfg = tomllib.load(open("configs/pilot.toml", "rb"))["frozen"]; m, r = cfg["m"], cfg["r"]
 base_arr, ref = A.load_geo("olmo2-1b-base"); base = A.Ck(base_arr.mean(1))
 STAGES = ["sft", "dpo", "rlvr1", "instruct"]

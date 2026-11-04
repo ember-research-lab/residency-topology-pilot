@@ -1,0 +1,19 @@
+{
+ "parent": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--Olmo-3-1025-7B/snapshots/a81bae42db3975be1671e27b9c9a56da1a9f980f",
+ "child": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--Olmo-3-7B-RL-Zero-Math/snapshots/dee26a4074b88215cd1326472e1ab14d0259d892",
+ "n_parent": 355,
+ "n_child": 355,
+ "keys_equal": true,
+ "shapes_equal": true,
+ "median_rel": 0.002195598790422082,
+ "median_cos": 0.9999976011869587,
+ "min_cos": 0.9,
+ "max_rel": 0.0030010677874088287,
+ "n_tensors": 355,
+ "passed": true,
+ "reason": "PASS",
+ "parent_sha": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+ "child_sha": "dee26a4074b88215cd1326472e1ab14d0259d892",
+ "label": "allenai/Olmo-3-1025-7B@main -> allenai/Olmo-3-7B-RL-Zero-Math@main",
+ "max_dist": 0.5
+}

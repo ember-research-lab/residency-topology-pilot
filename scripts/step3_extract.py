@@ -9,6 +9,15 @@ from rtp import extract as X
 
 snap, sha, out, prec = sys.argv[1:5]
 skip = "--skip-closure" in sys.argv
+# LINEAGE GATE (fail closed, no override): --gate PARENT_FULLSHA:CHILD_FULLSHA is mandatory and must name a PASS record
+# (scripts/lineage_check.py) and this checkpoint must be one end of the pair.
+from rtp import lineage
+if "--gate" not in sys.argv:
+    sys.exit("BROKEN: --gate PARENT:CHILD is mandatory (lineage gate)")
+gp, gc = sys.argv[sys.argv.index("--gate") + 1].split(":")
+if sha not in (gp, gc):
+    sys.exit("BROKEN: this checkpoint is not part of the gated pair")
+lineage.require_pass(gp, gc)
 base_snap = sys.argv[sys.argv.index("--base-snap") + 1] if "--base-snap" in sys.argv else None
 LAYERS = [0, 4, 8, 12]
 t0 = time.time()

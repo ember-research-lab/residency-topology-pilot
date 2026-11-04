@@ -2,7 +2,10 @@
 Usage: uv run python scripts/run_checkpoints.py step6|step7|step8   (appends to data/checkpoints.json)"""
 import json, pathlib, subprocess, sys, time
 
-BASE_SNAP = "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/a1847dff35000b4271fa70afc5db10fd29fedbdf"
+import tomllib
+BASE_SHA = tomllib.load(open("configs/pilot.toml", "rb"))["hosts"]["olmo2_1b"]["base"]["sha"]   # full SHA of the gated parent
+BASE_SNAP = f"/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/{BASE_SHA}"
+BASE_SPEC = tomllib.load(open("configs/pilot.toml", "rb"))["hosts"]["olmo2_1b"]["base"]["spec"]
 R = "allenai/OLMo-2-0425-1B"
 GROUPS = {
  "step6": [("sft", R + "-SFT", "main", "0d85a3d03787"), ("dpo", R + "-DPO", "main", "c4b0485961ab"),
@@ -20,9 +23,13 @@ for name, repo, rev, prefix in GROUPS[sys.argv[1]]:
     out = subprocess.run(["nice", "-n", "10", sys.executable, "scripts/fetch_checkpoint.py", repo, rev], capture_output=True, text=True, env=env)
     line = [l for l in out.stdout.splitlines() if l.startswith(repo)][-1]
     _, _, sha, path = line.split(" ", 3)
+    g = subprocess.run(["nice", "-n", "10", sys.executable, "scripts/lineage_check.py", BASE_SPEC, f"{repo}@{rev}"], capture_output=True, text=True, env=env)
+    print(g.stdout.strip(), flush=True)
+    if g.returncode:
+        sys.exit(f"BROKEN: lineage gate FAIL for {name}; stop")
     note = "" if prefix is None or sha.startswith(prefix) else f"MISMATCH expected prefix {prefix}"
     t_fetch = time.time() - t0
-    r = subprocess.run(["nice", "-n", "10", sys.executable, "scripts/step3_extract.py", path, sha, f"runs/{name}", "bf16", "--base-snap", BASE_SNAP], env=env,
+    r = subprocess.run(["nice", "-n", "10", sys.executable, "scripts/step3_extract.py", path, sha, f"runs/{name}", "bf16", "--base-snap", BASE_SNAP, "--gate", f"{BASE_SHA}:{sha}"], env=env,
                        stdout=open(f"runs/{name}.log", "w"), stderr=subprocess.STDOUT)
     db[name] = dict(repo=repo, revision=rev, sha=sha, snapshot=path, sha_note=note, fetch_s=round(t_fetch), total_s=round(time.time() - t0), rc=r.returncode)
     reg.write_text(json.dumps(db, indent=1))
