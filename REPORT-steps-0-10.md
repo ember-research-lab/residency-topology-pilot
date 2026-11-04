@@ -202,3 +202,30 @@ Step 6: sft 475 s, dpo 469 s, rlvr1 491 s, instruct 488 s. Step 7: ing1 593 s, i
 5. Bootstrap used r=50 although n/10=40 at 400 entities (r is frozen); the self-calibration used P=199.
 6. Not done: step 11 (Olmo-3 7B pair), step 12 (picture), GitHub issues (this repo is local-only); the 8-test Holm family is incomplete until step 11 (two p-values held at 1).
 
+
+## Base checkpoint diagnosis (2026-11-04, after the driver's hold; read-only, nothing fixed)
+
+**Status of the step 6-10 verdict column: DEGENERATE-pending (driver instruction) until the base question is resolved.**
+
+1. Loading (transformers, fp32, output_loading_info): base, SFT and ingredient1 each have 0 missing_keys, 0 unexpected_keys, 0 mismatched_keys; tie_word_embeddings False. No newly-initialised weights. (data/base_diagnosis_load_loss.json)
+
+2. Raw files (safetensors / torch.load weights_only, no transformers; data/base_diagnosis_tensors.json): all four checkpoints have 179 keys, identical key sets and shapes (no key or shape differences in any pair). Dtypes: base, ingredient1, ingredient2 float32; SFT bfloat16. Relative Frobenius difference ||A-B||/||B|| over 179 tensors:
+
+| pair | median | min | max | median by type (q/k/v/o/gate/up/down/norm/embed/lm_head) |
+|---|---|---|---|---|
+| base vs ingredient1 | 2.175 | 0.113 | 2.997 | 2.318 / 2.415 / 2.198 / 2.198 / 2.112 / 2.184 / 2.195 / 0.4461 / 1.467 / 1.905 |
+| base vs SFT | 2.166 | 0.112 | 2.98 | 2.306 / 2.401 / 2.189 / 2.189 / 2.104 / 2.174 / 2.185 / 0.4433 / 1.467 / 1.912 |
+| SFT vs ingredient1 | 0.1478 | 0.004705 | 0.231 | 0.1996 / 0.2117 / 0.1408 / 0.1437 / 0.1786 / 0.1808 / 0.1807 / 0.00683 / 0.02093 / 0.1246 |
+| ingredient1 vs ingredient2 | 0.1158 | 0.000736 | 0.2008 | 0.1653 / 0.1753 / 0.1154 / 0.1159 / 0.1555 / 0.1551 / 0.1541 / 0.003234 / 0.01895 / 0.09282 |
+
+Ten largest base-vs-ingredient1 tensors: layers.0.self_attn.q_proj.weight 2.997, layers.0.self_attn.k_proj.weight 2.876, layers.0.mlp.gate_proj.weight 2.609, layers.1.mlp.gate_proj.weight 2.551, layers.1.self_attn.k_proj.weight 2.536, layers.2.self_attn.k_proj.weight 2.526, layers.10.self_attn.k_proj.weight 2.507, layers.1.self_attn.q_proj.weight 2.500, layers.2.self_attn.q_proj.weight 2.485, layers.4.self_attn.q_proj.weight 2.471. The difference is not concentrated: every projection matrix in every layer is at 1.9-3.0 (median 2.18); only the norm weights (0.45) and nothing else are smaller. Sampled tensors: cosine(base, ingredient1) = 0.006 (embed_tokens), -0.0001 (L5 up_proj), 0.0003 (L5 q_proj), -0.006 (lm_head), 0.956 (L5 post_attention_layernorm weight); weight-norm ratio base/ingredient1 = 1.08 (embed), 1.94 (up_proj), 2.23 (q_proj), 1.61 (lm_head). Ingredient1 vs ingredient2 and SFT vs ingredient1 are 0.12 and 0.15 (the coordinator's expected ~1e-2 does not hold for these either, but they are 15-20x closer than base is to any of them; SFT-ingredient1 pattern is concentrated in q/k projections, the usual fine-tuning signature).
+
+3. Integrity: base shard sha256 (computed locally) c52e4ac8bf4867e698d908f9e8c2b84aa891b91dff066d46bf2a7cf453ad77fb and 5f80762572fe28aca49b01b98895d96ca529b9792fc10925a977a161ad768d30 equal the LFS sha256 from model_info(files_metadata=True) for revision main; index json lists 179 tensors (total_size 5939666944) and both shards are present with the sizes the hub reports (4983360992, 956326560). Resolved revision of main = a1847dff35000b4271fa70afc5db10fd29fedbdf (hub and fetch_base.log). fetch_checkpoint.py passes the repo and the hub-resolved sha of the requested revision (base: allenai/OLMo-2-0425-1B main); no different repo or revision was used. The ingredient shards have the same byte sizes as the base shards but different hashes (fac7173f..., 270e9ab0...).
+
+4. config.json: base and ingredient1 are byte-identical files (same blob 0e6dffcd...): olmo2, hidden 2048, 16 layers, 16 heads, intermediate 8192, vocab 100352, rope_theta 500000, rope_scaling None, rms_norm_eps 1e-6, tie_word_embeddings False. SFT differs only in torch_dtype (bfloat16 vs float32) and transformers_version (4.50.0 vs 4.50.3).
+
+5. Mean token loss, 20 fixed English sentences, fp32: base 2.643, ingredient1 2.638, SFT 3.022 nats (all far below the 6-nat mis-load threshold; base is a working language model).
+
+6. ingredient1 vs ingredient2 median relative weight distance 0.116 (max 0.201); ingredient1 vs SFT 0.148 (max 0.231). See table.
+
+**Cause (T1, measured): not a loading or mapping bug on our side.** The files on the hub for OLMo-2-0425-1B `main` (a1847dff) are intact (hash-verified), load cleanly, and give a healthy model, but their weights are essentially uncorrelated with those of the stage-2 ingredient branches (cosine ~0 in embeddings and projection matrices, uniform relative distance ~2.2 across all layers), whereas the ingredients, SFT and the later stages are mutually close (0.12-0.15). That is a different weight lineage (different initialisation or run), not a layout bug, which would concentrate in particular tensors. Why the hub `main` is not the soup of its own ingredients is **undiagnosed**: candidate explanations (main is a different run than the branches; the branches belong to the Instruct/post-training lineage rather than to main's pretraining run; hub branch naming) need a source outside this repo. Consequence for the pilot: every base-vs-stage contrast in steps 6-10 compares two unrelated networks; the ||D||/||H|| of 1.5, the identical stage rows and the red verdicts are therefore not interpretable as training-stage effects. Per instruction nothing was changed or re-run; steps 3-5 were not repeated because there is no loader fault to fix. Decision owed by the driver: choose a different base (for example ingredient soup, or one ingredient branch as the pre-post-training reference) and re-run, or abandon the 1B pair.
