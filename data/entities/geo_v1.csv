@@ -1,0 +1,501 @@
+name,country,lat,lon,population,continent,n_tok_space,n_tok_bare
+Veracruz,Mexico,19.4333,-96.3833,8062579,north_america,3,3
+Puebla,Mexico,19.0,-97.8833,6583278,north_america,3,3
+Los Angeles,United_States,34.05,-118.25,3898747,north_america,2,2
+Baja California,Mexico,30.0,-115.167,3769020,north_america,3,3
+Coahuila,Mexico,27.3,-102.05,3146771,north_america,3,3
+Sinaloa,Mexico,25.0,-107.5,3026943,north_america,3,3
+Mississippi,United_States,33.0,-90.0,2963914,north_america,1,2
+Brooklyn,United_States,40.6928,-73.9903,2736074,north_america,1,2
+San Salvador,El_Salvador,13.6989,-89.1914,2406709,north_america,2,2
+Queens,United_States,40.75,-73.8667,2405464,north_america,1,2
+Yucatán,Mexico,20.8333,-89.0,2320898,north_america,4,4
+Houston,United_States,29.7628,-95.3831,2304580,north_america,1,1
+Morelos,Mexico,18.75,-99.0667,1971520,north_america,2,2
+Tijuana,Mexico,32.525,-117.033,1922523,north_america,3,3
+Manhattan,United_States,40.7833,-73.9667,1694251,north_america,1,2
+Zacatecas,Mexico,23.3,-102.7,1622138,north_america,3,4
+Santo Domingo,Dominican_Republic,18.4667,-69.95,1484789,north_america,3,4
+Zapopan,Mexico,20.7203,-103.392,1476491,north_america,3,4
+San Antonio,United_States,29.425,-98.5239,1434625,north_america,2,2
+San Diego,United_States,32.715,-117.162,1386932,north_america,2,2
+Tlaxcala,Mexico,19.4333,-98.1667,1342977,north_america,4,4
+Monterrey,Mexico,25.6667,-100.3,1109171,north_america,2,3
+Managua,Nicaragua,12.1364,-86.2514,1055247,north_america,2,2
+Campeche,Mexico,18.8333,-90.4,928363,north_america,3,3
+Cancún,Mexico,21.1606,-86.8475,888797,north_america,2,3
+Morelia,Mexico,19.7683,-101.189,849053,north_america,2,2
+Saltillo,Mexico,25.4231,-100.992,807537,north_america,3,3
+San Pedro Sula,Honduras,15.5,-88.0333,801259,north_america,4,4
+Baja California Sur,Mexico,25.44,-111.88,798447,north_america,4,4
+Torreón,Mexico,25.5394,-103.449,735340,north_america,3,3
+Colima,Mexico,19.1667,-103.883,731391,north_america,2,2
+Detroit,United_States,42.3314,-83.0995,639111,north_america,1,1
+Hudson Waterfront,Hudson_County,40.716,-74.031,620000,north_america,3,4
+Santiago de Cuba,Cuba,20.0217,-75.8294,612753,north_america,3,4
+Reynosa,Mexico,26.0922,-98.2778,612183,north_america,2,3
+Baltimore,United_States,39.2894,-76.6153,585708,north_america,1,2
+Tlaquepaque,Mexico,20.6167,-103.317,575942,north_america,4,4
+Apodaca,Mexico,25.7817,-100.189,523370,north_america,3,3
+Northern Michigan,United_States,44.75,-84.75,506658,north_america,2,2
+Mazatlán,Mexico,23.2167,-106.417,502547,north_america,3,4
+Staten Island,United_States,40.5719,-74.1469,495747,north_america,2,3
+Celaya,Mexico,20.5231,-100.814,468469,north_america,3,3
+Mixco,Guatemala,14.6331,-90.6064,465773,north_america,2,2
+General Escobedo,Mexico,25.7933,-100.158,363436,north_america,4,4
+Holguín,Cuba,20.8869,-76.2592,346191,north_america,3,3
+Camagüey,Cuba,21.3839,-77.9075,321992,north_america,4,4
+Cincinnati,United_States,39.1,-84.5325,309317,north_america,1,2
+Gonaïves,Haiti,19.4456,-72.6883,300000,north_america,4,4
+Gatineau,Canada,45.4833,-75.65,291041,north_america,3,4
+Cité Soleil,Haiti,18.5778,-72.3319,265072,north_america,4,4
+Los Mochis,Mexico,25.7835,-108.994,256613,north_america,4,4
+Samaná Peninsula,Dominican_Republic,19.2502,-69.4212,241104,north_america,4,4
+Longueuil,Canada,45.5333,-73.5167,239700,north_america,3,3
+Monclova,Mexico,26.9103,-101.422,231107,north_america,3,3
+Mejicanos,El_Salvador,13.7333,-89.2167,224661,north_america,3,4
+Bayamo,Cuba,20.3817,-76.6428,222118,north_america,2,2
+Campeche City,Mexico,19.85,-90.5306,220389,north_america,4,4
+Apopa,El_Salvador,13.8,-89.1833,217733,north_america,2,3
+Upper West Side,United_States,40.787,-73.975,214744,north_america,3,3
+Ciudad Madero,Mexico,22.25,-97.8333,209175,north_america,3,4
+Salt Lake City,United_States,40.7708,-111.921,200133,north_america,3,3
+Poza Rica,Mexico,20.5333,-97.45,200119,north_america,3,3
+El Progreso,Honduras,15.4,-87.8,200010,north_america,3,3
+Boyeros,Cuba,23.0072,-82.4017,188667,north_america,2,2
+Cuajimalpa,Mexico,19.3744,-99.2847,186391,north_america,4,4
+Upper East Side,United_States,40.769,-73.966,183986,north_america,3,3
+Upper North Philadelphia,United_States_of_America,39.9855,-75.1636,181531,north_america,3,3
+Quetzaltenango,Guatemala,14.8444,-91.5014,180706,north_america,4,4
+Costalegre,Mexico,20.6667,-105.267,177830,north_america,3,3
+Ciudad Valles,Mexico,21.9833,-99.0167,176935,north_america,3,4
+Comayagua,Honduras,14.4522,-87.6383,172069,north_america,3,3
+Ciudad del Carmen,Mexico,18.6333,-91.8333,169466,north_america,3,4
+Matagalpa,Nicaragua,12.9167,-85.9167,167613,north_america,3,3
+Cienfuegos,Cuba,22.1456,-80.4364,164924,north_america,4,4
+Saint-Marc,Haiti,19.1167,-72.7,160181,north_america,3,3
+Zumpango,Mexico,19.7969,-99.0992,159647,north_america,3,3
+Bonao,Dominican_Republic,18.95,-70.41,158034,north_america,2,2
+Villa Canales,Guatemala,14.4833,-90.5333,155423,north_america,3,4
+Tipitapa,Nicaragua,12.2,-86.1,153777,north_america,3,3
+Tulancingo,Mexico,20.0833,-98.3667,151582,north_america,3,4
+Barrie,Canada,44.3711,-79.6769,147829,north_america,2,2
+Silao,Mexico,20.9478,-101.428,147123,north_america,2,2
+Baní,Dominican_Republic,18.29,-70.33,145595,north_america,2,2
+Matanzas,Cuba,23.0511,-81.5753,145246,north_america,3,3
+Tuxpan,Mexico,20.95,-97.4,143362,north_america,3,3
+Comitán,Mexico,16.25,-92.1333,141013,north_america,3,3
+Bisonó,Dominican_Republic,19.56,-70.87,140666,north_america,2,3
+Puerto Cortés,Honduras,15.85,-87.9333,136081,north_america,3,4
+San Miguel Petapa,Guatemala,14.5,-90.5667,135447,north_america,4,4
+Catacamas,Honduras,14.8,-85.9,133896,north_america,3,4
+Arcahaie,Haiti,18.7667,-72.5167,130306,north_america,4,4
+Dessalines,Haiti,19.2833,-72.5,127529,north_america,3,4
+Ciudad Sandino,Nicaragua,12.15,-86.35,126582,north_america,3,4
+Boca Chica,Dominican_Republic,18.4539,-69.6064,123510,north_america,3,4
+Sayaxché,Guatemala,16.5167,-90.1833,114781,north_america,3,3
+Ciudad Mante,Mexico,22.7333,-98.95,112061,north_america,3,4
+Fresnillo,Mexico,23.175,-102.868,110892,north_america,3,4
+Montego Bay,Jamaica,18.4667,-77.9167,110115,north_america,3,3
+Bridgetown,Barbados,13.0975,-59.6167,110000,north_america,3,4
+Momostenango,Guatemala,15.0444,-91.4083,105617,north_america,3,3
+Bahia,Brazil,-12.0,-41.0,14016906,south_america,2,2
+Rio Grande do Sul,Brazil,-30.0,-53.0,11422973,south_america,4,4
+Pernambuco,Brazil,-8.33333,-37.8,8796448,south_america,4,4
+Ceará,Brazil,-5.08,-39.65,8452381,south_america,3,3
+Bogotá,Colombia,4.71111,-74.0722,8034649,south_america,3,4
+Rio de Janeiro,Brazil,-22.9114,-43.2059,6747815,south_america,3,3
+Santiago,Chile,-33.45,-70.6667,6269384,south_america,1,2
+Goiás,Brazil,-15.9333,-50.1333,6003788,south_america,3,3
+Zulia,Venezuela,9.84,-72.25,5125579,south_america,2,2
+Rio Grande do Norte,Brazil,-5.74,-36.55,3168027,south_america,4,4
+Mato Grosso,Brazil,-15.5667,-56.075,3035122,south_america,4,4
+Caracas,Venezuela,10.4806,-66.9036,2956813,south_america,2,2
+Medellín,Colombia,6.23083,-75.5906,2569007,south_america,3,3
+Carabobo,Venezuela,10.193,-67.98,2245744,south_america,3,3
+Cali,Colombia,3.42056,-76.5222,2227642,south_america,2,2
+Manaus,Brazil,-3.1,-60.0167,2219580,south_america,2,2
+Aragua,Venezuela,10.25,-67.6,1630308,south_america,2,3
+Rondônia,Brazil,-10.9,-62.76,1562409,south_america,4,4
+Goiânia,Brazil,-16.6667,-49.25,1536097,south_america,4,4
+Belém,Brazil,-1.45583,-48.5039,1499641,south_america,2,2
+Monagas,Venezuela,9.43,-63.08,1460000,south_america,2,2
+Tocantins,Brazil,-10.1833,-48.3333,1383445,south_america,4,4
+Callao,Peru,-12.0333,-77.1333,1300000,south_america,2,2
+Barquisimeto,Venezuela,10.0636,-69.3347,1240714,south_america,4,4
+Campinas,Brazil,-22.9058,-47.0608,1213792,south_america,2,2
+Táchira,Venezuela,7.94,-72.12,1168908,south_america,3,3
+Maceió,Brazil,-9.66583,-35.735,1031597,south_america,3,3
+Soacha,Colombia,4.58722,-74.2214,808288,south_america,2,2
+Uberlândia,Brazil,-18.9231,-48.2886,699097,south_america,4,4
+Bucaramanga,Colombia,7.13333,-73.0,681130,south_america,4,4
+Contagem,Brazil,-19.9319,-44.0539,668949,south_america,2,2
+Aracaju,Brazil,-10.9167,-37.05,664908,south_america,3,3
+Maturín,Venezuela,9.75,-63.183,647459,south_america,3,3
+Joinville,Brazil,-26.3204,-48.8437,597658,south_america,2,2
+Puente Alto,Chile,-33.6167,-70.5667,568106,south_america,3,3
+Macapá,Brazil,0.0,-51.0664,512902,south_america,3,3
+Vila Velha,Brazil,-20.3364,-40.2936,501325,south_america,4,4
+Santa Marta,Colombia,11.2419,-74.2053,499192,south_america,3,3
+Montería,Colombia,8.75,-75.8833,490935,south_america,2,3
+Valledupar,Colombia,10.4833,-73.25,490075,south_america,4,4
+Mauá,Brazil,-23.6678,-46.4608,477552,south_america,3,3
+Apure,Venezuela,7.9,-67.4667,459025,south_america,2,2
+Huancayo,Peru,-12.0667,-75.2167,456250,south_america,3,3
+Puerto la Cruz,Venezuela,10.2,-64.6333,454312,south_america,3,4
+Roraima,Brazil,2.05,-61.4,450479,south_america,4,4
+Usaquén,Colombia,4.71972,-74.0367,449621,south_america,3,3
+Betim,Brazil,-19.9678,-44.1978,444784,south_america,2,2
+Montes Claros,Brazil,-16.7306,-43.8639,413487,south_america,4,4
+Anápolis,Brazil,-16.3339,-48.9519,391772,south_america,4,4
+Cariacica,Brazil,-20.2639,-40.42,383917,south_america,4,4
+Bauru,Brazil,-22.315,-49.0608,379297,south_america,3,3
+Petare,Venezuela,10.4833,-66.8167,369000,south_america,2,2
+Caruaru,Brazil,-8.28278,-35.9758,365278,south_america,3,3
+Caucaia,Brazil,-3.73278,-38.6558,365212,south_america,4,4
+Blumenau,Brazil,-26.9189,-49.0658,361855,south_america,3,3
+Sucre,Bolivia,-19.0475,-65.26,360544,south_america,2,2
+Petrolina,Brazil,-9.39278,-40.5078,354317,south_america,3,3
+Pelotas,Brazil,-31.7719,-52.3425,343132,south_america,2,2
+Avellaneda,Argentina,-34.6625,-58.3678,342677,south_america,3,3
+Uberaba,Brazil,-19.7478,-47.9319,340277,south_america,2,2
+Bavaria,Germany,49.0786,11.3856,13124737,europe,2,3
+Moscow,Russia,55.7558,37.6172,13010112,europe,1,2
+London,United_Kingdom,51.5072,-0.1275,8799800,europe,1,1
+Lower Saxony,Germany,52.7561,9.39306,8003421,europe,3,3
+Catalonia,Spain,41.8375,1.53778,7727029,europe,1,3
+Bohemia,Czech_Republic,50.0,15.0,6900000,europe,2,3
+Community of Madrid,Spain,40.5,-3.66667,6661949,europe,3,3
+Holland,Netherlands,52.25,4.667,6583534,europe,1,2
+Ankara,Turkey,39.93,32.85,5747325,europe,1,3
+İzmir,Turkey,38.42,27.14,4367251,europe,3,3
+Saxony,Germany,51.0269,13.3589,4077937,europe,2,3
+Berlin,Germany,52.52,13.405,3677472,europe,1,1
+Wallonia,Belgium,50.5,4.75,3633795,europe,2,2
+Inner London,United_Kingdom,51.5084,-0.125364,3535700,europe,2,2
+Bursa,Turkey,40.1833,29.05,3101833,europe,3,3
+Moravia,Czech_Republic,49.5,17.0,3100000,europe,2,2
+Leinster,Republic_of_Ireland,53.3478,-6.25972,2858501,europe,3,3
+North East England,United_Kingdom,55.0,-1.8667,2657909,europe,3,3
+Brandenburg,Germany,52.3619,13.0081,2520198,europe,2,2
+Lviv Oblast,Ukraine,49.7175,23.9503,2497750,europe,4,4
+Croatia proper,Croatia,45.75,16.2667,2418214,europe,2,4
+Lorraine,France,49.0,6.0,2349816,europe,2,2
+Barcelonès,Spain,41.4044,2.16083,2227238,europe,4,4
+Ulster,Republic_of_Ireland,54.4,-7.0,2215454,europe,2,2
+Gaziantep,Turkey,37.0667,37.3833,2130432,europe,3,4
+Thuringia,Germany,50.8611,11.0519,2120237,europe,3,3
+Republic of Crimea,Ukraine,45.3,34.4,1934630,europe,3,3
+Upper Normandy,France,49.5,1.0,1915000,europe,3,3
+Bucharest,Romania,44.4325,26.1039,1883425,europe,2,3
+Central Macedonia,Greece,40.7,23.0,1792069,europe,2,2
+Budapest,Hungary,47.4925,19.0514,1752286,europe,1,3
+Lower Austria,Austria,48.3333,15.75,1684623,europe,2,2
+Lower Normandy,France,49.0,-1.0,1453000,europe,3,3
+Copenhagen,Denmark,55.6761,12.5683,1366301,europe,1,2
+Munster,Republic_of_Ireland,52.25,-9.0,1364098,europe,2,3
+Samsun,Turkey,41.2903,36.3336,1356079,europe,3,3
+Aragon,Spain,41.0,-1.0,1326261,europe,2,2
+Vidzeme,Latvia,57.25,25.5,1300000,europe,3,4
+Styria,Austria,47.25,15.1667,1246576,europe,2,3
+Balıkesir,Turkey,39.6333,27.8833,1228620,europe,4,4
+Belgrade,Serbia,44.8178,20.4569,1166763,europe,2,2
+Peloponnese,Greece,37.3497,22.3522,1155019,europe,4,4
+Volyn Oblast,Ukraine,50.7414,25.3539,1021356,europe,4,4
+Muğla,Turkey,37.2167,28.3667,1000773,europe,3,3
+Saarland,Germany,49.3833,6.83333,990509,europe,3,3
+Stockholm,Sweden,59.3294,18.0686,978770,europe,1,2
+Turin,Italy,45.0792,7.67611,847287,europe,2,2
+Valencia,Spain,39.4667,-0.375,789744,europe,1,2
+Tyneside,United_Kingdom,54.9875,-1.45833,774891,europe,3,3
+Zagreb,Croatia,45.8167,15.9833,767131,europe,2,3
+Lviv,Ukraine,49.8425,24.0322,717486,europe,2,2
+Thessaly,Greece,39.6,22.2,687527,europe,3,3
+Zaragoza,Spain,41.65,-0.883333,675301,europe,3,4
+Łódź,Poland,51.7769,19.4547,670642,europe,4,4
+Rotterdam,Netherlands,51.9167,4.5,651157,europe,1,2
+Tunis,Tunisia,36.8064,10.1817,602560,europe,1,3
+Vilnius,Lithuania,54.6872,25.28,592389,europe,3,4
+Connacht,Republic_of_Ireland,54.0,-9.0,588583,europe,2,2
+Gothenburg,Sweden,57.7,11.9667,587549,europe,3,3
+Urfa,Turkey,37.1583,38.7917,586733,europe,2,2
+Genoa,Italy,44.4111,8.93278,580097,europe,2,2
+Carinthia,Austria,46.761,13.819,561390,europe,3,3
+Lisbon,Portugal,38.7253,-9.15002,544851,europe,1,3
+Poznań,Poland,52.4083,16.9336,529410,europe,3,4
+Gomel,Belarus,52.4453,30.9842,526872,europe,3,3
+Skopje,North_Macedonia,41.9961,21.4317,526502,europe,3,3
+Leeds,United_Kingdom,53.8003,-1.54972,516298,europe,1,2
+Upper Norrland,Sweden,65.925,18.8,514804,europe,4,4
+Mykolaiv,Ukraine,46.975,31.995,476101,europe,4,4
+Gdańsk,Poland,54.3475,18.6453,470621,europe,4,4
+Bristol,United_Kingdom,51.45,-2.58333,465866,europe,1,2
+Annaba,Algeria,36.9,7.76667,464740,europe,2,2
+Murcia,Spain,37.9861,-1.13028,460349,europe,2,2
+Vallès Oriental,Spain,41.6464,2.30778,399781,europe,3,4
+Luhansk,Ukraine,48.5667,39.3333,399559,europe,3,3
+Vorarlberg,Austria,47.2436,9.89389,397094,europe,3,4
+Mogilev,Mogilev_Region,53.9167,30.35,374644,europe,3,4
+Vinnytsia,Ukraine,49.2333,28.4833,369739,europe,4,4
+Bradford,United_Kingdom,53.8,-1.75,366187,europe,1,2
+Utrecht,Netherlands,52.0833,5.11667,361742,europe,2,2
+El Eulma,Algeria,36.1564,5.68508,355038,europe,4,4
+Malmö,Sweden,55.6058,13.0358,351749,europe,2,2
+Makiivka,Ukraine,48.0556,37.9611,338968,europe,4,4
+Lublin,Poland,51.25,22.5667,336339,europe,2,3
+Simferopol,Ukraine,44.9519,34.1022,332317,europe,3,3
+Thessaloniki,Greece,40.6403,22.9347,317778,europe,4,4
+Bari,Italy,41.1253,16.8667,316491,europe,2,2
+Saint-Prex,Switzerland,46.4833,6.46667,312011,europe,4,4
+Catania,Italy,37.5,15.0903,311584,europe,2,2
+Valladolid,Spain,41.6528,-4.72361,299265,europe,3,4
+Białystok,Poland,53.1353,23.1456,295683,europe,4,4
+Graz,Austria,47.0708,15.4386,295424,europe,1,2
+Burgenland,Austria,47.5,16.4167,294466,europe,3,3
+Bergen,Norway,60.3894,5.33,285911,europe,1,3
+Constanța,Romania,44.1667,28.6333,283872,europe,4,4
+Sarajevo,Bosnia_&_Herzegovina,43.8564,18.4131,275524,europe,3,4
+Gijón,Spain,43.5333,-5.7,271780,europe,3,3
+Craiova,Romania,44.3333,23.8167,269506,europe,3,4
+Bay of Santander,Spain,43.4667,-3.8,269335,europe,4,4
+Campo de Gibraltar,Spain,36.1333,-5.45,269294,europe,3,3
+Cairo,Egypt,30.0333,31.2333,10100166,africa,1,2
+Giza,Egypt,29.987,31.2118,9200000,africa,2,2
+Buganda,Buganda,0.331944,32.4181,6575425,africa,2,2
+Borno State,Nigeria,11.5,13.0,5860200,africa,3,3
+Rivers State,Nigeria,4.75,6.83333,5198716,africa,2,3
+Cape Town,South_Africa,-33.9253,18.4239,4710000,africa,2,3
+Bauchi State,Nigeria,10.5,10.0,4676465,africa,3,3
+Nairobi,Kenya,-1.28639,36.8172,4397073,africa,1,2
+Benue State,Nigeria,7.33333,8.75,4253641,africa,3,3
+Cross River State,Nigeria,5.75,8.5,3737517,africa,3,3
+Casablanca,Morocco,33.5333,-7.58333,3359818,africa,4,4
+Enugu State,Nigeria,6.5,7.5,3267837,africa,3,3
+Bamako,Mali,12.6392,-8.00278,2713000,africa,2,3
+Luanda,Angola,-8.83833,13.2344,2571861,africa,2,2
+Central Darfur,Sudan,12.3333,23.4167,2499000,africa,3,3
+Cotonou,Benin,6.36667,2.43333,2401067,africa,3,3
+Gombe State,Nigeria,10.25,11.1667,2365040,africa,4,4
+Ekiti State,Nigeria,7.66667,5.25,2210957,africa,4,4
+Bosaso,Somalia,11.17,49.11,2000000,africa,2,3
+Mongala,DR_Congo,2.15,21.5167,1793564,africa,2,3
+Bayelsa State,Nigeria,4.75,6.08333,1704515,africa,4,4
+Conakry,Guinea,9.50917,-13.7122,1660973,africa,3,3
+Banaadir,Somalia,2.04972,45.2622,1650227,africa,3,3
+North Wollo Zone,Ethiopia,11.8333,39.25,1500303,africa,4,4
+Umuleri,Nigeria,6.33333,7.83333,1500000,africa,3,3
+Sankuru,DR_Congo,-3.51667,23.6,1374239,africa,3,3
+Tshuapa,DR_Congo,-0.733333,19.2,1316855,africa,4,4
+Cacuaco,Angola,-8.67861,13.4917,1279488,africa,4,4
+Antananarivo,Madagascar,-18.9333,47.5167,1275207,africa,4,4
+Jonglei State,South_Sudan,7.4,32.0667,1228824,africa,3,4
+Bulawayo,Zimbabwe,-20.17,28.58,1200337,africa,3,4
+Mbandaka,Democratic_Republic_of_the_Congo,0.0477778,18.2558,1187837,africa,3,3
+Central Equatoria,South_Sudan,4.78333,31.4,1103592,africa,3,3
+Freetown,Sierra_Leone,8.48444,-13.2344,1055964,africa,3,3
+Matola,Mozambique,-25.9622,32.4589,1032197,africa,2,2
+Bujumbura,Burundi,-3.38333,29.3667,1000000,africa,4,4
+Lilongwe,Malawi,-13.9833,33.7833,989318,africa,3,4
+Gode,Ethiopia,5.95265,43.5516,950782,africa,2,2
+Baidoa,Somalia,3.11667,43.65,950000,africa,3,3
+N'Djamena,Chad,12.11,15.05,916000,africa,4,4
+Bunia,Democratic_Republic_of_the_Congo,1.56667,30.25,900666,africa,2,3
+Salé,Morocco,34.0333,-6.8,890403,africa,2,2
+Bangui,Central_African_Republic,4.37333,18.5628,889231,africa,2,2
+Bukavu,Democratic_Republic_of_the_Congo,-2.5,28.8667,870954,africa,3,4
+Degehabur,Ethiopia,8.21667,43.5667,850000,africa,4,4
+Lomé,Togo,6.13194,1.22278,837437,africa,3,3
+Bouaké,Ivory_Coast,7.68333,-5.01667,832371,africa,3,4
+Benghazi,Libya,32.1167,20.0667,807250,africa,1,3
+Blantyre,Malawi,-15.7861,35.0058,800264,africa,3,3
+Lubango,Angola,-14.9167,13.5,776246,africa,2,3
+Maiduguri,Nigeria,11.8333,13.15,758700,africa,3,4
+Burao,Somaliland,9.52789,45.5345,750211,africa,2,2
+Suez,Egypt,29.9667,32.55,744189,africa,2,2
+Nampula,Mozambique,-15.1167,39.2667,743125,africa,3,3
+Pretoria,South_Africa,-25.7461,28.1881,741651,africa,2,3
+Zaria,Nigeria,11.0667,7.7,736000,africa,2,2
+Jos North,Nigeria,9.91667,8.9,729300,africa,2,2
+Enugu,Nigeria,6.45278,7.51111,722664,africa,2,2
+Huambo,Angola,-12.7767,15.7347,713134,africa,3,3
+Libreville,Gabon,0.390278,9.45417,703904,africa,3,3
+Menabe,Madagascar,-20.3,44.28,700577,africa,2,2
+Cocody,Ivory_Coast,5.35,-3.96667,692583,africa,2,3
+Lokoja,Nigeria,7.80194,6.74417,692050,africa,3,3
+Bakori,Nigeria,11.55,7.43333,641576,africa,2,3
+Likasi,Democratic_Republic_of_the_Congo,-10.9814,26.7333,635463,africa,2,2
+Meknes,Morocco,33.895,-5.55472,632079,africa,3,3
+Jos,Nigeria,9.91667,8.89028,622802,africa,1,1
+Uíge,Angola,-7.61667,15.05,616605,africa,3,3
+Malanje,Angola,-9.53333,16.35,604215,africa,2,2
+Garoua,Cameroon,9.3,13.4,600000,africa,3,3
+Nakuru,Kenya,-0.3,36.0667,570674,africa,2,3
+Benguela,Angola,-12.55,13.4167,561775,africa,2,3
+Bloemfontein,South_Africa,-29.1167,26.2167,556000,africa,4,4
+Rustenburg,South_Africa,-25.6667,27.2428,549575,africa,2,3
+Zagazig,Egypt,30.5667,31.5,529200,africa,3,4
+Touba,Senegal,14.8667,-15.8833,529176,africa,2,3
+Juba,South_Sudan,4.85,31.6,525953,africa,2,2
+Jowhar,Somalia,2.78333,45.5,520000,africa,3,3
+Jos South,Nigeria,9.76667,8.8,506716,africa,2,2
+Bissau,Guinea-Bissau,11.85,-15.5667,492004,africa,3,3
+Uttar Pradesh,India,26.85,80.91,241066874,asia,2,4
+Maharashtra,India,18.97,72.82,112374333,asia,1,3
+Pearl River Delta,Hong_Kong,22.5333,113.733,78314535,asia,3,4
+Andhra Pradesh,India,14.9028,79.09,49386799,asia,3,3
+Sindh,Pakistan,26.35,68.85,47854510,asia,2,2
+Mekong Delta,Vietnam,10.04,105.8,21492987,asia,4,4
+Tokyo,Japan,35.6897,139.692,13988129,asia,1,2
+Tianjin,China,39.1336,117.205,13866009,asia,2,3
+Zhengzhou,China,34.764,113.684,12600574,asia,2,3
+Mumbai,India,19.0761,72.8775,12478447,asia,1,2
+Baoding,China,38.874,115.464,11194382,asia,2,2
+Linyi,China,35.1038,118.356,11018365,asia,3,3
+Qingdao,China,36.0669,120.383,10071722,asia,2,3
+Ho Chi Minh City,Vietnam,10.7756,106.702,8993082,asia,4,4
+Ganzhou,China,25.831,114.933,8970014,asia,3,3
+Quanzhou,People's_Republic_of_China,24.8744,118.676,8782285,asia,3,3
+Bangalore,India,12.9789,77.5917,8443675,asia,1,2
+Fuzhou,China,26.0743,119.296,8291268,asia,3,3
+Riyadh,Saudi_Arabia,24.6333,46.7167,7676654,asia,1,3
+Pune,India,18.5203,73.8567,7400000,asia,1,2
+Luoyang,People's_Republic_of_China,34.6197,112.454,7056699,asia,3,3
+Zhanjiang,China,21.2701,110.357,6981236,asia,3,3
+Hyderabad,India,17.385,78.4867,6809970,asia,1,2
+Riau,Indonesia,0.54,101.45,6493603,asia,3,3
+Nanchang,China,28.683,115.858,6255007,asia,3,3
+Dazhou,China,31.2093,107.468,5385422,asia,3,3
+Zhaotong,People's_Republic_of_China,27.338,103.717,5213533,asia,4,4
+Yueyang,People's_Republic_of_China,29.3564,113.129,5051922,asia,2,3
+Yuncheng,People's_Republic_of_China,35.0267,111.007,4774508,asia,3,3
+Huai'an,China,33.551,119.113,4556230,asia,3,3
+Zhongshan,China,22.517,113.393,4418060,asia,3,3
+Emirate of Dubai,United_Arab_Emirates,23.5,54.5,4177059,asia,4,4
+Anqing,China,30.5318,117.115,4165284,asia,2,2
+Qiqihar,China,47.3549,123.918,4067489,asia,3,3
+Linfen,People's_Republic_of_China,36.088,111.519,3976481,asia,2,3
+Qingyuan,People's_Republic_of_China,23.682,113.056,3969473,asia,3,4
+Chuzhou,China,32.256,118.333,3937868,asia,3,3
+Binzhou,People's_Republic_of_China,37.383,117.971,3928568,asia,2,2
+Meizhou,China,24.289,116.122,3873239,asia,3,3
+Zhuzhou,China,27.829,113.133,3855609,asia,3,3
+Suihua,People's_Republic_of_China,46.654,126.969,3756167,asia,3,3
+Tripura,India,23.84,91.28,3671032,asia,2,2
+Bandung Regency,Indonesia,-7.0212,107.53,3666156,asia,4,4
+Lucknow,India,26.85,80.95,3500000,asia,2,2
+Hohhot,China,40.842,111.657,3446100,asia,3,3
+Sabah,Malaysia,5.25,117.0,3418785,asia,2,2
+Lüliang,People's_Republic_of_China,37.519,111.145,3398431,asia,4,4
+Huzhou,China,30.8925,120.088,3367579,asia,3,3
+Busan,South_Korea,35.18,129.075,3331444,asia,2,2
+Anshan,China,41.108,122.994,3325372,asia,2,2
+Bengbu,People's_Republic_of_China,32.917,117.389,3296408,asia,2,3
+Suining,China,30.533,105.593,3252551,asia,2,2
+Zhenjiang,China,32.188,119.424,3210418,asia,3,3
+Leshan,China,29.552,103.766,3160168,asia,3,3
+Pyongyang,North_Korea,39.0194,125.738,3060900,asia,1,2
+Huainan,China,32.6314,117.019,3033528,asia,3,3
+Rizhao,China,35.417,119.527,2968365,asia,4,4
+Meghalaya,India,25.57,91.88,2964007,asia,3,3
+Tongliao,China,43.654,122.243,2873168,asia,3,4
+Longnan,China,33.3702,104.96,2855555,asia,2,2
+Bazhong,China,31.868,106.748,2712894,asia,3,4
+Baotou,China,40.6213,109.953,2709378,asia,3,3
+Ankang,China,32.6854,109.029,2656000,asia,2,3
+Malang Regency,Indonesia,-7.9797,112.63,2654448,asia,4,4
+Garut Regency,Indonesia,-7.2027,107.886,2604787,asia,4,4
+Suizhou,China,31.69,113.382,2580000,asia,3,3
+Yuxi,People's_Republic_of_China,24.347,102.527,2568000,asia,3,3
+Bekasi,Indonesia,-6.2349,106.992,2564940,asia,2,3
+Longyan,China,25.076,117.017,2559545,asia,2,2
+Janakpur Zone,Nepal,27.1667,85.9167,2557004,asia,4,4
+Sanaa,Yemen,15.3483,44.2064,2545000,asia,3,3
+Pu'er City,China,22.7868,100.977,2542898,asia,3,3
+Lishui,China,28.468,119.923,2506600,asia,3,3
+Zigong,People's_Republic_of_China,29.339,104.779,2489256,asia,2,3
+Sarawak,Malaysia,2.8,113.883,2453000,asia,3,4
+Bandung,Indonesia,-6.912,107.61,2452943,asia,2,2
+Zhuhai,China,22.2716,113.577,2439585,asia,3,3
+Medan,Indonesia,3.58944,98.6739,2435252,asia,2,2
+Huludao,People's_Republic_of_China,40.711,120.837,2434194,asia,4,4
+Nagpur,India,21.1498,79.0806,2405665,asia,2,3
+Tieling,People's_Republic_of_China,42.2866,123.842,2388294,asia,3,3
+Yunfu,People's_Republic_of_China,22.934,112.043,2383400,asia,2,3
+Nagoya,Japan,35.1833,136.9,2331078,asia,2,3
+Ziyang,China,30.129,104.627,2308631,asia,3,3
+Anshun,People's_Republic_of_China,26.2531,105.948,2297339,asia,3,3
+Baku,Azerbaijan,40.3953,49.8822,2293100,asia,2,2
+Mudanjiang,China,44.5514,129.633,2290208,asia,3,4
+Qingyang,China,35.7091,107.644,2179716,asia,2,3
+Ma'anshan,China,31.669,118.507,2159930,asia,4,4
+Depok,Indonesia,-6.394,106.823,2056400,asia,2,2
+Puning,China,23.298,116.166,2054703,asia,2,2
+Sanmenxia,China,34.7732,111.2,2034872,asia,3,3
+Baicheng,People's_Republic_of_China,45.62,122.838,2033058,asia,3,3
+Nagaland,India,25.67,94.12,1980602,asia,2,3
+Brebes Regency,Indonesia,-7.06667,108.883,1978759,asia,4,4
+Sapporo,Japan,43.0667,141.35,1973832,asia,3,3
+Huaibei,China,33.956,116.798,1970265,asia,4,4
+Peshawar,Pakistan,34.0144,71.5675,1970042,asia,4,4
+Nagaon,India,26.3504,92.6796,1892550,asia,3,3
+Multan,Pakistan,30.1978,71.4697,1871843,asia,2,2
+Tonghua,People's_Republic_of_China,41.7283,125.94,1812114,asia,2,3
+Bhopal,India,23.25,77.4167,1798218,asia,3,3
+Penang,Malaysia,5.4025,100.365,1783000,asia,2,2
+Baiyin,China,36.5451,104.139,1740800,asia,3,4
+Tianmen,People's_Republic_of_China,30.664,113.167,1731482,asia,2,3
+Ghaziabad,India,28.67,77.42,1729000,asia,3,3
+Visakhapatnam,India,17.7042,83.2978,1728128,asia,4,4
+Mandalay,Myanmar_(Burma),21.9831,96.0844,1726889,asia,2,3
+Ulanqab,China,40.994,113.132,1706328,asia,4,4
+Patna,India,25.6,85.1,1683200,asia,2,2
+Mosul,Iraq,36.34,43.13,1683000,asia,1,2
+Bayannur,China,40.743,107.387,1669915,asia,3,3
+Fuxin,People's_Republic_of_China,42.022,121.67,1647280,asia,3,3
+Ludhiana,India,30.91,75.85,1618879,asia,3,4
+Subang Regency,Indonesia,-6.5711,107.762,1608594,asia,4,4
+Liaoyang,People's_Republic_of_China,41.279,123.176,1604580,asia,3,4
+Fukuoka,Japan,33.5833,130.4,1603543,asia,3,3
+Coimbatore,India,11.0168,76.9558,1584719,asia,4,4
+Mecca,Saudi_Arabia,21.4225,39.8233,1578722,asia,2,2
+Meerut,India,28.98,77.71,1571434,asia,2,3
+Melbourne,Australia,-37.8142,144.963,4917750,oceania,1,2
+Brisbane,Australia,-27.4678,153.028,2582007,oceania,1,3
+Canberra,Australia,-35.2931,149.127,453558,oceania,1,2
+Geelong,Australia,-38.15,144.35,264866,oceania,2,2
+Hobart,Australia,-42.8806,147.325,247068,oceania,2,3
+Townsville,Australia,-19.25,146.817,180820,oceania,2,2
+Cairns,Australia,-16.92,145.78,153951,oceania,2,3
+Toowoomba,Australia,-27.5667,151.95,140303,oceania,3,3
+Bendigo,Australia,-36.75,144.267,103034,oceania,2,3
+Mandurah,Australia,-32.5289,115.723,96736,oceania,3,4
+Coffs Harbour,Australia,-30.3022,153.119,78759,oceania,3,3
+Bundaberg,Australia,-24.8661,152.349,50148,oceania,3,4
+Blacktown,Australia,-33.7711,150.906,47176,oceania,2,2
+Nadi,Fiji,-17.8,177.417,42284,oceania,2,2
+Apia,Samoa,-13.8333,-171.75,41611,oceania,2,2
+Geraldton,Australia,-28.7744,114.609,37648,oceania,2,3
+Bankstown,Australia,-33.9181,151.035,34933,oceania,2,2
+Mount Gambier,Australia,-37.8294,140.783,33233,oceania,3,3
+Busselton,Australia,-33.6478,115.346,27233,oceania,4,4
+Traralgon,Australia,-38.1958,146.54,26907,oceania,4,4
+Païta,France,-22.1337,166.35,24563,oceania,3,3
+Goulburn,Australia,-34.7547,149.619,23835,oceania,3,3
+Dee Why,Australia,-33.7544,151.285,21518,oceania,2,3
+Burnie,Australia,-41.0636,145.875,19918,oceania,2,2
+Lidcombe,Australia,-33.8646,151.046,19627,oceania,2,3
+Wangaratta,Australia,-36.3583,146.312,19318,oceania,3,4
+Mount Isa,Australia,-20.7261,139.494,18727,oceania,2,2
+Luganville,Vanuatu,-15.5333,167.167,18062,oceania,3,4
+Mount Druitt,Australia,-33.7722,150.819,16726,oceania,4,4
+Bossley Park,Australia,-33.8634,150.884,14585,oceania,3,3
+Morwell,Australia,-38.2333,146.4,14389,oceania,2,2
+Toongabbie,Australia,-33.7861,150.956,14337,oceania,4,4
+Turramurra,Australia,-33.7338,151.13,11919,oceania,4,4
+Caringbah,Australia,-34.0452,151.122,11658,oceania,3,3
+Bondi Beach,Australia,-33.891,151.278,11656,oceania,3,3
+Condell Park,Australia,-33.925,151.008,11574,oceania,3,3
+Toowong,Australia,-27.4816,152.99,10830,oceania,3,3
+Mount Pritchard,Australia,-33.8981,150.901,9955,oceania,4,4
+Lifou,France,-20.9667,167.233,9195,oceania,2,3
+Georges Hall,Australia,-33.9122,150.986,9038,oceania,2,3

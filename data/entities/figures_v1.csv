@@ -1,0 +1,301 @@
+name,death_year,country,occupation,zipf,n_tok_space
+Lady Sun,265,,,4.66,2
+historical Jesus,33,,carpenter; preacher; social activist; nan,4.51,2
+Sun Ben,208,Eastern Han Dynasty,military personnel,4.51,2
+Innocent I,417,,religious figure,4.45,3
+Alexander I,116,,religious figure,4.4,2
+John of Egypt,394,ancient Rome,,4.4,3
+Alexander the Great,-323,Macedonia,politician,4.39,3
+Min Sun,-480,,philosopher,4.31,2
+Ran Min,352,Ran Wei; Later Zhao,military personnel,4.29,2
+Mary of Egypt,421,Egypt; ancient Rome,hermit; prostitute,4.28,3
+Saint Faith,303,ancient Rome,,4.27,2
+Ma Tie,211,,,4.26,2
+Li Can,471,,,4.25,2
+Leo I,461,ancient Rome,artist,4.23,2
+Fan Ye,445,China,researcher,4.17,2
+Fan Li,-448,Chu,politician,4.17,2
+Sun Bin,-316,Qi; Wei,artist,4.15,2
+Alexander of Rome,289,,,4.12,3
+Saint Patrick,461,,religious figure,4.09,2
+Lawrence of Rome,258,ancient Rome,deacon,4.07,3
+Li Ban,334,,politician,4.07,2
+Kong Li,-483,,,4.05,2
+Martin of Tours,397,,religious figure,4.04,3
+Julia Minor,-51,ancient Rome,,4.0,2
+Saint Barbara,306,,thaumaturge; prisoner,3.99,2
+Alexander of Jerusalem,251,ancient Rome,religious figure,3.99,3
+Margaret the Virgin,307,,,3.98,3
+He Jin,189,Eastern Han Dynasty,politician,3.98,2
+Moses the Black,407,,artist,3.97,3
+Wang Can,217,Eastern Han Dynasty,artist,3.95,2
+John the Good,651,,religious figure,5.31,3
+Paul I,767,Papal States,religious figure,5.03,2
+John X,929,Papal States,religious figure,4.98,2
+Richard I,996,,military personnel,4.79,2
+Michael II,829,Byzantine Empire,military personnel,4.75,2
+Louis the Child,911,,monarch,4.7,3
+Charles the Child,866,,monarch,4.66,3
+Charles the Simple,929,,monarch,4.6,3
+Robert I of France,923,,politician,4.59,4
+Louis the German,876,,monarch,4.58,3
+Charles the Fat,888,,monarch,4.51,3
+Michael III,867,Byzantine Empire,politician,4.5,2
+Lady Ma,939,,politician,4.46,2
+Louis the Younger,882,,monarch,4.45,4
+Louis V of France,987,,politician,4.45,4
+Charles the Younger,811,,monarch,4.43,4
+Louis the Blind,928,,politician,4.34,3
+Louis II of Italy,875,,monarch,4.33,4
+Saint David,589,Kingdom of Dyfed,religious figure,4.33,2
+Justin I,527,Byzantine Empire,politician,4.32,2
+Louis III of France,882,,monarch,4.3,4
+Stephen the Younger,764,Byzantine Empire,monk,4.28,4
+Lady Pan,989,,,4.28,2
+Saint Lie,533,,religious figure,4.27,2
+Stephen III,772,Papal States,religious figure,4.26,2
+Li He,816,Tang Empire,artist,4.25,2
+Li You,829,,military personnel,4.25,2
+Justin II,578,Byzantine Empire,politician,4.24,2
+Li Men,877,,,4.23,2
+Li Run,876,,,4.23,2
+Robert I,1142,Poland,religious figure,4.85,2
+Richard I of England,1199,Kingdom of England,monarch,4.62,4
+Henry X,1139,Germany,sovereign,4.61,2
+Henry I of England,1135,,artist,4.59,4
+Richard II,1026,,military personnel,4.59,2
+Henry V,1125,Holy Roman Empire,artist,4.57,2
+David I of Scotland,1153,,sovereign,4.55,4
+Henry the Young King,1183,Kingdom of England,primate,4.54,4
+Henry I of France,1060,France,politician,4.53,4
+William II of England,1100,,politician,4.52,4
+Roman the Great,1205,,aristocrat,4.48,3
+Henry II of England,1189,Kingdom of England,monarch,4.45,4
+Robert II of France,1031,France,politician,4.45,4
+Stephen of England,1154,United Kingdom; Kingdom of England,artist,4.41,3
+Louis III,1190,Germany,,4.41,2
+Arthur I,1203,Duchy of Brittany; Kingdom of England,aristocrat,4.41,2
+Henry of Scotland,1152,Kingdom of Scotland,feudatory,4.41,3
+Richard III,1027,,politician,4.4,2
+George I of Georgia,1027,Georgia,politician,4.36,4
+Innocent II,1143,,religious figure,4.35,3
+John of Oxford,1200,United Kingdom,religious figure,4.34,3
+Ali I,1145,,,4.31,2
+William Iron Arm,1046,,condottiero,4.3,3
+David V of Georgia,1155,Georgia,politician,4.29,4
+George II of Georgia,1112,Georgia,politician,4.27,4
+Jean II,1089,,religious figure,4.27,2
+Alexander of Paris,1190,France,artist,4.26,3
+Sun Di,1169,Song dynasty,researcher,4.24,2
+Alexander I of Scotland,1124,Kingdom of Scotland,politician,4.21,4
+Alexander III,1181,,artist,4.2,2
+John of France,1248,,,4.8,3
+Thomas of York,1260,,philosopher,4.73,3
+John of Paris,1304,France,religious figure,4.71,3
+William de York,1256,,religious figure,4.63,3
+John of Scotland,1314,Kingdom of Scotland,sovereign,4.6,3
+David of Scotland,1219,Kingdom of Scotland,aristocrat,4.55,3
+Robert de St John,1267,,,4.52,4
+Louis X of France,1316,France,ruler,4.48,4
+Robert I of Scotland,1329,Kingdom of Scotland,warrior,4.45,4
+John of Ford,1214,,religious figure,4.45,3
+Thomas of Ireland,1317,,artist,4.44,3
+Robert of Holy Island,1283,,religious figure,4.43,4
+Edward I of England,1307,Kingdom of England,monarch,4.42,4
+Henry the Friendly,1327,,aristocrat,4.39,3
+John I of Sweden,1222,Sweden,politician,4.36,4
+Peter Wise,1338,,,4.36,2
+Innocent V,1276,France,religious figure,4.35,3
+Henry III the White,1266,,aristocrat,4.35,4
+Edward II of England,1327,Wales; Kingdom of England,aristocrat,4.32,4
+Henry III of England,1272,,politician,4.31,4
+Sir John de Grey,1266,Kingdom of England,military personnel,4.29,4
+Richard de Grey,1271,,military personnel,4.26,3
+James of Saint George,1309,Wales; France,architect,4.25,4
+Matthew Paris,1259,Kingdom of England,artist,4.24,2
+Henry de Grey,1219,,,4.24,3
+Walter de Washington,1264,,,4.24,3
+Roger de St John,1265,,,4.24,4
+Martin IV,1285,France,politician,4.22,2
+John de Graham,1298,,military personnel,4.22,3
+William Russell,1311,,knight,4.22,2
+James I,1362,France,military personnel,5.1,2
+John Ball,1381,Kingdom of England,politician,4.88,2
+John of Bar,1415,,military personnel,4.8,3
+Robert Long,1447,,politician,4.8,2
+Paul II,1471,Republic of Venice,religious figure,4.72,2
+Mary of York,1482,,aristocrat,4.68,3
+William II,1345,,politician,4.64,2
+John II of France,1364,France,sovereign,4.6,4
+Henry Green,1399,Kingdom of England,politician,4.59,2
+John de St Paul,1362,,religious figure,4.59,4
+Charles II,1431,France,feudatory,4.58,2
+Martin V,1431,Papal States,religious figure,4.57,2
+James I of Scotland,1437,Kingdom of Scotland,artist,4.54,4
+Henry of Bar,1397,,aristocrat,4.53,3
+Richard II of England,1400,Kingdom of England,monarch,4.48,4
+Henry V of England,1422,Kingdom of England,politician,4.46,4
+Thomas Wins,1465,Germany,politician,4.46,2
+Charles V of France,1380,France,monarch,4.43,4
+John Grey,1439,Kingdom of England,military personnel,4.43,2
+David II of Scotland,1371,Kingdom of Scotland,monarch,4.42,4
+James II of Scotland,1460,Kingdom of Scotland,politician,4.42,4
+Edward II,1352,France,feudatory,4.4,2
+Robert II of Scotland,1390,Kingdom of Scotland,politician,4.35,4
+Henry V of Iron,1369,,aristocrat,4.35,4
+Walter Back,1466,,religious figure,4.35,2
+Alexander V,1410,,religious figure,4.31,2
+La Hire,1443,France,military personnel,4.31,2
+Simon Richard,1381,France,,4.31,2
+George V of Georgia,1346,Georgia,politician,4.28,4
+Philip the Good,1467,France,politician,4.27,3
+John of God,1550,Portugal,mercenary; nurse; bookseller; philosopher; herder,5.16,3
+John Major,1550,Scotland; United Kingdom,researcher,5.04,2
+John of the Cross,1591,Spain,artist,4.85,4
+Thomas More,1535,Kingdom of England,researcher,4.83,2
+Paul V,1621,Papal States,religious figure,4.74,2
+John Wood,1484,,politician,4.68,2
+Christian II,1611,Germany,,4.64,2
+John Johnson,1594,United Kingdom of Great Britain and Ireland,artist,4.63,2
+Louis V,1544,Germany,,4.62,2
+Mary I of England,1558,Kingdom of England,politician,4.61,4
+Paul III,1549,France,religious figure,4.48,2
+John Davis,1605,United Kingdom,explorer; seafarer,4.44,2
+James V of Scotland,1542,Kingdom of Scotland,artist,4.43,4
+Elizabeth of York,1503,Kingdom of England,politician,4.42,3
+Henry II of France,1559,France,politician,4.41,4
+Charles III,1553,,aristocrat,4.39,2
+Jan II the Good,1532,,aristocrat,4.39,4
+Elizabeth I of England,1603,Kingdom of England,politician,4.38,4
+Eric II,1508,,teacher,4.38,2
+Edward Hall,1547,Kingdom of England,researcher,4.36,2
+Edward V of England,1483,Kingdom of England,politician,4.33,4
+Richard III of England,1485,Kingdom of England,monarch,4.32,4
+William the Silent,1584,Kingdom of the Netherlands,politician,4.31,3
+Richard Grey,1483,,politician,4.31,2
+Francis II,1488,,politician,4.3,2
+Paul IV,1559,Holy See,politician,4.29,2
+Robert Persons,1610,Kingdom of England,religious figure,4.29,2
+Jean Hey,1505,France; Duchy of Burgundy,artist,4.29,2
+James III of Scotland,1488,Kingdom of Scotland,politician,4.28,4
+Anne of York,1511,,aristocrat,4.28,3
+John Law,1729,France; Kingdom of Great Britain,businessperson,5.12,2
+John the Russian,1730,,confessor of the faith,4.85,3
+Peter the Great,1725,Russian Empire; Tsardom of Russia,statesperson; ruler,4.84,3
+William Say,1666,British,politician,4.84,2
+Thomas May,1650,Kingdom of England,researcher,4.81,2
+John Gay,1732,Kingdom of Great Britain,artist,4.78,2
+Henry More,1687,Kingdom of England,philosopher,4.73,2
+Mary Read,1721,Kingdom of Great Britain,pirate,4.71,2
+Thomas Street,1689,Kingdom of England,astronomer,4.71,2
+Henry Every,1699,United Kingdom,privateer; pirate,4.7,2
+Michael I of Russia,1645,Tsardom of Russia,monarch,4.69,4
+John George II,1693,Germany,aristocrat,4.64,3
+Charles I of England,1649,Kingdom of England,politician,4.61,4
+John Ray,1705,United Kingdom,researcher,4.61,2
+John the younger,1622,Denmark,aristocrat,4.61,3
+James II of England,1701,Kingdom of England; Kingdom of Scotland,politician,4.6,4
+Mary II,1694,Kingdom of England,politician,4.58,2
+John Blow,1708,England; Kingdom of Great Britain,artist,4.53,2
+Andrew White,1656,Kingdom of England,artist,4.52,2
+George Fox,1691,Kingdom of England,religious figure,4.51,2
+William Lee,1639,United Kingdom of Great Britain and Ireland,inventor,4.5,2
+Charles II of England,1685,Kingdom of England,politician,4.47,4
+Peter II of Russia,1730,Russian Empire,politician,4.46,4
+Edward Low,1724,Kingdom of Great Britain,pirate,4.46,2
+Jan Six I,1700,Netherlands,artist,4.44,3
+Louis I of Spain,1724,Spain,politician,4.39,4
+John Harris,1719,Kingdom of Great Britain,researcher,4.39,2
+Adam Brand,1713,Germany,artist,4.38,2
+Innocent X,1655,Papal States,politician,4.38,3
+Thomas Ford,1648,United Kingdom of Great Britain and Ireland,athlete,4.34,2
+George I,1803,Germany,aristocrat,5.04,2
+James Baby,1833,Canada,politician,4.88,2
+George Washington,1799,United States of America; Kingdom of Great Britain,politician,4.76,2
+David Brown,1829,United States of America,translator,4.76,2
+Thomas Young,1829,United Kingdom of Great Britain and Ireland,researcher,4.74,2
+James Justice,1763,Kingdom of Scotland,researcher,4.73,2
+John Thomas,1776,United States of America,military personnel,4.73,2
+Paul of the Cross,1775,Duchy of Savoy,religious figure,4.71,4
+Paul I of Russia,1801,Russian Empire,philosopher,4.67,4
+Peter August,1775,Prussia,aristocrat,4.67,2
+August Christian,1812,Germany,aristocrat,4.67,2
+Charles Green,1771,Kingdom of Great Britain,astronomer; explorer,4.61,2
+John Bird,1776,Kingdom of Great Britain,astronomer,4.56,2
+William Jack,1822,Kingdom of Great Britain; United Kingdom of Great Britain and Ireland,researcher,4.55,2
+August Beer,1863,Germany,researcher,4.55,2
+Michael Beer,1833,Germany,artist,4.55,2
+James Cook,1779,Kingdom of Great Britain,cartographer; naval officer; explorer; seafarer,4.52,2
+Robert Wood,1771,Kingdom of Great Britain,researcher,4.51,2
+Charles Louis,1806,Germany,military personnel,4.49,2
+William Prince,1824,United States of America,politician,4.49,2
+Joseph Black,1799,Kingdom of Great Britain,researcher,4.47,2
+Edward Young,1765,Kingdom of Great Britain,artist,4.47,2
+Charles X of France,1836,Spain; France,politician,4.46,4
+Peter the Wild Boy,1785,Germany,,4.45,4
+Adam Smith,1790,Kingdom of Great Britain,artist,4.4,2
+Joseph Smith,1844,United States of America,politician,4.37,2
+James Harris,1780,Kingdom of Great Britain,politician,4.36,2
+Elizabeth of Russia,1761,Russian Empire,monarch,4.34,3
+Edward Stone,1768,Kingdom of Great Britain,researcher,4.34,2
+John Austin,1859,Kingdom of Great Britain; United Kingdom of Great Britain and Ireland,lawyer,4.32,2
+Jack London,1916,Mexico,artist,4.69,2
+Paul Singer,1911,Germany,politician,4.4,2
+George Grey,1898,United Kingdom of Great Britain and Ireland,politician,4.37,2
+George Sand,1876,France,artist,4.34,2
+Andrew Johnson,1875,United States of America,politician,4.34,2
+Henry Ford,1947,United States of America,artist,4.3,2
+Queen Victoria,1901,United Kingdom of Great Britain and Ireland,artist,4.3,2
+Henry Miller,1916,Germany,breeder,4.3,2
+Max Simon,1961,Germany,politician,4.26,2
+Billy the Kid,1881,United States of America,cowboy; serial killer; gambler; ranch hand,4.24,3
+Sitting Bull,1890,United States of America,tribal chief,4.23,2
+Oscar Paul,1898,Germany,artist,4.23,2
+Mary Anderson,1953,United States of America,inventor,4.22,2
+George I of Greece,1913,Denmark; Greece,politician,4.21,4
+George Lawrence Price,1918,Canada,military personnel,4.19,3
+Anne Frank,1945,Germany,artist,4.18,2
+Miles Franklin,1954,Austria; Australia,artist,4.15,2
+William Terry,1888,United States of America,politician,4.15,2
+Albert Peter,1937,Germany,researcher,4.15,2
+William Thomas Hamilton,1888,United States of America,politician,4.12,3
+John Joseph Francis,1901,,politician,4.12,3
+Walter Gross,1945,Germany; Nazi Germany; Weimar Republic,politician,4.1,2
+Amy Johnson,1941,United Kingdom; United Kingdom of Great Britain and Ireland,military personnel,4.09,2
+Chris Watson,1941,Chile; Australia,politician,4.09,2
+Ken Johnson,1941,United Kingdom; United Kingdom of Great Britain and Ireland,artist,4.09,2
+George Richmond,1896,United Kingdom of Great Britain and Ireland,artist,4.07,2
+Walter Gordon,1939,Germany,researcher,4.06,2
+Joseph Albert,1886,Germany,artist,4.06,2
+Anne Elizabeth Ball,1872,Ireland,researcher,4.04,3
+Anne Anderson,1952,United Kingdom; United Kingdom of Great Britain and Ireland,artist,4.04,2
+John Paul I,1978,Italy; Kingdom of Italy,artist,4.87,3
+James Brown,2006,United States of America,artist,4.76,2
+Little Richard,2020,United States of America,artist,4.75,2
+Park Won-soon,2020,South Korea,politician,4.74,4
+Louis King,1962,United States of America,artist,4.66,2
+Man Ray,1976,United States of America,artist,4.66,2
+John Paul II,2005,Poland,researcher,4.64,3
+Steve Jobs,2011,United States of America,researcher,4.52,2
+Max Born,1970,United Kingdom; United Kingdom of Great Britain and Ireland; German Reich,researcher,4.52,2
+Chris Wood,1983,United Kingdom,artist,4.49,2
+Michael Jackson,2009,United States of America,athlete,4.46,2
+John Lewis,2020,United States of America,politician,4.43,2
+Michael Wilson,1978,United States of America,artist,4.42,2
+Major Harris,2012,United States of America,artist,4.38,2
+John Francis,2012,United Kingdom,artist,4.35,2
+Robert Wise,2005,United States of America,artist,4.35,2
+John Wayne,1979,United States of America,athlete,4.33,2
+Martin Roman,1996,United States of America; Germany,artist,4.3,2
+Peter Alexander,2011,Austria,artist,4.28,2
+Lee Hills,2000,United States of America,journalist,4.27,2
+Elizabeth Taylor,2011,United States of America; United States of America; United Kingdom,artist,4.25,2
+Johnny Cash,2003,United States of America,artist,4.25,2
+Phil Hill,2008,United States of America,racing automobile driver; formula one driver,4.24,2
+George William Gray,2013,United Kingdom,researcher,4.24,3
+Larry King,2021,United States of America,artist,4.23,2
+Roy Black,1991,Germany,artist,4.22,2
+Grace Kelly,1982,United States of America; Monaco,artist,4.2,2
+Bruce Lee,1973,United States of America; Hong Kong,artist,4.19,2
+Max Gordon,1989,,artist,4.19,2
+Albert King,1992,United States of America,artist,4.19,2

@@ -1,0 +1,501 @@
+text,zipf,n_tok_space,matched_geo,zipf_geo,delta_zipf
+almanac,3.06,3,Andhra Pradesh,3.06,0.0
+polony,1.01,2,Ankang,0.0,1.01
+adolescence,3.36,1,Ankara,3.36,0.0
+bactericide,1.28,2,Annaba,1.28,0.0
+mopper,1.01,2,Anqing,0.0,1.01
+advertizing,1.57,2,Anshan,1.57,0.0
+arctangent,1.09,3,Anshun,1.09,0.0
+borosilicate,2.09,4,Antananarivo,2.09,0.0
+ferroconcrete,1.01,4,Anápolis,0.0,1.01
+aldosterone,2.21,2,Apia,2.21,0.0
+assonance,1.75,3,Apodaca,1.75,0.0
+aerology,1.01,2,Apopa,0.0,1.01
+absinth,1.26,2,Apure,1.26,0.0
+altazimuth,1.1,3,Aracaju,1.1,0.0
+abrasion,2.91,2,Aragon,2.91,0.0
+abatis,1.33,2,Aragua,1.33,0.0
+eulogist,1.01,4,Arcahaie,0.0,1.01
+atheroma,1.55,3,Avellaneda,1.55,0.0
+airman,2.88,2,Bahia,2.88,0.0
+featherbedding,1.02,3,Baicheng,0.0,1.02
+anorectic,1.39,3,Baidoa,1.39,0.0
+filmdom,1.02,3,Baiyin,0.0,1.02
+atonement,3.09,3,Baja California,3.09,0.0
+mademoiselle,2.98,4,Baja California Sur,3.0,-0.02
+mandril,1.01,2,Bakori,0.0,1.01
+amulet,2.99,2,Baku,2.99,0.0
+amateur,4.22,1,Baltimore,4.22,0.0
+adrenalectomy,1.23,4,Balıkesir,1.23,0.0
+adverb,2.55,2,Bamako,2.55,0.0
+hemorrhoidectomy,1.01,3,Banaadir,0.0,1.01
+acidification,2.73,2,Bandung,2.73,0.0
+doppelganger,2.61,4,Bandung Regency,2.61,0.0
+accomplishment,3.69,1,Bangalore,3.69,0.0
+assizes,2.27,2,Bangui,2.27,0.0
+aeon,2.64,2,Bankstown,2.64,0.0
+bilgewater,1.01,2,Baní,0.0,1.01
+atomism,1.76,2,Baoding,1.76,0.0
+abettor,1.35,3,Baotou,1.35,0.0
+jinrikisha,1.01,4,Barcelonès,0.0,1.01
+adieu,2.83,2,Bari,2.83,0.0
+bipedalism,1.55,4,Barquisimeto,1.55,0.0
+amplification,3.12,2,Barrie,3.12,0.0
+abutment,2.35,3,Bauchi State,2.35,0.0
+affricate,1.3,3,Bauru,1.3,0.0
+abstinence,3.18,2,Bavaria,3.18,0.0
+belligerent,3.04,4,Bay of Santander,3.04,0.0
+auspex,1.23,2,Bayamo,1.23,0.0
+fleapit,1.02,3,Bayannur,0.0,1.02
+bioluminescence,2.13,4,Bayelsa State,2.13,0.0
+cocoyam,1.02,3,Bazhong,0.0,1.02
+accentuation,1.89,2,Bekasi,1.89,0.0
+alligator,3.32,2,Belgrade,3.32,0.0
+accordionist,1.81,2,Belém,1.81,0.0
+agonist,2.83,2,Bendigo,2.83,0.0
+patka,1.01,2,Bengbu,0.0,1.01
+accusation,3.6,1,Benghazi,3.6,0.0
+bilberry,1.87,2,Benguela,1.87,0.0
+archeologist,2.42,3,Benue State,2.42,0.0
+aba,3.32,1,Bergen,3.32,0.0
+amendment,4.38,1,Berlin,4.38,0.0
+counterfoil,1.01,2,Betim,0.0,1.01
+anathema,2.79,3,Bhopal,2.79,0.0
+asepsis,1.14,4,Białystok,1.14,0.0
+nonbeing,1.01,2,Binzhou,0.0,1.01
+blamelessness,1.01,2,Bisonó,0.0,1.01
+aikido,2.67,3,Bissau,2.67,0.0
+ambler,2.36,2,Blacktown,2.36,0.0
+accompanist,2.3,3,Blantyre,2.3,0.0
+ventriloquist,2.45,4,Bloemfontein,2.45,0.0
+autogyro,1.22,3,Blumenau,1.22,0.0
+afterglow,2.64,3,Boca Chica,2.64,0.0
+asthmatic,2.63,3,Bogotá,2.63,0.0
+airliner,3.07,2,Bohemia,3.07,0.0
+bedspring,1.01,2,Bonao,0.0,1.01
+antithesis,2.96,3,Bondi Beach,2.96,0.0
+abdication,2.8,3,Borno State,2.8,0.0
+disputant,1.01,2,Bosaso,0.0,1.01
+acaricide,1.14,3,Bossley Park,1.14,0.0
+supertonic,1.01,3,Bouaké,0.0,1.01
+ascendence,1.01,2,Boyeros,0.0,1.01
+ark,3.75,1,Bradford,3.75,0.0
+alkali,2.94,2,Brandenburg,2.94,0.0
+ectoparasite,1.02,4,Brebes Regency,0.0,1.02
+biogeography,2.28,3,Bridgetown,2.28,0.0
+amber,3.97,1,Brisbane,3.97,0.0
+analyst,4.03,1,Bristol,4.03,0.0
+alpha,4.25,1,Brooklyn,4.25,0.0
+arborvitae,1.48,4,Bucaramanga,1.48,0.0
+bagel,3.18,2,Bucharest,3.18,0.0
+acquaintance,3.55,1,Budapest,3.55,0.0
+ablution,2.11,2,Buganda,2.11,0.0
+antineoplastic,1.86,4,Bujumbura,1.86,0.0
+acromion,1.61,3,Bukavu,1.61,0.0
+acolyte,2.41,3,Bulawayo,2.41,0.0
+belladonna,2.52,3,Bundaberg,2.52,0.0
+alidade,1.08,2,Bunia,1.08,0.0
+gibbsite,1.01,2,Burao,0.0,1.01
+ailanthus,1.47,3,Burgenland,1.47,0.0
+aftercare,2.54,2,Burnie,2.54,0.0
+antecedent,2.6,3,Bursa,2.6,0.0
+acreage,3.05,2,Busan,3.05,0.0
+angioedema,1.97,4,Busselton,1.97,0.0
+spaghettini,1.01,4,Cacuaco,0.0,1.01
+airfield,3.29,2,Cairns,3.29,0.0
+advertisement,3.84,1,Cairo,3.84,0.0
+airbus,3.33,2,Cali,3.33,0.0
+adoptee,2.15,2,Callao,2.15,0.0
+carambola,1.37,4,Camagüey,1.37,0.0
+aborigine,2.11,3,Campeche,2.11,0.0
+charioteer,2.11,4,Campeche City,2.11,0.0
+abstinent,2.09,2,Campinas,2.09,0.0
+affluence,2.74,3,Campo de Gibraltar,2.74,0.0
+bam,3.64,1,Canberra,3.64,0.0
+assignation,2.07,2,Cancún,2.07,0.0
+khan,4.25,2,Cape Town,4.25,0.0
+abasement,1.71,3,Carabobo,1.71,0.0
+aching,3.29,2,Caracas,3.29,0.0
+imperturbability,1.01,4,Cariacica,0.0,1.01
+anabolism,1.51,3,Caringbah,1.51,0.0
+caudate,1.99,3,Carinthia,1.99,0.0
+frivolousness,1.01,3,Caruaru,0.0,1.01
+aneurysm,3.08,4,Casablanca,3.07,0.01
+breeziness,1.01,3,Catacamas,0.0,1.01
+appliance,3.35,1,Catalonia,3.35,0.0
+adonis,2.9,2,Catania,2.9,0.0
+inapplicability,1.01,4,Caucaia,0.0,1.01
+acrophobia,1.68,3,Ceará,1.68,0.0
+acetabulum,1.78,3,Celaya,1.78,0.0
+buttermilk,2.95,3,Central Darfur,2.95,0.0
+arborist,2.01,3,Central Equatoria,2.01,0.0
+afterlife,3.36,2,Central Macedonia,3.36,0.0
+aphorist,1.02,3,Chuzhou,0.0,1.02
+acyclovir,2.04,4,Cienfuegos,2.04,0.0
+artillery,3.96,1,Cincinnati,3.96,0.0
+catabolism,2.05,4,Cité Soleil,2.05,0.0
+ambergris,2.15,3,Ciudad Madero,2.15,0.0
+anisette,1.29,3,Ciudad Mante,1.29,0.0
+angiosperm,1.76,3,Ciudad Sandino,1.76,0.0
+adsorbent,2.0,3,Ciudad Valles,2.0,0.0
+absinthe,2.69,3,Ciudad del Carmen,2.69,0.0
+antimalarial,2.12,3,Coahuila,2.12,0.0
+lysin,1.01,2,Cocody,0.0,1.01
+callousness,2.28,3,Coffs Harbour,2.28,0.0
+marmalade,2.89,4,Coimbatore,2.9,-0.01
+agama,1.98,2,Colima,1.98,0.0
+acerbity,1.1,3,Comayagua,1.1,0.0
+biquadratic,1.01,3,Comitán,0.0,1.01
+motherfucker,3.61,3,Community of Madrid,4.26,-0.65
+chancellery,2.29,3,Conakry,2.29,0.0
+baronetcy,1.76,3,Condell Park,1.76,0.0
+alternation,2.53,2,Connacht,2.53,0.0
+oligospermia,1.01,4,Constanța,0.0,1.01
+atole,1.13,2,Contagem,1.13,0.0
+activism,3.67,1,Copenhagen,3.67,0.0
+adenoidectomy,1.01,3,Costalegre,0.0,1.01
+anteroom,1.91,3,Cotonou,1.91,0.0
+barbette,1.55,3,Craiova,1.55,0.0
+chronicle,3.7,2,Croatia proper,3.7,0.0
+gilbert,3.9,3,Cross River State,4.68,-0.78
+antimetabolite,1.01,4,Cuajimalpa,0.0,1.01
+aigrette,1.02,3,Dazhou,0.0,1.02
+ira,3.84,2,Dee Why,3.84,0.0
+vasopressor,1.01,4,Degehabur,0.0,1.01
+altruist,1.74,2,Depok,1.74,0.0
+archpriest,1.65,3,Dessalines,1.65,0.0
+ambassador,4.35,1,Detroit,4.35,0.0
+soliloquy,2.45,4,Ekiti State,2.45,0.0
+mendelevium,1.01,4,El Eulma,0.0,1.01
+abridgment,1.92,3,El Progreso,1.92,0.0
+emphysema,2.72,4,Emirate of Dubai,2.73,-0.01
+adherent,2.6,2,Enugu,2.6,0.0
+bruiser,2.6,3,Enugu State,2.6,0.0
+corgi,2.83,3,Freetown,2.83,0.0
+autoloader,1.52,3,Fresnillo,1.52,0.0
+burlap,2.69,3,Fukuoka,2.69,0.0
+airmanship,1.28,3,Fuxin,1.28,0.0
+agronomist,2.24,3,Fuzhou,2.24,0.0
+barye,1.22,3,Ganzhou,1.22,0.0
+zettabyte,1.01,3,Garoua,0.0,1.01
+bryophyte,1.35,4,Garut Regency,1.35,0.0
+altarpiece,2.29,3,Gatineau,2.29,0.0
+acclimation,2.09,3,Gaziantep,2.09,0.0
+citrulline,1.79,4,Gdańsk,1.79,0.0
+barbarian,3.28,2,Geelong,3.28,0.0
+jujutsu,1.99,4,General Escobedo,1.99,0.0
+barometer,3.18,2,Genoa,3.18,0.0
+bartlett,3.39,2,Georges Hall,3.39,0.0
+alkalinity,2.32,2,Geraldton,2.32,0.0
+albinism,2.33,3,Ghaziabad,2.33,0.0
+armamentarium,1.57,3,Gijón,1.57,0.0
+activator,2.78,2,Giza,2.78,0.0
+arcus,1.87,2,Gode,1.87,0.0
+airdrome,1.51,3,Goiás,1.51,0.0
+biophysicist,1.49,4,Goiânia,1.49,0.0
+anhydride,2.26,4,Gombe State,2.26,0.0
+atelectasis,1.65,3,Gomel,1.65,0.0
+alphanumerics,1.01,4,Gonaïves,0.0,1.01
+ayatollah,2.92,3,Gothenburg,2.92,0.0
+alabaster,2.71,3,Goulburn,2.71,0.0
+logger,2.53,1,Graz,2.53,0.0
+embezzlement,3.02,4,Ho Chi Minh City,3.04,-0.02
+abbot,3.43,2,Hobart,3.43,0.0
+bettong,1.27,3,Hohhot,1.27,0.0
+arroba,1.26,3,Holguín,1.26,0.0
+ally,4.1,1,Holland,4.1,0.0
+android,4.42,1,Houston,4.42,0.0
+bathysphere,1.37,3,Huai'an,1.37,0.0
+filaggrin,1.02,4,Huaibei,0.0,1.02
+babassu,1.1,3,Huainan,1.1,0.0
+barbital,1.03,3,Huambo,1.03,0.0
+bonemeal,1.46,3,Huancayo,1.46,0.0
+dixie,3.37,3,Hudson Waterfront,3.43,-0.06
+echinocactus,1.02,4,Huludao,0.0,1.02
+antitype,1.19,3,Huzhou,1.19,0.0
+allegation,3.5,1,Hyderabad,3.5,0.0
+colonel,4.41,2,Inner London,4.43,-0.02
+antifeminism,1.27,4,Janakpur Zone,1.27,0.0
+angstrom,1.97,2,Joinville,1.97,0.0
+arrivederci,1.73,3,Jonglei State,1.73,0.0
+cert,3.19,1,Jos,3.19,0.0
+airway,3.19,2,Jos North,3.19,0.0
+assimilation,3.19,2,Jos South,3.19,0.0
+adorability,1.02,3,Jowhar,0.0,1.02
+ablation,2.77,2,Juba,2.77,0.0
+adaptation,4.01,1,Leeds,4.01,0.0
+gentrification,3.03,3,Leinster,3.03,0.0
+accoutrement,1.6,3,Leshan,1.6,0.0
+ageratum,1.2,3,Liaoyang,1.2,0.0
+agouti,1.88,3,Libreville,1.88,0.0
+adz,1.72,2,Lidcombe,1.72,0.0
+talipes,1.01,2,Lifou,0.0,1.01
+medick,1.01,2,Likasi,0.0,1.01
+adverbial,2.13,3,Lilongwe,2.13,0.0
+abreaction,1.07,2,Linfen,1.07,0.0
+allopathy,1.4,3,Linyi,1.4,0.0
+applicant,3.64,1,Lisbon,3.64,0.0
+decussation,1.02,3,Lishui,0.0,1.02
+abetment,1.56,3,Lokoja,1.56,0.0
+amblyopia,1.9,3,Lomé,1.9,0.0
+college,5.27,1,London,5.27,0.0
+penologist,1.01,2,Longnan,0.0,1.01
+bandolier,1.75,3,Longueuil,1.75,0.0
+potful,1.01,2,Longyan,0.0,1.01
+apostle,3.46,2,Lorraine,3.46,0.0
+jimmy,4.44,2,Los Angeles,4.45,-0.01
+alendronate,1.36,4,Los Mochis,1.36,0.0
+arctic,4.03,2,Lower Austria,4.03,0.0
+baroness,3.38,3,Lower Normandy,3.47,-0.09
+arroyo,2.95,3,Lower Saxony,2.95,0.0
+airstream,2.39,2,Luanda,2.39,0.0
+geometrid,1.01,2,Lubango,0.0,1.01
+absorbance,2.37,2,Lublin,2.37,0.0
+actuality,3.1,2,Lucknow,3.1,0.0
+artemisia,2.41,3,Ludhiana,2.41,0.0
+mandatary,1.02,3,Luganville,0.0,1.02
+bioethics,2.6,3,Luhansk,2.6,0.0
+baryon,2.02,3,Luoyang,2.02,0.0
+abatement,2.73,2,Lviv,2.73,0.0
+calisthenics,2.38,4,Lviv Oblast,2.38,0.0
+azadirachtin,1.02,4,Lüliang,0.0,1.02
+chandlery,1.57,4,Ma'anshan,1.57,0.0
+caryopsis,1.01,3,Macapá,0.0,1.01
+caragana,1.01,3,Maceió,0.0,1.01
+adherence,3.34,1,Maharashtra,3.34,0.0
+bloodletting,2.4,3,Maiduguri,2.4,0.0
+aldosteronism,1.14,4,Makiivka,1.14,0.0
+bioterrorism,2.29,4,Malang Regency,2.29,0.0
+metritis,1.01,2,Malanje,0.0,1.01
+abalone,2.66,2,Malmö,2.66,0.0
+acyl,2.48,2,Managua,2.48,0.0
+aeration,2.49,2,Manaus,2.49,0.0
+alder,2.97,2,Mandalay,2.97,0.0
+amaretto,2.17,3,Mandurah,2.17,0.0
+acceptance,4.16,1,Manhattan,4.16,0.0
+anovulation,1.46,3,Matagalpa,1.46,0.0
+carpetbagger,1.99,3,Matanzas,1.99,0.0
+curmudgeon,2.21,4,Mato Grosso,2.21,0.0
+fermium,1.01,2,Matola,0.0,1.01
+carnallite,1.01,3,Maturín,0.0,1.01
+chanoyu,1.01,3,Mauá,0.0,1.01
+albuminuria,1.59,3,Mazatlán,1.59,0.0
+akinesia,1.05,3,Mbandaka,1.05,0.0
+barrow,3.38,2,Mecca,3.38,0.0
+agronomy,2.43,2,Medan,2.43,0.0
+asceticism,2.4,3,Medellín,2.4,0.0
+aldehyde,2.45,2,Meerut,2.45,0.0
+astrolabe,2.24,3,Meghalaya,2.24,0.0
+apteryx,1.02,3,Meizhou,0.0,1.02
+achievability,1.01,3,Mejicanos,0.0,1.01
+acrolein,1.69,3,Meknes,1.69,0.0
+mistletoe,2.81,4,Mekong Delta,2.81,0.0
+achievement,4.36,1,Melbourne,4.36,0.0
+kidskin,1.01,2,Menabe,0.0,1.01
+bacteria,4.19,1,Mississippi,4.19,0.0
+accentor,1.01,2,Mixco,0.0,1.01
+adnexa,1.48,3,Mogilev,1.48,0.0
+candytuft,1.01,3,Momostenango,0.0,1.01
+cakehole,1.01,2,Monagas,0.0,1.01
+amygdalin,1.53,3,Monclova,1.53,0.0
+earliness,1.01,2,Mongala,0.0,1.01
+aliyah,2.4,3,Montego Bay,2.4,0.0
+afterthought,2.88,2,Monterrey,2.88,0.0
+coreference,1.01,2,Montería,0.0,1.01
+benzoquinone,1.52,4,Montes Claros,1.52,0.0
+abbess,2.5,2,Moravia,2.5,0.0
+americium,1.97,2,Morelia,1.97,0.0
+ablative,2.31,2,Morelos,2.31,0.0
+backbeat,1.99,2,Morwell,1.99,0.0
+anger,4.42,1,Moscow,4.42,0.0
+abort,3.27,1,Mosul,3.27,0.0
+diphthong,2.09,4,Mount Druitt,2.09,0.0
+acquiescence,2.47,3,Mount Gambier,2.47,0.0
+brewer,3.54,2,Mount Isa,3.54,0.0
+ombudsman,3.14,4,Mount Pritchard,3.15,-0.01
+epiphyllum,1.02,3,Mudanjiang,0.0,1.02
+aleph,2.39,2,Multan,2.39,0.0
+boarding,3.96,1,Mumbai,3.96,0.0
+accountancy,3.1,2,Munster,3.1,0.0
+airfoil,2.41,2,Murcia,2.41,0.0
+ambuscade,1.62,3,Muğla,1.62,0.0
+apomixis,1.3,4,Mykolaiv,1.3,0.0
+ribonuclease,1.82,4,N'Djamena,1.82,0.0
+arum,2.37,2,Nadi,2.37,0.0
+aught,2.43,2,Nagaland,2.43,0.0
+accouchement,1.01,3,Nagaon,1.01,0.0
+airship,2.88,2,Nagoya,2.88,0.0
+ambivalence,2.8,2,Nagpur,2.8,0.0
+academia,3.54,1,Nairobi,3.54,0.0
+andante,2.25,2,Nakuru,2.25,0.0
+assiduity,1.33,3,Nampula,1.33,0.0
+anoxia,1.96,3,Nanchang,1.96,0.0
+soviet,4.54,3,North East England,4.72,-0.18
+actinomyces,1.29,4,North Wollo Zone,1.29,0.0
+anna,4.37,2,Northern Michigan,4.37,0.0
+angler,2.84,2,Patna,2.84,0.0
+huskiness,1.02,3,Païta,0.0,1.02
+cummings,3.46,3,Pearl River Delta,3.8,-0.34
+aggrandizement,2.16,4,Peloponnese,2.16,0.0
+adeptness,1.49,2,Pelotas,1.49,0.0
+beheading,2.95,2,Penang,2.95,0.0
+anticoagulant,2.42,4,Pernambuco,2.42,0.0
+aeronautics,3.1,4,Peshawar,3.1,0.0
+abstractionist,1.31,2,Petare,1.31,0.0
+garishness,1.01,3,Petrolina,0.0,1.01
+arbitrageur,1.18,3,Poza Rica,1.18,0.0
+agnosia,1.73,3,Poznań,1.73,0.0
+amnesia,3.34,2,Pretoria,3.34,0.0
+thirteenth,3.36,3,Pu'er City,3.37,-0.01
+centimetre,2.55,3,Puebla,2.55,0.0
+arthritic,2.45,3,Puente Alto,2.45,0.0
+adulterer,2.32,3,Puerto Cortés,2.32,0.0
+wolverine,3.44,3,Puerto la Cruz,3.73,-0.29
+adjective,3.34,1,Pune,3.34,0.0
+sacculus,1.01,2,Puning,0.0,1.01
+acknowledgment,3.11,1,Pyongyang,3.11,0.0
+abacus,2.65,2,Qingdao,2.65,0.0
+quartan,1.01,2,Qingyang,0.0,1.01
+acoustician,1.21,3,Qingyuan,1.21,0.0
+anopheline,1.02,3,Qiqihar,0.0,1.02
+agenesis,1.87,3,Quanzhou,1.87,0.0
+accommodation,4.06,1,Queens,4.06,0.0
+anamorphosis,1.22,4,Quetzaltenango,1.22,0.0
+ordnance,3.37,3,Republic of Crimea,3.42,-0.05
+atrazine,1.99,2,Reynosa,1.99,0.0
+beneficence,2.02,3,Riau,2.02,0.0
+polystyrene,2.8,4,Rio Grande do Norte,2.8,0.0
+taekwondo,2.84,4,Rio Grande do Sul,2.83,0.01
+waltz,3.38,3,Rio de Janeiro,3.45,-0.07
+graham,4.3,2,Rivers State,4.29,0.01
+caster,3.1,1,Riyadh,3.1,0.0
+crepuscule,1.02,4,Rizhao,0.0,1.02
+angiosarcoma,1.35,4,Rondônia,1.35,0.0
+backgrounder,1.79,4,Roraima,1.79,0.0
+agitation,3.19,1,Rotterdam,3.19,0.0
+argonaut,2.16,2,Rustenburg,2.16,0.0
+aetiology,1.96,3,Saarland,1.96,0.0
+acumen,2.91,2,Sabah,2.91,0.0
+faggot,3.48,3,Saint-Marc,3.88,-0.4
+hemolysin,1.17,4,Saint-Prex,1.17,0.0
+confederate,3.7,3,Salt Lake City,4.37,-0.67
+caracal,1.99,3,Saltillo,1.99,0.0
+adjustor,1.43,2,Salé,1.43,0.0
+ascomycete,1.03,4,Samaná Peninsula,1.03,0.0
+acidophilus,1.84,3,Samsun,1.84,0.0
+potter,4.11,2,San Antonio,4.11,0.0
+warren,4.26,2,San Diego,4.26,0.0
+encopresis,1.01,4,San Miguel Petapa,0.0,1.01
+agoraphobia,2.34,4,San Pedro Sula,2.34,0.0
+boulevard,3.7,2,San Salvador,3.7,0.0
+ambrosia,2.65,3,Sanaa,2.65,0.0
+loiterer,1.01,3,Sankuru,0.0,1.01
+fatwah,1.02,3,Sanmenxia,0.0,1.02
+daphne,3.26,3,Santa Marta,3.26,0.0
+absorption,3.66,1,Santiago,3.66,0.0
+obituary,3.41,3,Santiago de Cuba,3.53,-0.12
+hypothermia,2.98,3,Santo Domingo,2.98,0.0
+agitator,2.59,3,Sapporo,2.59,0.0
+acoustics,3.1,3,Sarajevo,3.1,0.0
+annulment,2.85,3,Sarawak,2.85,0.0
+adage,2.95,2,Saxony,2.95,0.0
+canaliculus,1.01,3,Sayaxché,0.0,1.01
+beefalo,1.01,2,Silao,0.0,1.01
+acrimony,2.34,3,Simferopol,2.34,0.0
+accretion,2.78,3,Sinaloa,2.78,0.0
+aberration,2.98,2,Sindh,2.98,0.0
+balmoral,2.63,3,Skopje,2.63,0.0
+carbonisation,1.01,2,Soacha,0.0,1.01
+barb,3.31,2,Staten Island,3.31,0.0
+accountant,3.76,1,Stockholm,3.76,0.0
+armful,1.98,2,Styria,1.98,0.0
+klebsiella,2.05,4,Subang Regency,2.05,0.0
+absolutism,2.45,2,Sucre,2.45,0.0
+admirer,3.19,2,Suez,3.19,0.0
+avaritia,1.02,3,Suihua,0.0,1.02
+actinia,1.09,2,Suining,1.09,0.0
+coffeecake,1.02,3,Suizhou,0.0,1.02
+escherichia,2.63,4,Thessaloniki,2.63,0.0
+arabesque,2.32,3,Thessaly,2.32,0.0
+boatswain,2.22,3,Thuringia,2.22,0.0
+admittance,2.8,2,Tianjin,2.8,0.0
+anthesis,1.5,2,Tianmen,1.5,0.0
+diapir,1.02,3,Tieling,0.0,1.02
+atrocity,3.03,3,Tijuana,3.03,0.0
+aquaplane,1.01,3,Tipitapa,0.0,1.01
+amebiasis,1.07,4,Tlaquepaque,1.07,0.0
+aggrandisement,1.72,4,Tlaxcala,1.72,0.0
+bronchiolitis,1.82,4,Tocantins,1.82,0.0
+allies,4.27,1,Tokyo,4.27,0.0
+tactfulness,1.01,2,Tonghua,0.0,1.01
+barytone,1.02,3,Tongliao,0.0,1.02
+balbriggan,1.4,4,Toongabbie,1.4,0.0
+analects,1.9,3,Toowong,1.9,0.0
+amphitheatre,2.84,3,Toowoomba,2.84,0.0
+adhesiveness,1.37,3,Torreón,1.37,0.0
+abetter,1.19,2,Touba,1.19,0.0
+aerosol,3.03,2,Townsville,3.03,0.0
+clomiphene,1.79,4,Traralgon,1.79,0.0
+baloney,2.52,2,Tripura,2.52,0.0
+rilievo,1.01,4,Tshuapa,0.0,1.01
+benzofuran,1.01,3,Tulancingo,0.0,1.01
+blister,3.0,1,Tunis,3.0,0.0
+bastion,3.31,2,Turin,3.31,0.0
+chiropodist,1.63,4,Turramurra,1.63,0.0
+backscratcher,1.18,3,Tuxpan,1.18,0.0
+adenosine,2.68,3,Tyneside,2.68,0.0
+abducens,1.3,3,Táchira,1.3,0.0
+agal,1.08,2,Uberaba,1.08,0.0
+exotropia,1.01,4,Uberlândia,0.0,1.01
+halberdier,1.02,4,Ulanqab,0.0,1.02
+amelia,3.55,2,Ulster,3.55,0.0
+indusium,1.01,3,Umuleri,0.0,1.01
+benedict,3.7,3,Upper East Side,4.54,-0.84
+phoebe,3.38,3,Upper Normandy,3.46,-0.08
+androgyne,1.45,4,Upper Norrland,1.45,0.0
+bohemian,3.5,3,Upper North Philadelphia,4.21,-0.71
+duchess,3.76,3,Upper West Side,4.56,-0.8
+affiant,1.74,2,Urfa,1.74,0.0
+comfortableness,1.01,3,Usaquén,0.0,1.01
+accuser,2.99,2,Utrecht,2.99,0.0
+acorn,3.08,2,Uttar Pradesh,3.08,0.0
+thanatopsis,1.01,3,Uíge,0.0,1.01
+aquatic,3.62,1,Valencia,3.62,0.0
+bullfighting,2.46,3,Valladolid,2.46,0.0
+abstemiousness,1.04,4,Valledupar,1.04,0.0
+hectolitre,1.01,3,Vallès Oriental,0.0,1.01
+anointing,2.76,3,Veracruz,2.76,0.0
+grandaunt,1.01,3,Vidzeme,0.0,1.01
+antifeminist,1.5,4,Vila Velha,1.5,0.0
+banns,2.02,3,Villa Canales,2.02,0.0
+antiviral,2.83,3,Vilnius,2.83,0.0
+clitoridectomy,1.22,4,Vinnytsia,1.22,0.0
+evanescence,2.35,4,Visakhapatnam,2.35,0.0
+bivouacking,1.23,4,Volyn Oblast,1.23,0.0
+almsgiving,1.71,3,Vorarlberg,1.71,0.0
+amateurism,2.04,2,Wallonia,2.04,0.0
+campanile,2.09,3,Wangaratta,2.09,0.0
+amaryllis,2.14,4,Yucatán,2.14,0.0
+absoluteness,1.5,2,Yueyang,1.5,0.0
+abecedarian,1.32,3,Yuncheng,1.32,0.0
+promptitude,1.01,2,Yunfu,0.0,1.01
+apprehensiveness,1.13,3,Yuxi,1.13,0.0
+aerobatics,2.05,3,Zacatecas,2.05,0.0
+acrosome,1.31,3,Zagazig,1.31,0.0
+balboa,2.95,2,Zagreb,2.95,0.0
+abomasum,1.26,3,Zapopan,1.26,0.0
+arugula,2.46,3,Zaragoza,2.46,0.0
+auk,2.27,2,Zaria,2.27,0.0
+calyptra,1.29,3,Zhanjiang,1.29,0.0
+androsterone,1.21,4,Zhaotong,1.21,0.0
+affaire,2.21,2,Zhengzhou,2.21,0.0
+archerfish,1.24,3,Zhenjiang,1.24,0.0
+acanthus,2.08,3,Zhongshan,2.08,0.0
+adulteress,2.04,3,Zhuhai,2.04,0.0
+amateurishness,1.12,3,Zhuzhou,1.12,0.0
+atonia,1.13,2,Zigong,1.13,0.0
+antiserum,1.91,3,Ziyang,1.91,0.0
+abjection,1.59,2,Zulia,1.59,0.0
+akvavit,1.01,3,Zumpango,0.0,1.01
+actinide,1.91,3,İzmir,1.91,0.0
+coelacanth,1.75,4,Łódź,1.75,0.0

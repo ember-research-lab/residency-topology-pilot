@@ -1,0 +1,55 @@
+{
+ "fig_pool_unique_clean": 30911,
+ "fig_rejected_while_filling": {
+  "gt_4_tokens": 4,
+  "stage_tokenization_differs": 0
+ },
+ "fig_rows": 37539,
+ "fig_survivors": 300,
+ "geo_populated_place_with_population": 22125,
+ "geo_rejected_while_filling_quota": {
+  "duplicate_name_in_table": 0,
+  "gt_4_tokens": 130,
+  "stage_tokenization_differs": 0,
+  "unclean_name": 670
+ },
+ "geo_stratum_africa": {
+  "candidates": 1741,
+  "got": 80,
+  "quota": 80
+ },
+ "geo_stratum_asia": {
+  "candidates": 5336,
+  "got": 120,
+  "quota": 120
+ },
+ "geo_stratum_europe": {
+  "candidates": 8096,
+  "got": 100,
+  "quota": 100
+ },
+ "geo_stratum_north_america": {
+  "candidates": 4766,
+  "got": 100,
+  "quota": 100
+ },
+ "geo_stratum_oceania": {
+  "candidates": 1025,
+  "got": 40,
+  "quota": 40
+ },
+ "geo_stratum_south_america": {
+  "candidates": 1161,
+  "got": 60,
+  "quota": 60
+ },
+ "geo_survivors": 500,
+ "geo_table_rows": 39585,
+ "nonce_controls": 500,
+ "nonce_unfilled_token_counts": {},
+ "noun_candidates": 30956,
+ "noun_controls": 500,
+ "noun_max_abs_dzipf": 1.02,
+ "noun_mean_abs_dzipf": 0.203,
+ "noun_unmatched_geo": 0
+}
