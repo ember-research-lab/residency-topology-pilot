@@ -1,0 +1,29 @@
+sft ratio 0.3993 f_low 0.00089368 (null med 0.00061233) p_blue 1.000 p_red 0.001 red (2633s)
+dpo|sft ratio 0.0611 f_low 0.00093014 (null med 0.00061705) p_blue 1.000 p_red 0.001 red (2633s)
+rlvr1|dpo ratio 0.0192 f_low 0.00084664 (null med 0.00059912) p_blue 0.972 p_red 0.029 not red (2633s)
+instruct|rlvr1 ratio 0.0099 f_low 0.00080474 (null med 0.00061537) p_blue 0.985 p_red 0.016 not red (2633s)
+step200|rlvr1 ratio 0.0025 f_low 0.00078066 (null med 0.00061789) p_blue 0.977 p_red 0.024 non-voting (2633s)
+step800|step200 ratio 0.0051 f_low 0.00077656 (null med 0.00061408) p_blue 0.990 p_red 0.011 non-voting (2633s)
+step1600|step800 ratio 0.0065 f_low 0.00077422 (null med 0.00061711) p_blue 0.990 p_red 0.011 non-voting (2633s)
+step2600|step1600 ratio 0.0076 f_low 0.00078809 (null med 0.00061574) p_blue 0.993 p_red 0.008 non-voting (2633s)
+boot 0 2635 s
+boot 50 2769 s
+boot 100 2901 s
+boot 150 3035 s
+boot 200 3167 s
+boot 250 3305 s
+boot 300 3442 s
+boot 350 3579 s
+boot 400 3716 s
+boot 450 3853 s
+boot 500 3989 s
+boot 550 4129 s
+boot 600 4265 s
+boot 650 4402 s
+boot 700 4538 s
+boot 750 4676 s
+boot 800 4813 s
+boot 850 4949 s
+boot 900 5086 s
+boot 950 5223 s
+DONE 5356 s
