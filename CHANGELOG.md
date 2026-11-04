@@ -9,3 +9,4 @@
 - Steps 3-4: OLMo-2-0425-1B base extracted (4 layers x 8 templates x 1500 strings, bf16-rounded weights); closure passed; base-only freezes (l*, m, r) written to configs/pilot.toml.
 - Step 5 precision null: ||D_prec|| = 1.601 at l*=12 (0.68% of ||H||). Report renamed REPORT-steps-0-5.md.
 - step 6: post-trained 1B stages (SFT, DPO, RLVR1, Instruct) extracted with per-checkpoint closure check; precision-null condition checked on D_SFT (data/checkpoints.json).
+- step 7: three stage-2 ingredient branches extracted (epsilon floor inputs).

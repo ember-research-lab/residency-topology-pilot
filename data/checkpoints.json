@@ -43,5 +43,35 @@
   "fetch_s": 39,
   "total_s": 488,
   "rc": 0
+ },
+ "ing1": {
+  "repo": "allenai/OLMo-2-0425-1B",
+  "revision": "stage2-ingredient1-step23852-tokens51B",
+  "sha": "ada39260a92eb8cfc2252b9e937f790fd5b0dbc1",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/ada39260a92eb8cfc2252b9e937f790fd5b0dbc1",
+  "sha_note": "",
+  "fetch_s": 135,
+  "total_s": 593,
+  "rc": 0
+ },
+ "ing2": {
+  "repo": "allenai/OLMo-2-0425-1B",
+  "revision": "stage2-ingredient2-step23852-tokens51B",
+  "sha": "b51c5f1b7c83a96b9a80bdaf14a2077c672fbccd",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/b51c5f1b7c83a96b9a80bdaf14a2077c672fbccd",
+  "sha_note": "",
+  "fetch_s": 90,
+  "total_s": 564,
+  "rc": 0
+ },
+ "ing3": {
+  "repo": "allenai/OLMo-2-0425-1B",
+  "revision": "stage2-ingredient3-step23852-tokens51B",
+  "sha": "f83cd641d4f00954eb25c781e0ac360debb3239e",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B/snapshots/f83cd641d4f00954eb25c781e0ac360debb3239e",
+  "sha_note": "",
+  "fetch_s": 63,
+  "total_s": 513,
+  "rc": 0
  }
 }
