@@ -209,6 +209,37 @@ Extraction (scripts/step13_extract.py, streaming bf16): nonce C2 (4000 prompts) 
 - Band: eps = 0.00849 (eps_A ingredients 0.00849, eps_N6 RL steps 0.00030), **borrowed from 1B (geography ridge, l=12), T3**; no 7B ingredient or figures activations exist, so the same eps is used for C2. Bootstrap: entities resampled over out-of-fold predictions, B=1000.
 - **P2 verdict: FALSIFIED** by the preregistered rule (a red reward stage, and neither C1 nor C2 drops beyond the band). Caveats: the "red" premise is itself F4-artefactual; the band is large relative to the CIs, and the drop/p_drop operationalisation is mine (stated in the JSON rule).
 
+## Step 14 (EXPLORATORY): is red generic smoothness?  (non-voting, analysis only, T1 numbers)
+
+**1B controls (l*=12, own N4', P=999, r=50, m by gap rule per set).** The step-3 activations contain C1 nouns and C2 nonce for the base and all four stages. Controls are red (percentile >= 0.98) at every stage, so the 1B stage reds also appear on controls, with enrichment 1.28-1.33 on controls (geography values in the table).
+
+| set | stage | ratio | enrichment | percentile |
+|---|---|---|---|---|
+| geo (step 9) | sft | 0.399 | 1.46 | 0.999 |
+| C1_nouns | sft | 0.363 | 1.28 | 0.982 |
+| C2_nonce | sft | 0.415 | 1.33 | 0.999 |
+| geo (step 9) | dpo | 0.409 | 1.42 | 0.998 |
+| C1_nouns | dpo | 0.373 | 1.29 | 0.986 |
+| C2_nonce | dpo | 0.427 | 1.32 | 0.998 |
+| geo (step 9) | rlvr1 | 0.410 | 1.42 | 0.999 |
+| C1_nouns | rlvr1 | 0.371 | 1.29 | 0.985 |
+| C2_nonce | rlvr1 | 0.425 | 1.33 | 0.998 |
+| geo (step 9) | instruct | 0.411 | 1.43 | 0.998 |
+| C1_nouns | instruct | 0.372 | 1.29 | 0.986 |
+| C2_nonce | instruct | 0.425 | 1.33 | 0.998 |
+
+**7B smoothness diagnostic (RL-Zero vs base, l*=16).** Kernel ridge of D on H_b (RBF, bandwidth = median pairwise distance, lambda by 5-fold CV), 80/20 held-out R2, and a 5-fold cross-fit so every row has a held-out residual that is coloured against N4'.
+
+| set | held-out R2 (80/20) | cross-fit R2 | raw enrich / pct | residual enrich / pct | residual p_blue |
+|---|---|---|---|---|---|
+| geo | 0.314 | 0.320 | 2.07 / 0.999 | 0.59 / 0.000 | 0.001 |
+| C1_nouns | 0.218 | 0.215 | 1.78 / 0.999 | 0.95 / 0.216 | 0.217 |
+| C2_nonce | 0.177 | 0.178 | 1.37 / 0.999 | 0.95 / 0.160 | 0.161 |
+
+Geography-minus-C1 raw enrichment: point 0.29 (geo 2.07, C1 1.78, C2 1.37); paired bootstrap B=1000 (80% entity subsample without replacement, geography entity with its matched noun, null P=99; resampling with replacement makes the graph singular) mean 0.23, CI95 [-0.12, 0.55], which includes 0.
+
+**Reading (T3, exploratory).** D is partly a smooth function of H_b (held-out R2 0.18-0.31, highest on geography). Red-ness is not specific to geography (CI includes 0). After removing the smooth part, controls lose the red (percentile 0.16-0.22, not significant), but geography flips to blue (p_blue 0.001). The blue is likely partly a construction effect (the smoother removes low-frequency energy that the permutation null retains), so the residual colour is not read as evidence for or against the hypothesis. This supports "red tracks smooth displacement shared with controls" without proving that N4' is too weak for every fine-tune.
+
 # VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
 
 # REPORT steps 0-10 (residency-topology-pilot), 2026-11-03/04 (steps 0-5 sections retained below, steps 6-10 appended at the end)
