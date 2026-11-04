@@ -52,3 +52,17 @@ def n4prime_f_low(Dsp: np.ndarray, Pbasis: np.ndarray, U: np.ndarray, m: int, n_
     null = np.array([f_low_null_gram(G, rng.permutation(len(R)), Pbasis, U, m) for _ in range(n_perm)])
     pb, pr = p_values(obs, null)
     return dict(obs=obs, null=null, p_blue=pb, p_red=pr, lambda_lin=lam_lin)
+
+
+def f_low_null_batch(G: np.ndarray, perms: np.ndarray, P: np.ndarray, U: np.ndarray, m: int) -> np.ndarray:
+    """Vectorised f_low_null_gram over a (B, n) array of permutations (same maths, projections hoisted out of the loop)."""
+    proj = lambda Y: Y - P @ (P.T @ Y)
+    W = np.concatenate([proj(U[:, 1:m + 1]), proj(U[:, :1])], axis=1)      # (n, m+1)
+    trG = np.trace(G); out = np.empty(len(perms))
+    for i, perm in enumerate(perms):
+        inv = np.argsort(perm)
+        Wi = W[inv]; Wp = P[inv]
+        e = np.einsum("ij,ij->j", Wi, G @ Wi)
+        tot = trG - np.einsum("ij,ij->", Wp, G @ Wp)
+        out[i] = e[:m].sum() / (tot - e[m])
+    return out

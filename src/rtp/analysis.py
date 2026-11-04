@@ -132,3 +132,19 @@ def load_geo(name: str, ref_ids=None, layer: int = 12, n: int = 500, K: int = 8)
     meta = a["meta"]
     assert (meta[: n * K, 0] == 0).all() and (meta[: n * K, 1] == np.repeat(np.arange(n), K)).all()
     return a[f"last_L{layer}"][: n * K].reshape(n, K, -1).astype(np.float64), man["token_ids"]
+
+
+FAMILY = ["sft", "dpo", "instruct"]   # preregistered Holm family members present until step 11 (Olmo-3 RL-Zero absent)
+
+
+def family_verdicts(res: dict) -> dict:
+    """Holm over the 8-test family (absent Olmo-3 pair counts as p=1, provisional) + RLVR1 as secondary (own 2-p Holm).
+    res[stage] needs p_blue, p_red, reff_R. Returns {stage: dict(holm_p_blue, holm_p_red, verdict)}."""
+    out = {}
+    h = holm([res[s][k] for s in FAMILY for k in ("p_blue", "p_red")], 8)
+    for i, s in enumerate(FAMILY):
+        (ab, rb), (ar, rr) = h[2 * i], h[2 * i + 1]
+        out[s] = dict(holm_p_blue=ab, holm_p_red=ar, verdict=verdict(rb, rr, res[s]["reff_R"]))
+    h2 = holm([res["rlvr1"]["p_blue"], res["rlvr1"]["p_red"]], 2)
+    out["rlvr1"] = dict(holm_p_blue=h2[0][0], holm_p_red=h2[1][0], verdict=verdict(h2[0][1], h2[1][1], res["rlvr1"]["reff_R"]))
+    return out

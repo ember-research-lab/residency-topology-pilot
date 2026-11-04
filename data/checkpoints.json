@@ -73,5 +73,45 @@
   "fetch_s": 63,
   "total_s": 513,
   "rc": 0
+ },
+ "inst_step200": {
+  "repo": "allenai/OLMo-2-0425-1B-Instruct",
+  "revision": "step_200",
+  "sha": "0f49bb9c8bb23d43b51b1732be137a99bfaaf9ec",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/0f49bb9c8bb23d43b51b1732be137a99bfaaf9ec",
+  "sha_note": "",
+  "fetch_s": 45,
+  "total_s": 519,
+  "rc": 0
+ },
+ "inst_step800": {
+  "repo": "allenai/OLMo-2-0425-1B-Instruct",
+  "revision": "step_800",
+  "sha": "033e02d7fe4fe254c16c2c21d16bbf08bad1ad77",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/033e02d7fe4fe254c16c2c21d16bbf08bad1ad77",
+  "sha_note": "",
+  "fetch_s": 110,
+  "total_s": 564,
+  "rc": 0
+ },
+ "inst_step1600": {
+  "repo": "allenai/OLMo-2-0425-1B-Instruct",
+  "revision": "step_1600",
+  "sha": "9ab374beda00b26265133e125046e564fb5d2f26",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/9ab374beda00b26265133e125046e564fb5d2f26",
+  "sha_note": "",
+  "fetch_s": 136,
+  "total_s": 595,
+  "rc": 0
+ },
+ "inst_step2600": {
+  "repo": "allenai/OLMo-2-0425-1B-Instruct",
+  "revision": "step_2600",
+  "sha": "a7b49f0c28561ccc212976a6b036ee556ee61fd7",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/a7b49f0c28561ccc212976a6b036ee556ee61fd7",
+  "sha_note": "",
+  "fetch_s": 119,
+  "total_s": 592,
+  "rc": 0
  }
 }

@@ -13,17 +13,14 @@ FAMILY = ["sft", "dpo", "instruct"]       # preregistered family; Olmo-3 RL-Zero
 res = {"m": m, "r": r, "P": 999}
 rng = np.random.default_rng(20261104)
 arrs = {s: A.load_geo(s, ref)[0].mean(1) for s in STAGES}
-for s in STAGES:
-    res[s] = A.stage_vs_base(base, arrs[s], m, r, 999, rng, full_null=True)
+for i, s in enumerate(STAGES):
+    res[s] = A.stage_vs_base(base, arrs[s], m, r, 999, np.random.default_rng(1000 + i), full_null=True)   # seed shared with step 10 identity draw
     print(s, "ratio %.4f f_low %.5g p_blue %.4f p_red %.4f reff %.1f  (%.0fs)" % (res[s]["ratio"], res[s]["f_low"], res[s]["p_blue"], res[s]["p_red"], res[s]["reff_R"], time.time() - t0), flush=True)
-# Holm: family of 8 = {sft,dpo,instruct,rl_zero} x {blue,red}; the 2 absent Olmo-3 p-values count as 1 (provisional)
-ps = [res[s][k] for s in FAMILY for k in ("p_blue", "p_red")]
-h = A.holm(ps, 8)
-for i, s in enumerate(FAMILY):
-    (ab, rb), (ar, rr) = h[2 * i], h[2 * i + 1]
-    res[s].update(holm_p_blue=ab, holm_p_red=ar, verdict=A.verdict(rb, rr, res[s]["reff_R"]), verdict_family="primary (provisional, Olmo-3 pair absent)")
-h2 = A.holm([res["rlvr1"]["p_blue"], res["rlvr1"]["p_red"]], 2)
-res["rlvr1"].update(holm_p_blue=h2[0][0], holm_p_red=h2[1][0], verdict=A.verdict(h2[0][1], h2[1][1], res["rlvr1"]["reff_R"]), verdict_family="secondary (own Holm over its 2 p-values)")
+# Holm over the family of 8 (Olmo-3 pair absent -> p=1, provisional); RLVR1 secondary with its own 2-p Holm
+for s_, v in A.family_verdicts(res).items():
+    res[s_].update(v)
+res["sft"]["verdict_family"] = res["dpo"]["verdict_family"] = res["instruct"]["verdict_family"] = "primary family, provisional (Olmo-3 pair absent)"
+res["rlvr1"]["verdict_family"] = "secondary (own Holm over its 2 p-values)"
 # r sensitivity 25/50/100 (f_low only, P=999)
 res["r_sensitivity"] = {}
 for s in STAGES:
@@ -31,9 +28,16 @@ for s in STAGES:
     for rr_ in (r // 2, r, 2 * r):
         o = A.stage_vs_base(base, A.Ck(arrs[s]), m, rr_, 999, rng)
         res["r_sensitivity"][s][rr_] = dict(f_low=o["f_low"], p_blue=o["p_blue"], p_red=o["p_red"], lambda_lin=o["lambda_lin"], reff_R=o["reff_R"])
+# m sensitivity (non-voting): m = m*-2, m*+2, 10
+res["m_sensitivity"] = {}
+for s in STAGES:
+    res["m_sensitivity"][s] = {}
+    for mm in (m - 2, m + 2, 10):
+        o = A.stage_vs_base(base, A.Ck(arrs[s]), mm, r, 999, rng)
+        res["m_sensitivity"][s][mm] = dict(f_low=o["f_low"], p_blue=o["p_blue"], p_red=o["p_red"], d_O=o["d_O"])
 # reference rows: ingredients and RL steps vs base (point, non-voting) + RL-step monotonicity from DPO
 refs = {}
-for nme in ["ing1", "ing2", "ing3", "inst_step200", "inst_step800", "inst_step1600", "inst_step2600"]:
+for nme in ["ing1", "ing2", "ing3", "inst_step200", "inst_step800", "inst_step1600", "inst_step2600"]:  # vs base
     try:
         Hn = A.load_geo(nme, ref)[0].mean(1)
     except FileNotFoundError:
@@ -41,6 +45,13 @@ for nme in ["ing1", "ing2", "ing3", "inst_step200", "inst_step800", "inst_step16
     st = A.Ck(Hn); refs[nme] = dict(ratio=float(np.linalg.norm(st.H - base.H) / np.linalg.norm(base.H)), **A.triplet(base, st, m),
                                     norm_D_from_dpo=float(np.linalg.norm(st.H - A.Ck(arrs["dpo"]).H)))
 res["reference_rows"] = refs
+pairs = {}
+for a_, b_ in [("ing1", "ing2"), ("ing1", "ing3"), ("ing2", "ing3"), ("inst_step200", "inst_step800"), ("inst_step800", "inst_step1600"), ("inst_step1600", "inst_step2600")]:
+    ca, cb = A.Ck(A.load_geo(a_, ref)[0].mean(1)), A.Ck(A.load_geo(b_, ref)[0].mean(1))
+    pairs[f"{a_}|{b_}"] = dict(ratio=float(np.linalg.norm(ca.H - cb.H) / np.linalg.norm(base.H)), **A.triplet(ca, cb, m))
+res["epsilon_point_pairs"] = pairs
+steps = ["inst_step200", "inst_step800", "inst_step1600", "inst_step2600"]
+res["rl_step_norm_D_vs_base"] = {k: refs[k]["ratio"] for k in steps if k in refs}
 # self-calibration: a permuted D treated as observed, 50 times (SFT), percentile uniform?
 Dsft = A.Ck(arrs["sft"]).H - base.H; pcs = []
 for _ in range(50):
