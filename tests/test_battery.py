@@ -99,16 +99,15 @@ def test_rescale_and_rotation_invariance(base):
         assert not bad, bad
 
 
-def test_tk_rescale_covariance_and_rotation(base):
-    """t_k is linear in D: rotation leaves it unchanged (<1e-12); a joint x5 rescale multiplies it by 5.
-    (DESIGN 2.5 says 'every measure' is scale-invariant; t_k is not - reported in REPORT-steps-0-2.md.)"""
+def test_tk_rescale_and_rotation_invariance(base):
+    """amended t^_k (normalised): invariant to rotation and to a joint x5 rescale of (H_b, D), both < 1e-12."""
     rng = np.random.default_rng(104)
     H, U, m = base["H"], base["U"], base["m"]
     Dsp = matched(rng.standard_normal(H.shape), 0.1, H)
     t = M.t_k(H, Dsp, U, m)
     Q, _ = np.linalg.qr(rng.standard_normal((H.shape[1],) * 2))
     assert np.abs(M.t_k(H @ Q, Dsp @ Q, U, m) - t).max() < 1e-12
-    assert np.abs(M.t_k(5 * H, 5 * Dsp, U, m) - 5 * t).max() < 1e-12
+    assert np.abs(M.t_k(5 * H, 5 * Dsp, U, m) - t).max() < 1e-12
 
 
 def test_tk_null_witness_offspan(base):
@@ -120,6 +119,7 @@ def test_tk_null_witness_offspan(base):
     null = np.array([M.t_k(H, N.n4_draw(Dw, rng), U, m) for _ in range(999)])
     ratio = null.mean(0) / null.std(0)
     a0 = H.T @ Uc[:, 0]; a0 /= np.linalg.norm(a0)
+    nv = np.linalg.norm(H.T @ Uc[:, 0])
     tp = M.t_k(H, +0.05 * np.outer(Uc[:, 0], a0) * np.linalg.norm(H), U, m)
     tm = M.t_k(H, -0.05 * np.outer(Uc[:, 0], a0) * np.linalg.norm(H), U, m)
     Q, _ = np.linalg.qr(H.T)
@@ -127,7 +127,8 @@ def test_tk_null_witness_offspan(base):
     off = np.abs(M.t_k(H, np.outer(lat - lat.mean(), v), U, m)).max()
     print("t_k null mean/sd", ratio.round(3), "witness", tp[0], tm[0], "others", np.abs(tp[1:]).max(), "offspan", off)
     assert np.abs(ratio).max() < 0.1
-    assert tp[0] > 0 > tm[0] and abs(tp[0] + tm[0]) < 1e-9 and abs(tp[0] - 1.135) < 0.005
+    assert tp[0] > 0 > tm[0] and abs(tp[0] + tm[0]) < 1e-9 and abs(tp[0] - 0.145086) < 1e-5
+    assert abs(tp[0] - 0.05 * np.linalg.norm(H) / nv * (Uc[:, 0] @ Uc[:, 0])) < 1e-12   # analytic value
     assert off < 1e-10
 
 

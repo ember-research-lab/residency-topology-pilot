@@ -132,8 +132,9 @@ def build_noun_controls(geo: list[dict], nouns_file: pathlib.Path, toks: dict[st
     cands = []
     for w in nouns_file.read_text().split():
         z = zipf_frequency(w, "en")
-        if z >= 1.0 and len(w) >= 3 and w not in geo_lower and check_name(w, toks, TEMPLATES_CTRL) is None:
-            cands.append((w, z, n_tok(toks, w)))
+        W = w.capitalize()   # Title-case so casing matches place names (amendment 2026-11-04)
+        if z >= 1.0 and len(w) >= 3 and w not in geo_lower and check_name(W, toks, TEMPLATES_CTRL) is None:
+            cands.append((W, z, n_tok(toks, W)))
     rep["noun_candidates"] = len(cands)
     used, out = set(), []
     order = sorted(range(len(geo)), key=lambda i: -zipf_frequency(geo[i]["name"], "en"))

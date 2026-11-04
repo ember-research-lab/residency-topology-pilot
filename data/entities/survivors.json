@@ -47,9 +47,9 @@
  "geo_table_rows": 39585,
  "nonce_controls": 500,
  "nonce_unfilled_token_counts": {},
- "noun_candidates": 30956,
+ "noun_candidates": 30785,
  "noun_controls": 500,
  "noun_max_abs_dzipf": 1.02,
- "noun_mean_abs_dzipf": 0.203,
+ "noun_mean_abs_dzipf": 0.192,
  "noun_unmatched_geo": 0
 }

@@ -135,12 +135,15 @@ def e_low(H: np.ndarray, U: np.ndarray, m: int) -> float:
 
 # ---- 11 odd readout -------------------------------------------------------------------------------
 def t_k(Hb: np.ndarray, Dsp: np.ndarray, U: np.ndarray, m: int) -> np.ndarray:
-    """(11) t_k = u~_k^T D a_k, u~_k = u_k - mean(u_k), a_k = H_b^T u~_k / |H_b^T u~_k|, k=1..m.
-    Signed: flips with D -> -D; invariant to the eigenvector sign convention."""
+    """(11, amended 2026-11-04) normalised signed mode stretch
+    t^_k = u~_k^T D a_k / |H_b^T u~_k|, u~_k = u_k - mean(u_k), a_k = H_b^T u~_k / |H_b^T u~_k|, k=1..m.
+    Relative stretch of mode k (+1 = amplitude doubled). Flips with D -> -D, invariant to the eigenvector sign
+    convention, to a joint rescale of (H_b, D) and to a joint rotation. (The unnormalised form is
+    |H_b^T u~_k| times this and is only scale-covariant.)"""
     Uc = U[:, 1:m + 1] - U[:, 1:m + 1].mean(0)
     out = np.empty(m)
     for j in range(m):
-        a = Hb.T @ Uc[:, j]
-        a = a / np.linalg.norm(a)
-        out[j] = Uc[:, j] @ (Dsp @ a)
+        v = Hb.T @ Uc[:, j]
+        nv = np.linalg.norm(v)
+        out[j] = Uc[:, j] @ (Dsp @ (v / nv)) / nv
     return out
