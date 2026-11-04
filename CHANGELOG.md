@@ -19,7 +19,8 @@
 - REPORT-steps-0-10.md v2: steps 3-10 re-run on gated base f83cd641 (all four stages red at Holm, stability 0.73-0.94, ||D||/||H|| 0.40); v1 verdicts retained as VOID.
 - scripts/step_increments.py: AMENDMENT 3 exploratory parent-relative increments.
 - memory cap rule: model jobs run in a systemd-run cgroup scope (MemoryMax=16G, swap 0); src/rtp/cap.py fail-closed check; step-11 7B extraction now streams bf16 weights (VmHWM ~10.3 GB). WSL freeze incident documented in REPORT v2.
-- step 11 (Olmo-3 7B RL-Zero vs base) results, Holm family of 8, step-12 picture.
+- step 11 (Olmo-3 7B RL-Zero vs base): red, Holm p_red 0.008, stability 1.0; step-12 picture (footer: colour family killed as verdict instrument).
 - step 13: F4 + P2 cost on the Olmo-3 7B pair (F4 fires via C1; P2 falsified).
 - step 14 (exploratory): 1B controls colour + 7B smoothness diagnostic.
 - step 15 (exploratory): synthetic positive control for the smooth null (readouts i, ii, iii-old, iii).
+- final adjudication 2026-11-04 in REPORT v2 (kill ledger, hypothesis UNTESTED), ISSUES.md OPEN-1, CLAUDE.md BROKEN-if row for colour verdicts.

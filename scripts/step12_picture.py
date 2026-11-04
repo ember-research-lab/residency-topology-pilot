@@ -55,6 +55,7 @@ a.axvline(0, color="k", lw=.6)
 fig.suptitle("Imitation activates, reward prunes: pilot picture 2026-11-04 (blue = preregistered rows, grey = EXPLORATORY post-hoc increments, AMENDMENT 3)\n"
              "OLMo-2-0425-1B at l*=12 on base f83cd641 (lineage-gated); RL-Zero-Math = Olmo-3 7B at l*=16. Ribbon: d_O only has an ingredient-drift band; no layer-0/control ribbon exists for these columns.",
              fontsize=9)
-plt.tight_layout(rect=(0, 0, 0.93, 0.93))
+plt.tight_layout(rect=(0, 0.03, 0.93, 0.93))
+fig.text(0.01, 0.01, "steps 13-15: controls red; colour family killed as verdict instrument; see REPORT final adjudication", fontsize=9)
 fig.savefig("runs/picture-2026-11-04.png", dpi=150); fig.savefig("runs/picture-2026-11-04.pdf")
 print("saved")

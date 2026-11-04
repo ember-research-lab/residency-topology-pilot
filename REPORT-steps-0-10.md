@@ -2,6 +2,28 @@
 
 **Read this first.** v1 of this report (retained verbatim at the end, section "VOID RUN") used hub `main` a1847dff as the base. That checkpoint is an unrelated network (weight cosine to SFT and to every ingredient about 0.0003; T1 measured), so every steps 3-10 verdict in v1 is VOID. AMENDMENT 2 (PREREG-2026-11-04.md, commit 2b8755d) replaces the base with `stage2-ingredient3-step23852-tokens51B` = **f83cd641d4f00954eb25c781e0ac360debb3239e** and adds a fail-closed lineage gate. Steps 3-10 below are re-run on that base. Steps 11 and 12 are not run.
 
+## Driver adjudication 2026-11-04 (final)
+
+(a) **Base lineage (T1).** Run 1 used hub `main` a1847dff as the base; it is unrelated to the stage-2 ingredients and the SFT/DPO/Instruct chain (median relative weight distance 1.11, median cosine 0.0). Run 1 is VOID. A fail-closed weights-only lineage gate (src/rtp/lineage.py) now precedes every extraction and measure; the base is stage2-ingredient3 f83cd641 (AMENDMENT 2).
+(b) **1B chain (T1).** All four stages are red at the point estimate, none is stable at >= 0.9 except the secondary RLVR1 row, and base-relative D on a sequential chain carries the SFT displacement (confound owned). No verdict on the 1B chain; F1 is not met there.
+(c) **7B RL-Zero (T1).** Red at the point estimate, Holm p_red 0.008, stability 1.0, so the F1 condition fires. F4 also fires via C1 nouns (red, 99.9th percentile; C2 nonce also red). The red reading is therefore not a world-structure claim.
+(d) **Steps 14-15 (T1 on synthetic; T3 reading).** The colour-versus-row-permutation family is KILLED as a verdict instrument at ||D||/||H|| of about 0.01: the raw N4' test calls a pure smooth map red in 20/20 seeds (geography, C1, C2); the smoothed readout, including the corrected Freedman-Lane null with a nonlinear smoother, calls it blue in 20/20 seeds on geography and C1; power appears only at rewire share 0.20 (share 0.10 under Freedman-Lane: 15%). Caveat: the random-MLP smooth part may be smoother in H_b than real fine-tune displacements.
+(e) **P2 cost (T1; band T3).** No drop beyond the band: delta R2 geography -0.00013 (CI [-0.00031, +0.00008]), death-year +0.00004; band 0.0085 borrowed from 1B.
+(f) **Hypothesis "imitation activates, reward prunes": UNTESTED**, neither supported nor killed. No instrument in this pilot has a calibrated null at this effect size.
+(g) **What survives.** The pipeline (lineage gate, memory cap, streaming extraction, controls, closure checks); the finding that fine-tune displacements are partly smooth in H_b (kernel-ridge held-out R2 0.18-0.31, T1); and the measured bias table of step 15.
+(h) **Path forward.** The null this needs is empirical, not permutation-based. Seed replicates of the same post-training recipe give "displacement under the same reward, different seed"; the test becomes the entity-versus-control enrichment of the stage displacement relative to the seed-to-seed displacement, with the planted-rewiring control of step 15 as the power calibration. That is the compute ask of the residency proposal (open-instruct recipe on 1B/7B/13B, at least 3 seeds). [prediction, T3]
+
+## Kill ledger (what died, when, and the number that killed it)
+
+| Date | Dead thing | Killing number |
+|---|---|---|
+| 2026-11-04 | Hub `main` a1847dff as the OLMo-2 1B base | lineage gate median rel 1.11, cos 0.0 against ingredients and chain (T1) |
+| 2026-11-04 | Base-relative D for DPO/RLVR/Instruct on the sequential chain as a test of "reward prunes" | all four ||D||/||H|| 0.40-0.41 with near-identical p: SFT displacement dominates (T1) |
+| 2026-11-04 | N4' (row permutation of D) alone as a verdict | pure smooth synthetic D read red 20/20 on geography, C1, C2 (step 15, T1) |
+| 2026-11-04 | Smoother (KRR) plus N4' | same D read blue 20/20 on geography and C1 (step 15, T1) |
+| 2026-11-04 | Freedman-Lane null with a nonlinear smoother | blue 20/20 at s=0 on geography and C1; red 15% at s=0.10 (step 15, T1) |
+| 2026-11-04 | CKA / d_O as "no-change" evidence | RL-Zero CKA 0.99998 and d_O 2.1e-5 while the controls colour identically and F4 fires; d_O passes for any small change (Davis-Kahan, DEGENERATE, T1) |
+
 ## Lineage gate results (weights only; src/rtp/lineage.py, records data/lineage/*.json; PASS = median rel < 0.5 and median cos > 0.9, keys and shapes identical)
 
 | pair (first 12 of full SHA, parent -> child) | median ||child-parent||/||parent|| | median cosine | gate |
