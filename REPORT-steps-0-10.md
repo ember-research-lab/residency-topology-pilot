@@ -1,3 +1,170 @@
+# REPORT steps 0-10 v2 (residency-topology-pilot), 2026-11-04: gated base
+
+**Read this first.** v1 of this report (retained verbatim at the end, section "VOID RUN") used hub `main` a1847dff as the base. That checkpoint is an unrelated network (weight cosine to SFT and to every ingredient about 0.0003; T1 measured), so every steps 3-10 verdict in v1 is VOID. AMENDMENT 2 (PREREG-2026-11-04.md, commit 2b8755d) replaces the base with `stage2-ingredient3-step23852-tokens51B` = **f83cd641d4f00954eb25c781e0ac360debb3239e** and adds a fail-closed lineage gate. Steps 3-10 below are re-run on that base. Steps 11 and 12 are not run.
+
+## Lineage gate results (weights only; src/rtp/lineage.py, records data/lineage/*.json; PASS = median rel < 0.5 and median cos > 0.9, keys and shapes identical)
+
+| pair (first 12 of full SHA, parent -> child) | median ||child-parent||/||parent|| | median cosine | gate |
+|---|---|---|---|
+| 9d3e43659f00 -> 0d85a3d03787 | 0.2311 | 0.9730 | PASS |
+| 9d3e43659f00 -> f83cd641d4f0 | 0.2157 | 0.9766 | PASS |
+| a1847dff3500 -> 0d85a3d03787 | 1.1101 | 0.0003 | FAIL |
+| a1847dff3500 -> ada39260a92e | 1.1088 | 0.0003 | FAIL |
+| a1847dff3500 -> b51c5f1b7c83 | 1.1089 | 0.0002 | FAIL |
+| a1847dff3500 -> f83cd641d4f0 | 1.1088 | 0.0003 | FAIL |
+| a81bae42db39 -> dee26a4074b8 | 0.0022 | 1.0000 | PASS |
+| f83cd641d4f0 -> 033e02d7fe4f | 0.0884 | 0.9961 | PASS |
+| f83cd641d4f0 -> 0d85a3d03787 | 0.0883 | 0.9961 | PASS |
+| f83cd641d4f0 -> 0f49bb9c8bb2 | 0.0884 | 0.9961 | PASS |
+| f83cd641d4f0 -> 12cb33498d26 | 0.0884 | 0.9961 | PASS |
+| f83cd641d4f0 -> 48d788eca847 | 0.0884 | 0.9961 | PASS |
+| f83cd641d4f0 -> 9ab374beda00 | 0.0884 | 0.9961 | PASS |
+| f83cd641d4f0 -> a7b49f0c2856 | 0.0884 | 0.9961 | PASS |
+| f83cd641d4f0 -> ada39260a92e | 0.1155 | 0.9933 | PASS |
+| f83cd641d4f0 -> b51c5f1b7c83 | 0.1157 | 0.9933 | PASS |
+| f83cd641d4f0 -> c4b0485961ab | 0.0884 | 0.9961 | PASS |
+
+Short sha map: a1847dff3500 = hub main (regression case, must FAIL: it does, 4 of 4); f83cd641d4f0 = chosen base; 0d85a3d03787 SFT; ada39260a92e / b51c5f1b7c83 ingredients 1/2; 9d3e43659f00 = stage1 final (stage1-step1907359-tokens4001B); c4b0485961ab DPO; 12cb33498d26 RLVR1; 48d788eca847 Instruct; 0f49bb9c8bb2 / 033e02d7fe4f / 9ab374beda00 / a7b49f0c2856 Instruct steps 200/800/1600/2600; a81bae42db39 -> dee26a4074b8 the Olmo-3 7B pair (PASS, so step 11 is gated open). The ingredient1-vs-ingredient2 weight distance is 0.116 (ING3-relative values above; the coordinator's 1e-2 expectation was wrong). Base choice evidence: AMENDMENT 2 table (stage1 final -> SFT 0.231 / cos 0.973 also passes the gate but is the 4T-token stage-1 end, not the 50B-mix final that the card names; ingredients 1/2 are exploratory; SFT is closest to ingredient 3, 0.088).
+
+## Freezes re-derived on the new base (unchanged step-4 rules; configs/pilot.toml [frozen])
+
+| quantity | new base f83cd641 | void a1847dff |
+|---|---|---|
+| l* | 12 | 12 |
+| m / r | 5 / 50 (uncapped r 166) | 5 / 50 (178) |
+| probe R2 L0/L4/L8/L12 | 0.276 / 0.639 / 0.788 / 0.824 | 0.280 / 0.540 / 0.754 / 0.822 |
+| lambda_2 | 0.429 | 0.462 |
+| layer-0 overlap O (F4 threshold 0.8) | 0.200 | 0.170 |
+| Spearman u_2 vs zipf / token count (F4 threshold 0.6) | -0.566 / 0.089 | -0.480 / 0.053 |
+| top-3 coordinate variance share (outlier arm needed?) | 0.0099 (no) | 0.0109 (no) |
+| precision null ||D_prec|| at l*=12 | 1.411 | 1.601 |
+
+Closure on the new base: closure_rel 5.6e-7 (<= 1e-5), re-extraction 5.6e-7 (<= 1e-6); F32 run closure the same order. F4 flags: none raised (T1).
+
+
+# Steps 6-10 v2 results on the gated base (AMENDMENT 2, 2026-11-04)
+
+Adjudications (a)-(f) of 2026-11-04 carry over unchanged (r=50 at the n/10 cap; m=5; layer-0 mean-over-name-tokens; no zipf partialling; precision null explicit; snapshots kept). The extractions of the non-base checkpoints are reused from the void run (activations depend only on the checkpoint weights, not on the base; closure re-checked on the base only), each re-gated against the new base below.
+
+## Checkpoints (full commit SHAs, snapshots kept in /mnt/e/ai-models/huggingface_cache/hub; data/checkpoints.json)
+
+| key | repo @ revision | full SHA | prefix check | lineage gate vs base: median rel / median cos / result | closure rel (max over L0/4/8/12) | seconds (fetch / total) |
+|---|---|---|---|---|---|---|
+| sft | allenai/OLMo-2-0425-1B-SFT @ main | 0d85a3d037876ce6ac7d4311d994400fc66ac27f | matches pinned prefix | 0.0883 / 0.9961 / PASS | 7.12e-07 | 34 / 475 |
+| dpo | allenai/OLMo-2-0425-1B-DPO @ main | c4b0485961ab24c2433b090f3b922f0913a9290f | matches pinned prefix | 0.0884 / 0.9961 / PASS | 6.97e-07 | 31 / 469 |
+| rlvr1 | allenai/OLMo-2-0425-1B-RLVR1 @ main | 12cb33498d26b411c38ac3ca9df27180a1d291b8 | matches pinned prefix | 0.0884 / 0.9961 / PASS | 6.81e-07 | 44 / 491 |
+| instruct | allenai/OLMo-2-0425-1B-Instruct @ main | 48d788eca847d4d7548f375ad03d3c9312f6139e | matches pinned prefix | 0.0884 / 0.9961 / PASS | 6.84e-07 | 39 / 488 |
+| ing1 | allenai/OLMo-2-0425-1B @ stage2-ingredient1-step23852-tokens51B | ada39260a92eb8cfc2252b9e937f790fd5b0dbc1 | n/a (branch) | 0.1155 / 0.9933 / PASS | 6.11e-07 | 135 / 593 |
+| ing2 | allenai/OLMo-2-0425-1B @ stage2-ingredient2-step23852-tokens51B | b51c5f1b7c83a96b9a80bdaf14a2077c672fbccd | n/a (branch) | 0.1157 / 0.9933 / PASS | 6.11e-07 | 90 / 564 |
+| ing3 | allenai/OLMo-2-0425-1B @ stage2-ingredient3-step23852-tokens51B | f83cd641d4f00954eb25c781e0ac360debb3239e | n/a (branch) | is the base | 6.08e-07 | 63 / 513 |
+| inst_step200 | allenai/OLMo-2-0425-1B-Instruct @ step_200 | 0f49bb9c8bb23d43b51b1732be137a99bfaaf9ec | n/a (branch) | 0.0884 / 0.9961 / PASS | 6.84e-07 | 45 / 519 |
+| inst_step800 | allenai/OLMo-2-0425-1B-Instruct @ step_800 | 033e02d7fe4fe254c16c2c21d16bbf08bad1ad77 | n/a (branch) | 0.0884 / 0.9961 / PASS | 6.85e-07 | 110 / 564 |
+| inst_step1600 | allenai/OLMo-2-0425-1B-Instruct @ step_1600 | 9ab374beda00b26265133e125046e564fb5d2f26 | n/a (branch) | 0.0884 / 0.9961 / PASS | 6.94e-07 | 136 / 595 |
+| inst_step2600 | allenai/OLMo-2-0425-1B-Instruct @ step_2600 | a7b49f0c28561ccc212976a6b036ee556ee61fd7 | n/a (branch) | 0.0884 / 0.9961 / PASS | 6.86e-07 | 119 / 592 |
+
+BROKEN-if checks, steps 3-8 (AMENDMENT 2): lineage gate PASS for every checkpoint against the base (table above; step 9/10 assert it); closure <= 1e-5 and re-extraction <= 1e-6 on every checkpoint; pinned SHA prefixes match for the four stages. ing3 is the base (bit-identical activations to runs/olmo2-1b-base, max abs difference 0.0). Tier T1 (measured).
+
+## Precision null (step 6, explicit)
+||D_SFT|| = 102.219 at l*=12 (centred, template-averaged last token, geography). Required > 16.0: PASS (ratio ||D_SFT||/16.0 = 6.4). ||D_prec|| = 1.411; ||D_prec||/||D_SFT|| = 0.0138 < 0.1: PASS. Tier T1.
+
+## Results table (l*=12, m=5, r=50, P=999; Holm at 0.05 over the 8-test family; B=1000 bootstrap)
+
+Family caveat: the Olmo-3 RL-Zero pair (step 11) is not yet run. The family of 8 is held at size 8 with the two absent p-values taken as 1 (the most permissive reading for the present ones); SFT/DPO/Instruct vote in that family. RLVR1 (a post-trained RL stage) is reported with its own Holm over its 2 p-values and is labelled secondary. Verdict words are the preregistered ones only.
+
+| stage | ||D||/||H|| | f_low(R) (null median) | lambda_lin | r_eff(R) | p_blue | p_red | Holm p_blue / p_red | verdict | dPR_cov (N4' 5th / 95th) | d_O (N4' 5/95) | d_NP k=10 | Procrustes R_P | CKA | bootstrap stability |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| sft | 0.3993 | 0.0008937 (0.0006123) | 0.2886 | 146.2 | 1.000 | 0.001 | 1.000 / 0.008 | **red** | 7.253 (6.648 / 6.86) | 0.07484 (0.03935 / 0.05235) | 0.2732 | 0.02779 | 0.9548 | 0.763 (NOT claimable, < 0.9) |
+| dpo | 0.4094 | 0.0008805 (0.0006194) | 0.2824 | 147.4 | 0.999 | 0.002 | 1.000 / 0.014 | **red** | 7.904 (6.804 / 7.014) | 0.07388 (0.04084 / 0.05369) | 0.276 | 0.02907 | 0.9524 | 0.737 (NOT claimable, < 0.9) |
+| rlvr1 | 0.4102 | 0.0008827 (0.0006195) | 0.2852 | 148.1 | 1.000 | 0.001 | 1.000 / 0.002 | **red** | 8.055 (6.911 / 7.138) | 0.07513 (0.04153 / 0.05536) | 0.2766 | 0.02926 | 0.9519 | 0.944 (claimable) |
+| instruct | 0.4106 | 0.0008801 (0.0006152) | 0.2851 | 147.9 | 0.999 | 0.002 | 1.000 / 0.014 | **red** | 8.067 (6.892 / 7.113) | 0.07614 (0.04213 / 0.05655) | 0.2766 | 0.02929 | 0.9519 | 0.725 (NOT claimable, < 0.9) |
+
+Verdict set per replicate (counts of 1000): sft: {'not red': 237, 'red': 763}; dpo: {'not red': 263, 'red': 737}; rlvr1: {'not red': 56, 'red': 944}; instruct: {'not red': 275, 'red': 725}.
+
+Other non-voting rows (point estimates; none of them votes):
+
+| stage | clustering change (N4' 5/50/95) | E_low(base graph) change (N4' 5/50/95) | coupling C | t_hat_k (k=1..5) | null percentile of dPR_cov / dclust / dE_low / d_O / d_NP |
+|---|---|---|---|---|---|
+| sft | -0.03863 (-0.037, -0.03017, -0.02316) | -0.02414 (-0.02304, -0.02266, -0.02224) | 0.4808 | -0.047, -0.0606, -0.0534, -0.0191, -0.0271 | 1.000 / 0.011 / 0.001 / 1.000 / 1.000 |
+| dpo | -0.04096 (-0.03781, -0.03106, -0.02383) | -0.02599 (-0.02396, -0.02358, -0.0232) | 0.4236 | -0.046, -0.0664, -0.0569, -0.00375, -0.02 | 1.000 / 0.011 / 0.001 / 1.000 / 1.000 |
+| rlvr1 | -0.04211 (-0.03987, -0.03252, -0.02547) | -0.02637 (-0.02431, -0.02394, -0.02354) | 0.4273 | -0.0474, -0.069, -0.0592, -0.00403, -0.0259 | 1.000 / 0.016 / 0.001 / 1.000 / 1.000 |
+| instruct | -0.04286 (-0.03914, -0.0327, -0.02565) | -0.02641 (-0.0243, -0.02389, -0.0235) | 0.4257 | -0.0467, -0.0686, -0.0584, -0.00378, -0.025 | 1.000 / 0.007 / 0.001 / 1.000 / 1.000 |
+
+Bootstrap 95% CIs (percentile; 400-entity subsample, template multiset): sft: ratio 0.395-0.4347, f_low 0.0003185-0.00107, d_O 0.05684-0.1802; dpo: ratio 0.4052-0.4462, f_low 0.0003123-0.001044, d_O 0.05812-0.1748; rlvr1: ratio 0.4058-0.4475, f_low 0.0003131-0.001045, d_O 0.05834-0.1763; instruct: ratio 0.4061-0.4481, f_low 0.0003128-0.001045, d_O 0.05888-0.1768.
+
+## Sensitivity columns (reported, non-voting)
+r/2, r, 2r = 25/50/100 (f_low(R), p_red; red verdict by raw p_red <= 0.05):
+
+| stage | r=25 | r=50 | r=100 |
+|---|---|---|---|
+| sft | 0.001419, p_red 0.001, lambda_lin 0.216 | 0.0008937, p_red 0.004, lambda_lin 0.2886 | 0.0006246, p_red 0.020, lambda_lin 0.399 |
+| dpo | 0.001385, p_red 0.001, lambda_lin 0.2108 | 0.0008805, p_red 0.004, lambda_lin 0.2824 | 0.0006175, p_red 0.025, lambda_lin 0.3918 |
+| rlvr1 | 0.00139, p_red 0.001, lambda_lin 0.2135 | 0.0008827, p_red 0.001, lambda_lin 0.2852 | 0.0006159, p_red 0.038, lambda_lin 0.3945 |
+| instruct | 0.001389, p_red 0.001, lambda_lin 0.2134 | 0.0008801, p_red 0.001, lambda_lin 0.2851 | 0.0006149, p_red 0.040, lambda_lin 0.3944 |
+
+m = m*-2, m*+2, 10 (f_low(R), p_red, d_O):
+
+| stage | m=3 | m=7 | m=10 |
+|---|---|---|---|
+| sft | 0.0007164, p_red 0.003, d_O 0.06302 | 0.001125, p_red 0.001, d_O 0.09326 | 0.001605, p_red 0.001, d_O 0.1481 |
+| dpo | 0.0007061, p_red 0.002, d_O 0.07632 | 0.001109, p_red 0.001, d_O 0.09383 | 0.001586, p_red 0.002, d_O 0.1482 |
+| rlvr1 | 0.0007069, p_red 0.002, d_O 0.07925 | 0.001111, p_red 0.001, d_O 0.09458 | 0.001592, p_red 0.001, d_O 0.1492 |
+| instruct | 0.0007053, p_red 0.005, d_O 0.0793 | 0.001108, p_red 0.001, d_O 0.09455 | 0.001588, p_red 0.001, d_O 0.1491 |
+
+## epsilon floor (steps 7-8) and legacy P1 row
+epsilon = max(eps_A over the 3 ingredient pairs, eps_N6 over the 3 consecutive RL-step pairs), each the 95th bootstrap percentile of the statistic under the same paired draw (maximum over pairs). Caption: none of these is a true seed replicate; eps_A is a drift reference, not a noise floor.
+
+| statistic | eps_A (ingredient pairs) | eps_N6 (RL steps 200-800-1600-2600) | epsilon |
+|---|---|---|---|
+| d_O | 0.02936 | 0.000126 | **0.02936** |
+| d_NP | 0.1607 | 0.008012 | **0.1607** |
+| R_P | 0.01103 | 9.323e-06 | **0.01103** |
+
+Point values of the pairwise statistics (step 9, all templates and entities):
+
+| pair | ||D||/||H_base|| | d_O | d_NP | R_P |
+|---|---|---|---|---|
+| ing1|ing2 | 0.2453 | 0.01049 | 0.1446 | 0.01071 |
+| ing1|ing3 | 0.2438 | 0.0133 | 0.1454 | 0.01066 |
+| ing2|ing3 | 0.2452 | 0.01032 | 0.15 | 0.01074 |
+| inst_step200|inst_step800 | 0.005079 | 8.39e-06 | 0.0046 | 3.596e-06 |
+| inst_step800|inst_step1600 | 0.006515 | 1.353e-05 | 0.006 | 6.294e-06 |
+| inst_step1600|inst_step2600 | 0.007582 | 1.434e-05 | 0.0056 | 8.237e-06 |
+
+Base against each reference checkpoint (point): ing1: ||D||/||H|| 0.2438, d_O 0.0133, d_NP 0.1454, R_P 0.01066; ing2: ||D||/||H|| 0.2452, d_O 0.01032, d_NP 0.15, R_P 0.01074; ing3: ||D||/||H|| 0, d_O 2.22e-16, d_NP 0, R_P -2.22e-16; inst_step200: ||D||/||H|| 0.4102, d_O 0.07518, d_NP 0.2764, R_P 0.02926; inst_step800: ||D||/||H|| 0.4106, d_O 0.07577, d_NP 0.277, R_P 0.02932; inst_step1600: ||D||/||H|| 0.4105, d_O 0.07497, d_NP 0.2756, R_P 0.02927; inst_step2600: ||D||/||H|| 0.4109, d_O 0.07557, d_NP 0.2778, R_P 0.02932.
+
+Within-RL drift ordering: ||D(step_k, base)||/||H|| = inst_step200: 0.41017, inst_step800: 0.41056, inst_step1600: 0.4105, inst_step2600: 0.41089 (monotone non-decreasing in step order: False; reported, not a break).
+
+**Legacy P1 'within eps' row: DEGENERATE (reported, never decisive).** Rule: within eps if the upper 95% bootstrap bound of M(base, s) < eps; beyond if the lower bound > eps; else INCONCLUSIVE.
+
+| stage | d_O | d_NP | R_P |
+|---|---|---|---|
+| sft | beyond eps | beyond eps | beyond eps |
+| dpo | beyond eps | beyond eps | beyond eps |
+| rlvr1 | beyond eps | beyond eps | beyond eps |
+| instruct | beyond eps | beyond eps | beyond eps |
+
+## Step-9 self-calibration (BROKEN-if: real-data uniformity)
+A row-permuted D_SFT was treated as the observed displacement 50 times (P=199 each); the 50 p_blue values were tested for uniformity: KS statistic 0.135, p = 0.295 (>= 0.01: PASS; mean value 0.536). Note this checks p_blue only. Tier T1.
+
+## Step 10 identity check
+The identity draw (all 8 templates, all 500 entities, step-9 seeds) reproduces the step-9 point estimates (f_low, d_O, d_NP, R_P, ||D||, p-values, verdict) to 1e-12 relative: PASS. Bootstrap B=1000, 400 entities per draw, m, r (=50, kept at its frozen value although n/10 = 40 at 400 entities) and l* frozen, P=999 per replicate for every stage, same draw applied to base, stages, ingredients and RL-step branches. Wall time 3068 s.
+
+## Wall times (steps 6-10)
+Step 6: sft 475 s, dpo 469 s, rlvr1 491 s, instruct 488 s. Step 7: ing1 593 s, ing2 564 s, ing3 513 s. Step 8: inst_step200 519 s, inst_step800 564 s, inst_step1600 595 s, inst_step2600 592 s. Step 9: 1929 s. Step 10: 3068 s (a first launch was stopped after ~25 min and relaunched: the per-draw template averaging used a slow fancy-indexed mean, replaced by an equivalent weighted tensordot).
+
+
+## Flags (facts; no interpretation beyond the preregistered words)
+1. The void-run pathology is gone: ||D(base, stage)||/||H_base|| is 0.399 / 0.409 / 0.410 / 0.411 (SFT/DPO/RLVR1/Instruct), the ingredients 1/2 sit at 0.244/0.245 and RL-step branches at 0.410-0.411 (void run: 1.52 and 1.48). ||D_SFT|| = 102.2 > 16.0 (BROKEN-if not triggered), ||D_prec||/||D_SFT|| = 0.0138 < 0.1. Note ||D(base, ing1)|| = 0.244 is a large part of the SFT displacement 0.399: ingredient 1/2 are different runs from the final ingredient 3 and sit nearly as far from the base as post-training does (ing1 vs ing2 0.245). A displacement of this size from a different-data-order sibling is the scale to compare against, and the epsilon floor (below) is set by it.
+2. Verdicts at Holm: SFT red (Holm p_red 0.008), DPO red (0.014), RLVR1 red (0.002), Instruct red (0.014); Holm p_blue 1.000 for all four. Bootstrap stability of "red" is 0.763 / 0.737 / 0.944 / 0.725: only RLVR1 reaches the F1 threshold 0.9; SFT, DPO and Instruct do not (stable_claim false). Family caveat (two absent RL-Zero p-values held at 1) as in v1.
+3. Literal F1 reading, for the driver (not applied): F1 = "RLVR-final or RL-Zero-Math residual red at l*, p_red <= Holm, stability >= 0.9"; the 1B RLVR1 stage meets it (Holm p_red 0.002, stability 0.944), RL-Zero not run. The red verdict is uniform across SFT through Instruct with similar f_low (0.00088-0.00089, null median 0.0006), so it is not a reward-specific signature in this data: SFT (imitation) is equally red (T1).
+4. Sensitivity: at r=100 raw p_red is 0.020 / 0.025 / 0.038 / 0.040 (SFT/DPO/RLVR1/Instruct); the r=100 Holm reading was not run (non-voting column). The f_low value itself falls with r (SFT-like drift).
+5. epsilon (95th bootstrap percentile, max over pairs): d_O 0.0294, d_NP 0.1607, R_P 0.0110, all set by the ingredient pairs (eps_A), not by RL steps (eps_N6 <= 0.008). Legacy P1 DEGENERATE row: all four stages "beyond eps" on d_O, d_NP and R_P.
+6. Self-calibration KS p = 0.295 (uniformity not rejected); identity bootstrap draw reproduces step 9 exactly.
+7. Extractions of non-base checkpoints were reused from the void run (activations depend only on the checkpoint); the gate was re-run for each against the new base, and the base extraction was redone. Base activations are bit-identical to the ing3 extraction (max abs difference 0.0).
+8. Not done: step 11 (Olmo-3 7B pair; its gate already PASSes), step 12 (picture), GitHub issues (local-only repo), a diagnosis of why hub `main` differs from every ingredient.
+
+# VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
+
 # REPORT steps 0-10 (residency-topology-pilot), 2026-11-03/04 (steps 0-5 sections retained below, steps 6-10 appended at the end)
 
 ## Commits (repo ., branch main)

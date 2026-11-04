@@ -16,3 +16,4 @@
 - base diagnosis: hub main of OLMo-2-0425-1B is uncorrelated with its stage-2 ingredients (not a load bug); verdicts held as DEGENERATE-pending.
 - lineage gate (src/rtp/lineage.py, scripts/lineage_check.py): weights-only parent/child check, fail closed in extract/step9/step10; main a1847dff FAILs (regression case).
 - steps 3-5 re-run on the gated base stage2-ingredient3 f83cd641 (AMENDMENT 2): l*=12, m=5, r=50 unchanged; void a1847dff data archived in data/void_a1847dff/.
+- REPORT-steps-0-10.md v2: steps 3-10 re-run on gated base f83cd641 (all four stages red at Holm, stability 0.73-0.94, ||D||/||H|| 0.40); v1 verdicts retained as VOID.
