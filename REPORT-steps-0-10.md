@@ -180,6 +180,19 @@ Step 6: sft 475 s, dpo 469 s, rlvr1 491 s, instruct 488 s. Step 7: ing1 593 s, i
 - Mechanism live: **systemd-run --user --scope (cgroup v2)**, `-p MemoryMax=16G -p MemorySwapMax=0`. From inside the scope /sys/fs/cgroup/.../memory.max reads 17179869184 and memory.swap.max reads 0. Test: a python allocating and touching 1 GB chunks was OOM-killed by the kernel (CONSTRAINT_MEMCG) at the cap with the VM unaffected: 4 GB cap, 6 GB request: killed after 3 GB; 10 GB cap, 14 GB request: killed after 9 GB. The literal 16 GB cap / 20 GB request test was not run, because only about 12 GB of RAM was free (about 6 GB of the 24 GB is non-reclaimable shared memory) and a request above that could reach the global limit before the cgroup one; the mechanism is identical at 16 GB (memory.max verified). prlimit/ulimit fallback not needed; `rtp.cap.require_cap()` accepts either (cgroup <= 16 GiB with swap 0, or RLIMIT_AS <= 20 GiB) and `step11_run.py` and `step11_extract.py` refuse to start otherwise (verified: running without the scope raises CapError); no override flag.
 - Streaming extraction (scripts/step11_extract.py): meta-device skeleton with 17 blocks, only the needed tensors read per key from the safetensors shards and kept in bf16 (lm_head not loaded); each block is upcast to fp32 only for its forward (pre-hook) and returned to bf16 afterwards; embeddings, final norm and rotary are fp32. Compute is fp32 from the released bf16 weights, as preregistered. The closure numbers of the streaming path are identical to the earlier all-fp32 path (4.2127e-07 / 4.0983e-07, T1). One model per process, base then RL-Zero. **Dry run under the cap (load + 10-prompt closure): VmHWM 10.32 GB (base), 10.11 GB (RL-Zero), both < 12 GB**; data/step11_dry_rss.json.
 
+## Step 11: Olmo-3-1025-7B base vs Olmo-3-7B-RL-Zero-Math (T1, measured; a81bae42db39 -> dee26a4074b8, lineage gate PASS)
+
+- Extraction under the cgroup cap, streaming bf16: peak RSS (VmHWM) base 11.58 GB, RL-Zero 11.83 GB; wall 1337 s / 1228 s; closure 4.2e-7 / 4.1e-7 (10 prompts). data/step11_rss.json.
+- Freezes on the 7B base (l*=16 = 1/2 L, fixed by truncation): probe R2 L8 0.783, L16 0.845; m=4, r=50, lambda_2 0.474.
+- RL-Zero: ||D||/||H|| = 0.0104; f_low(R) = 0.00122 vs N4' median 0.00059, percentile 99.9 (p_red = 0.001, floor of P=999; p_blue = 1.0); Holm (family of 8) p_red = 0.008, p_blue 1.0; lambda_lin 0.396; R effective rank 224 (power gate >= 20 met); d_O 2.1e-05; dPR_cov 0.119; dclust -0.00052.
+- Sensitivity: red at r=25 and r=100 (p_red 0.001 / 0.002), m=2, 6, 10 (p_red 0.001 each).
+- Bootstrap B=1000: red in 1000/1000, **stability 1.0** (>= 0.9, verdict claimable). Holm family: 1B SFT/DPO/Instruct at step-9 point values (0.008/0.012/0.012 red).
+- **Readings.** F1 condition (RL-Zero red, Holm-significant, stability >= 0.9): MET at the clean reward arm. F2 literal wording ("f_low(R) at or above N4' median") is also satisfied numerically (0.00122 > 0.00059), but here "red" already means f_low above the null, so F2 as worded does not discriminate from F1 on this statistic: **flagged for driver adjudication, no reading claimed** beyond the numbers. P1-R as an affirmative claim is not made here; the P2 readout (C1/C2) is not run in this step.
+- Caveats (T3): single seed per checkpoint, 1B Holm entries are point values, 7B at 1/2 L only, ||D||/||H|| ~ 1% so the red signal is a small structured displacement.
+
+## Step 12 picture
+runs/picture-2026-11-04.png and .pdf (force-added; runs/ is gitignored).
+
 # VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
 
 # REPORT steps 0-10 (residency-topology-pilot), 2026-11-03/04 (steps 0-5 sections retained below, steps 6-10 appended at the end)

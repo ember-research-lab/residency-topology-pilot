@@ -19,3 +19,4 @@
 - REPORT-steps-0-10.md v2: steps 3-10 re-run on gated base f83cd641 (all four stages red at Holm, stability 0.73-0.94, ||D||/||H|| 0.40); v1 verdicts retained as VOID.
 - scripts/step_increments.py: AMENDMENT 3 exploratory parent-relative increments.
 - memory cap rule: model jobs run in a systemd-run cgroup scope (MemoryMax=16G, swap 0); src/rtp/cap.py fail-closed check; step-11 7B extraction now streams bf16 weights (VmHWM ~10.3 GB). WSL freeze incident documented in REPORT v2.
+- step 11 (Olmo-3 7B RL-Zero vs base) results, Holm family of 8, step-12 picture.
