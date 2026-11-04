@@ -11,3 +11,4 @@
 - step 6: post-trained 1B stages (SFT, DPO, RLVR1, Instruct) extracted with per-checkpoint closure check; precision-null condition checked on D_SFT (data/checkpoints.json).
 - step 7: three stage-2 ingredient branches extracted (epsilon floor inputs).
 - step 8: Instruct RL-step branches step_200/800/1600/2600 extracted (within-RL drift inputs).
+- step 9: all measures + N4' (P=999) + Holm over the preregistered family; results in data/step9_results.json.
