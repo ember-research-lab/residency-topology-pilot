@@ -4,7 +4,7 @@
 - step 0 scaffold: aead2609e2b4750f7c80c56de67aa663c69a91a9
 - SEAL (PREREG-2026-11-04.md, alone): 9b8cf78799283c1cbc1ee1b8fef51cb38c028d51
 - step 1 battery: 61dc090
-- step 2 entities: see `git log` (last commit)
+- step 2 entities: f4a3032 (report file committed after: see git log)
 
 ## Versions
 python 3.12.12; torch 2.15.0+cpu (CUDA None, CPU wheel from download.pytorch.org/whl/cpu); transformers 5.22.1;
