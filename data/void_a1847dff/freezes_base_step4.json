@@ -1,0 +1,57 @@
+{
+ "probe_r2": {
+  "0": 0.2795058395372493,
+  "4": 0.5401328284457664,
+  "8": 0.754433711015138,
+  "12": 0.8218912512470815
+ },
+ "l_star": 12,
+ "probe_r2_below_0.3_everywhere": false,
+ "lambda_2": 0.46218157783550373,
+ "spectrum_2_22": [
+  0.46218,
+  0.83175,
+  0.88192,
+  0.90751,
+  0.91604,
+  0.93875,
+  0.95165,
+  0.95949,
+  0.96088,
+  0.96577,
+  0.97282,
+  0.97382,
+  0.97617,
+  0.97794,
+  0.97951,
+  0.98109,
+  0.98348,
+  0.98467,
+  0.9858,
+  0.98645,
+  0.98735
+ ],
+ "m": 5,
+ "m_point_estimate": 5,
+ "m_boundary": false,
+ "r": 50,
+ "r_uncapped_90pct": 178,
+ "top3_coord_variance_share": 0.010854030959308147,
+ "top3_coords": [
+  1139,
+  1080,
+  233
+ ],
+ "outlier_arm_needed": false,
+ "layer0_last_token_distinct_vectors": 366,
+ "layer0_overlap_O": 0.1704580615547037,
+ "layer0_theta_max": 87.09054293395555,
+ "layer0_mean_name_distinct_vectors": 500,
+ "spearman_u2_zipf": -0.47983575368387654,
+ "spearman_u2_ntok": 0.052973729824702845,
+ "spearman_u2_logpop": -0.1609489676586459,
+ "F4_flags": {
+  "layer0_overlap_gt_0.8": false,
+  "freq_or_ntok_rho_gt_0.6": false
+ }
+}
