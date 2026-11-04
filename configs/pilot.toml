@@ -1,0 +1,28 @@
+# Pilot configuration. Repo ids + revisions are the 12-char prefixes from the DESIGN (HF API 2026-11-03);
+# record FULL SHAs at download time (step 3+). m, r, l* are filled after step 4 and then frozen.
+[measure]
+n = 500
+K = 8
+k_knn = 10
+k_self = 7
+alpha = 1.0
+m_range = [4, 20]
+B = 1000
+P = 999
+holm_alpha = 0.05
+
+[hosts.olmo2_1b]
+base = { repo = "allenai/OLMo-2-0425-1B", rev = "main", sha12 = "a1847dff3500" }
+sft = { repo = "allenai/OLMo-2-0425-1B-SFT", sha12 = "0d85a3d03787" }
+dpo = { repo = "allenai/OLMo-2-0425-1B-DPO", sha12 = "c4b0485961ab" }
+rlvr1 = { repo = "allenai/OLMo-2-0425-1B-RLVR1", sha12 = "12cb33498d26" }
+instruct = { repo = "allenai/OLMo-2-0425-1B-Instruct", sha12 = "48d788eca847" }
+
+[hosts.olmo3_7b]
+base = { repo = "allenai/Olmo-3-1025-7B", sha12 = "a81bae42db39" }
+rl_zero_math = { repo = "allenai/Olmo-3-7B-RL-Zero-Math", sha12 = "dee26a4074b8" }
+
+[frozen]  # filled after step 4
+m = 0
+r = 0
+l_star = 0

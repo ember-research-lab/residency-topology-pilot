@@ -1,0 +1,30 @@
+[project]
+name = "residency-topology-pilot"
+version = "0.1.0"
+description = "Preregistered CPU pilot: imitation activates, reward prunes (entity-graph colour of post-training displacements)"
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub>=2.4.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pytest>=9.2.0",
+    "safetensors>=0.8.0",
+    "scipy>=1.18.1",
+    "torch>=2.15.0",
+    "transformers>=5.22.1",
+    "wordfreq>=3.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "rtp"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
