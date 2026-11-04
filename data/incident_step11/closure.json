@@ -1,0 +1,14 @@
+{
+ "8": {
+  "closure_rel": 4.212739668219001e-07,
+  "closure_max_abs": 1.430511474609375e-06,
+  "reextract_rel": 4.2127390997848124e-07,
+  "reextract_max_abs": 1.430511474609375e-06
+ },
+ "16": {
+  "closure_rel": 4.098330350643664e-07,
+  "closure_max_abs": 1.430511474609375e-06,
+  "reextract_rel": 4.098330350643664e-07,
+  "reextract_max_abs": 1.430511474609375e-06
+ }
+}

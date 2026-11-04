@@ -18,3 +18,4 @@
 - steps 3-5 re-run on the gated base stage2-ingredient3 f83cd641 (AMENDMENT 2): l*=12, m=5, r=50 unchanged; void a1847dff data archived in data/void_a1847dff/.
 - REPORT-steps-0-10.md v2: steps 3-10 re-run on gated base f83cd641 (all four stages red at Holm, stability 0.73-0.94, ||D||/||H|| 0.40); v1 verdicts retained as VOID.
 - scripts/step_increments.py: AMENDMENT 3 exploratory parent-relative increments.
+- memory cap rule: model jobs run in a systemd-run cgroup scope (MemoryMax=16G, swap 0); src/rtp/cap.py fail-closed check; step-11 7B extraction now streams bf16 weights (VmHWM ~10.3 GB). WSL freeze incident documented in REPORT v2.

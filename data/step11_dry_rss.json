@@ -1,0 +1,16 @@
+{
+ "olmo3-7b-base": {
+  "sha": "a81bae42db3975be1671e27b9c9a56da1a9f980f",
+  "rc": 0,
+  "peak_rss_gb": 10.32,
+  "wall_s": 219,
+  "killed_over_20gb": false
+ },
+ "olmo3-7b-rlzero": {
+  "sha": "dee26a4074b88215cd1326472e1ab14d0259d892",
+  "rc": 0,
+  "peak_rss_gb": 10.11,
+  "wall_s": 208,
+  "killed_over_20gb": false
+ }
+}

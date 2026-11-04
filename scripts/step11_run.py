@@ -1,7 +1,9 @@
 """Step 11 runner: extracts Olmo-3-1025-7B then Olmo-3-7B-RL-Zero-Math one at a time as a child process; polls the child's RSS every 10 s
-from /proc and kills that one pid if RSS > 20 GB (never pkill). Writes data/step11_rss.json. Usage: uv run python scripts/step11_run.py"""
+from /proc and kills that one pid if RSS > 20 GB (never pkill). Writes data/step11_rss.json. Usage: systemd-run --user --scope --quiet -p MemoryMax=16G -p MemorySwapMax=0 -- env OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 nice -n 10 uv run python scripts/step11_run.py [--dry]"""
 import json, os, signal, subprocess, sys, time, tomllib
-from rtp import lineage
+from rtp import lineage, cap
+MECH = cap.require_cap()   # refuse to start without a live memory cap (no override)
+print('memory cap mechanism:', MECH, flush=True)
 P = tomllib.load(open("configs/pilot.toml", "rb"))["hosts"]["olmo3_7b"]
 H = "/mnt/e/ai-models/huggingface_cache/hub/models--allenai--"
 BASE = ("olmo3-7b-base", H + "Olmo-3-1025-7B/snapshots/a81bae42db3975be1671e27b9c9a56da1a9f980f", "a81bae42db3975be1671e27b9c9a56da1a9f980f")
@@ -10,9 +12,9 @@ assert BASE[2].startswith(P["base"]["sha12"]) and RLZ[2].startswith(P["rl_zero_m
 lineage.require_pass(BASE[2], RLZ[2])
 env = dict(os.environ, OMP_NUM_THREADS="4", MKL_NUM_THREADS="4"); rec = {}
 for name, snap, sha in (BASE, RLZ):
-    if os.path.exists(f"runs/{name}/acts.npz"):
+    if os.path.exists(f"runs/{name}/acts.npz") and "--dry" not in sys.argv:
         continue
-    ch = subprocess.Popen(["nice", "-n", "10", sys.executable, "scripts/step11_extract.py", snap, sha, f"runs/{name}", "--gate", f"{BASE[2]}:{RLZ[2]}"], env=env,
+    ch = subprocess.Popen(["nice", "-n", "10", sys.executable, "scripts/step11_extract.py", snap, sha, f"runs/{name}", "--gate", f"{BASE[2]}:{RLZ[2]}"] + (["--dry"] if "--dry" in sys.argv else []), env=env,
                           stdout=open(f"runs/{name}.log", "w"), stderr=subprocess.STDOUT)
     peak = 0; t0 = time.time(); killed = False
     while ch.poll() is None:
