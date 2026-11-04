@@ -1,0 +1,21 @@
+{
+ "selfcheck_fast_minus_direct": 1.3552527156068805e-19,
+ "r": 22,
+ "m": 4,
+ "reff=5 blue beta=0.0": 0.0,
+ "reff=5 blue beta=0.05": 0.0,
+ "reff=5 blue beta=0.1": 0.0,
+ "reff=5 blue beta=0.2": 0.0,
+ "reff=5 red beta=0.0": 0.0,
+ "reff=5 red beta=0.05": 0.0,
+ "reff=5 red beta=0.1": 0.0,
+ "reff=5 red beta=0.2": 0.1,
+ "reff=50 blue beta=0.0": 0.0,
+ "reff=50 blue beta=0.05": 0.0,
+ "reff=50 blue beta=0.1": 0.0,
+ "reff=50 blue beta=0.2": 0.3,
+ "reff=50 red beta=0.0": 0.0,
+ "reff=50 red beta=0.05": 0.0,
+ "reff=50 red beta=0.1": 0.55,
+ "reff=50 red beta=0.2": 0.95
+}

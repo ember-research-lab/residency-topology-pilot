@@ -1,0 +1,50 @@
+{
+ "base_stand_in": {
+  "PR_cov": 16.482393289146945,
+  "PR_lap": 459.84642994312117,
+  "lowmode_energy": 0.37033026925261436,
+  "clust": 0.5627335050570345,
+  "deg_entropy_bits": 2.3479706067717894,
+  "mean_deg": 11.468
+ },
+ "base_rescaled_x5": {
+  "PR_cov": 16.482393289146938,
+  "PR_lap": 459.84642994312117,
+  "lowmode_energy": 0.37033026925261425,
+  "clust": 0.5627335050570345,
+  "deg_entropy_bits": 2.3479706067717894,
+  "mean_deg": 11.468,
+  "jaccard_to_ref": 1.0
+ },
+ "indep_gauss": {
+  "PR_cov": 252.02076595275526,
+  "PR_lap": 460.2033640766173,
+  "lowmode_energy": 0.016808785166804726,
+  "clust": 0.03549804998922646,
+  "deg_entropy_bits": 2.4209379298832525,
+  "mean_deg": 11.544,
+  "jaccard_to_ref": 0.013387352474898714
+ },
+ "chance_jaccard": 0.010121457489878543,
+ "tk_null_mean_over_sd": [
+  0.016,
+  -0.034,
+  0.0,
+  -0.014
+ ],
+ "witness_mode1_sign+1": {
+  "t_1": 1.135086332192094,
+  "t_others_maxabs": 2.276042695161483e-06,
+  "PR_cov": 15.127701324060224,
+  "lowmode_energy": 0.3920674962433846,
+  "jaccard_to_ref": 0.9899445214979196
+ },
+ "witness_mode1_sign-1": {
+  "t_1": -1.135086332192094,
+  "t_others_maxabs": 2.276042695161483e-06,
+  "PR_cov": 17.3949923404896,
+  "lowmode_energy": 0.3503792407173941,
+  "jaccard_to_ref": 0.9881944444444445
+ },
+ "offspan_tk_maxabs": 4.5970132598109995e-15
+}
