@@ -22,3 +22,4 @@
 - step 11 (Olmo-3 7B RL-Zero vs base) results, Holm family of 8, step-12 picture.
 - step 13: F4 + P2 cost on the Olmo-3 7B pair (F4 fires via C1; P2 falsified).
 - step 14 (exploratory): 1B controls colour + 7B smoothness diagnostic.
+- step 15 (exploratory): synthetic positive control for the smooth null (readouts i, ii, iii-old, iii).

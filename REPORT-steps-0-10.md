@@ -240,6 +240,31 @@ Geography-minus-C1 raw enrichment: point 0.29 (geo 2.07, C1 1.78, C2 1.37); pair
 
 **Reading (T3, exploratory).** D is partly a smooth function of H_b (held-out R2 0.18-0.31, highest on geography). Red-ness is not specific to geography (CI includes 0). After removing the smooth part, controls lose the red (percentile 0.16-0.22, not significant), but geography flips to blue (p_blue 0.001). The blue is likely partly a construction effect (the smoother removes low-frequency energy that the permutation null retains), so the residual colour is not read as evidence for or against the hypothesis. This supports "red tracks smooth displacement shared with controls" without proving that N4' is too weak for every fine-tune.
 
+## Step 15 (EXPLORATORY): synthetic positive control for the smooth null  (non-voting; analysis only; T1 numbers, T3 reading)
+
+Design as briefed: D_syn = D_smooth (random 2-layer tanh MLP, width 256, of H_b) + D_rewire (U_low M, m=5), ||D||/||H_b|| = 0.0104, rewire share s in {0, 0.05, 0.10, 0.20} on geography, s=0 on C1 and C2, 20 seeds per cell; readouts at red/blue 0.05 (no Holm). (iii) follows the corrected Freedman-Lane definition: fit the cross-fit KRR once, E = D - fhat(H_b), P=199 draws of D* = fhat + E_perm refitted through the full pipeline including the lambda choice. The earlier row-permuted-D version is kept as "iii-old" and is the bias measurement. Deviations: lambda per fold by closed-form LOO (not the step-14 5-fold inner CV) so that 199 refits per cell are affordable; (i),(ii) use P=499; (iii) P=199.
+
+Fraction of 20 seeds called red / blue:
+
+| cell | (i) raw red/blue | (ii) resid red/blue | iii-old red/blue | (iii) red/blue |
+|---|---|---|---|---|
+| geo_s0.0 | 1.00 / 0.00 | 0.00 / 1.00 | 0.95 / 0.00 | 0.00 / 1.00 |
+| geo_s0.05 | 1.00 / 0.00 | 0.00 / 0.80 | 1.00 / 0.00 | 0.00 / 0.40 |
+| geo_s0.1 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 0.15 / 0.00 |
+| geo_s0.2 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 / 0.00 |
+| C1_nouns_s0.0 | 1.00 / 0.00 | 0.00 / 1.00 | 1.00 / 0.00 | 0.00 / 1.00 |
+| C2_nonce_s0.0 | 1.00 / 0.00 | 0.00 / 1.00 | 1.00 / 0.00 | 0.00 / 0.25 |
+
+Real RL-Zero displacement (verdict, percentile of f_low), frozen m per set:
+
+| set | (i) raw | (ii) resid | iii-old | (iii) |
+|---|---|---|---|---|
+| geo | red (0.998) | blue (0.000) | red (0.985) | blue (0.000) |
+| C1_nouns | red (0.998) | white (0.194) | red (0.995) | white (0.915) |
+| C2_nonce | red (0.998) | white (0.120) | red (0.990) | red (0.980) |
+
+**Reading.** (i) raw N4' calls a pure smooth map red in 20/20 seeds on geography, C1 and C2: it cannot separate smooth displacement from rewiring, which is the hypothesis being tested (N4' too weak). (ii) and (iii) are biased blue at s=0 on geography (false-positive 100% in both; direct construction bias: iii-old 0% blue / 95% red versus iii 100% blue) and on C1 (100% blue); C2 is 100% / 25% blue. They recover s=0.20 (100%) but not s=0.10 reliably under (iii) (15%) and miss s=0.05; so by the falsifier none of the readouts is usable as a verdict instrument: (i) fails the null, (ii)/(iii) fail the null on the other side. Real data under (iii): geography blue (percentile 0.000), C1 white (0.915), C2 red (0.98), i.e. the real geography blue and the C1 white are inside the range the synthetic s=0 smooth-only displacement produces, and no colour claim about RL-Zero survives. Caveat: the synthetic smooth part is a random MLP, which may be smoother in H_b than real fine-tune displacements.
+
 # VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
 
 # REPORT steps 0-10 (residency-topology-pilot), 2026-11-03/04 (steps 0-5 sections retained below, steps 6-10 appended at the end)
