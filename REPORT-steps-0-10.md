@@ -13,6 +13,10 @@
 (g) **What survives.** The pipeline (lineage gate, memory cap, streaming extraction, controls, closure checks); the finding that fine-tune displacements are partly smooth in H_b (kernel-ridge held-out R2 0.18-0.31, T1); and the measured bias table of step 15.
 (h) **Path forward.** The null this needs is empirical, not permutation-based. Seed replicates of the same post-training recipe give "displacement under the same reward, different seed"; the test becomes the entity-versus-control enrichment of the stage displacement relative to the seed-to-seed displacement, with the planted-rewiring control of step 15 as the power calibration. That is the compute ask of the residency proposal (open-instruct recipe on 1B/7B/13B, at least 3 seeds). [prediction, T3]
 
+**CORRECTION (2026-11-04, after cross-family verification; (c) and (e) above are not rewritten).** (c): the clause "the red reading is therefore not a world-structure claim" is a T3 reading, not T1: F4 fired through its part (a) only; (b) O = 0.188 and (c) |rho| = 0.378 / 0.014 did not fire. (e): "P2 FALSIFIED" (step 13) is withdrawn; its premise, a red reward stage, was killed in step 15 and its band is borrowed from 1B (T3). Replacement: P2 not evaluable; the cost numbers themselves (delta R2 of order 1e-4) stand (T1).
+
+**Cross-family verification 2026-11-04:** C1-C4 DERIVED (Grok reproduced f_low to 1e-18 and Holm 0.008; Sonnet re-derived m, r, lineage, P=199 percentile 0.995, 100/100 bootstrap red, ridge delta R2 <= 6e-5, step-15 s=0 blue 5/5 and s=0.20 red 5/5); C5 PARTIAL, fixed by these two corrections. Report: ~/ember-review/VERIFY-2026-11-04-pilot-steps-11-15.md.
+
 ## Kill ledger (what died, when, and the number that killed it)
 
 | Date | Dead thing | Killing number |
@@ -286,6 +290,8 @@ Real RL-Zero displacement (verdict, percentile of f_low), frozen m per set:
 | C2_nonce | red (0.998) | white (0.120) | red (0.990) | red (0.980) |
 
 **Reading.** (i) raw N4' calls a pure smooth map red in 20/20 seeds on geography, C1 and C2: it cannot separate smooth displacement from rewiring, which is the hypothesis being tested (N4' too weak). (ii) and (iii) are biased blue at s=0 on geography (false-positive 100% in both; direct construction bias: iii-old 0% blue / 95% red versus iii 100% blue) and on C1 (100% blue); C2 is 100% / 25% blue. They recover s=0.20 (100%) but not s=0.10 reliably under (iii) (15%) and miss s=0.05; so by the falsifier none of the readouts is usable as a verdict instrument: (i) fails the null, (ii)/(iii) fail the null on the other side. Real data under (iii): geography blue (percentile 0.000), C1 white (0.915), C2 red (0.98), i.e. the real geography blue and the C1 white are inside the range the synthetic s=0 smooth-only displacement produces, and no colour claim about RL-Zero survives. Caveat: the synthetic smooth part is a random MLP, which may be smoother in H_b than real fine-tune displacements.
+
+**CORRECTION (2026-11-04, after cross-family verification; the sentence above is not rewritten).** The sentence "the real geography blue and the C1 white are inside the range the synthetic s=0 smooth-only displacement produces" is false for C1: real C1 under (iii) has enrichment 1.118 and percentile 0.915, against the s=0 synthetic mean 0.650, sd 0.045, max 0.763 (0 of 20 at or above). Real C2 (0.98, red) is also above the s=0 maximum of 1.040 (m mismatch noted: synthetic m=5, real m=4). Corrected reading: real displacements are less smooth-removable than the random-MLP synthetic, which confirms the stated caveat that the synthetic smooth part is smoother than a real fine-tune. The kill of the instrument family stands on the s=0 false-positive rates and the s=0.10 power, not on that sentence. (T1 numbers.)
 
 # VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
 
