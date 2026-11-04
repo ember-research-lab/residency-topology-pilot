@@ -7,3 +7,4 @@
 - Step 2: frozen entity sets (500 geography, 500 noun controls, 500 nonce controls, 300 figures) + SHA256SUMS; tokenizer files for 7 repos hashed; identical tokenization asserted within each family.
 - Amendments before first data: t_k normalised, stable theta/R_P forms, kNN-Laplacian reference rows, Title-cased noun controls (see PREREG-2026-11-04.md).
 - Steps 3-4: OLMo-2-0425-1B base extracted (4 layers x 8 templates x 1500 strings, bf16-rounded weights); closure passed; base-only freezes (l*, m, r) written to configs/pilot.toml.
+- Step 5 precision null: ||D_prec|| = 1.601 at l*=12 (0.68% of ||H||). Report renamed REPORT-steps-0-5.md.
