@@ -21,7 +21,8 @@ KEYS = ("d_O", "d_NP", "R_P")
 
 
 def draw_stats(tpl, ents, seeds_fixed: bool):
-    H = {n_: arr[n_][ents][:, tpl].mean(1) for n_ in names}
+    w = np.bincount(tpl, minlength=8) / len(tpl)       # template multiset as weights (identical to mean over the drawn templates)
+    H = {n_: np.tensordot(arr[n_], w, axes=([1], [0]))[ents] for n_ in names}
     base = A.Ck(H["olmo2-1b-base"]); rng = np.random.default_rng(7)
     res = {}
     for i, s in enumerate(STAGES):
