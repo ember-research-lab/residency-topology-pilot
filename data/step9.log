@@ -1,6 +1,6 @@
-sft ratio 1.5168 f_low 0.00088222 p_blue 1.0000 p_red 0.0010 reff 208.8  (393s)
-dpo ratio 1.5229 f_low 0.00087197 p_blue 1.0000 p_red 0.0010 reff 209.6  (731s)
-rlvr1 ratio 1.5221 f_low 0.00087255 p_blue 1.0000 p_red 0.0010 reff 209.6  (1071s)
-instruct ratio 1.5227 f_low 0.00087251 p_blue 1.0000 p_red 0.0010 reff 209.6  (1408s)
-self-calibration KS p = 0.0986
-DONE 1685 s
+sft ratio 0.3993 f_low 0.00089368 p_blue 1.0000 p_red 0.0010 reff 146.2  (367s)
+dpo ratio 0.4094 f_low 0.00088047 p_blue 0.9990 p_red 0.0020 reff 147.4  (708s)
+rlvr1 ratio 0.4102 f_low 0.0008827 p_blue 1.0000 p_red 0.0010 reff 148.1  (1090s)
+instruct ratio 0.4106 f_low 0.00088009 p_blue 0.9990 p_red 0.0020 reff 147.9  (1585s)
+self-calibration KS p = 0.2947
+DONE 1929 s
