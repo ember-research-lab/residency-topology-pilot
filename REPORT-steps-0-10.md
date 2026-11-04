@@ -163,6 +163,12 @@ Step 6: sft 475 s, dpo 469 s, rlvr1 491 s, instruct 488 s. Step 7: ing1 593 s, i
 7. Extractions of non-base checkpoints were reused from the void run (activations depend only on the checkpoint); the gate was re-run for each against the new base, and the base extraction was redone. Base activations are bit-identical to the ing3 extraction (max abs difference 0.0).
 8. Not done: step 11 (Olmo-3 7B pair; its gate already PASSes), step 12 (picture), GitHub issues (local-only repo), a diagnosis of why hub `main` differs from every ingredient.
 
+## Driver adjudication 2026-11-04
+
+1. F1 is NOT met. PREREG §4 names RLVR-final (= Instruct) and RL-Zero-Math, not RLVR1 (secondary, non-voting). Instruct is red at the point estimate but stability 0.725 < 0.9, and §3 line 200 says a verdict is claimed only at stability >= 0.9. Same for SFT (0.763) and DPO (0.737): "red at point estimate, UNSTABLE, no verdict claimed". RLVR1 red/0.944 is reported in the secondary block only. So P1-S is not yet claimable either.
+2. Design error, driver-owned, into the kill ledger: for a sequential chain (base->SFT->DPO->RLVR) the preregistered base-relative D for DPO/RLVR/Instruct inherits the SFT displacement (all four ||D||/||H|| ~ 0.40-0.41, near-identical p), so base-relative reward stages cannot test "reward prunes" on OLMo-2 1B. The only clean reward arm in this pilot is Olmo-3 RL-Zero-Math vs its base (RL directly from the pretrained model), i.e. step 11. State this plainly.
+3. AMENDMENT 3 (post-hoc, EXPLORATORY, non-voting on P1; to be preregistered for the residency-scale run): stage increments relative to the immediate parent per the model cards, each run through the identical pipeline on the frozen base graph (see PREREG AMENDMENT 3 and the increment section below).
+
 # VOID RUN (base = hub main a1847dff; unrelated network; kept for the kill ledger; do not quote verdicts from this part)
 
 # REPORT steps 0-10 (residency-topology-pilot), 2026-11-03/04 (steps 0-5 sections retained below, steps 6-10 appended at the end)
