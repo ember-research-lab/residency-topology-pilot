@@ -1,2 +1,17 @@
 21:58:55 toy/scripts/t2_train.py ('sft', 0) rc 0
 22:01:03 toy/scripts/t3_extract.py ('sft', 0) rc 0
+23:28:58 toy/scripts/t2_train.py ('sft', 1) rc 0
+23:31:00 toy/scripts/t3_extract.py ('sft', 1) rc 0
+01:03:49 toy/scripts/t2_train.py ('sft', 2) rc 0
+01:05:44 toy/scripts/t3_extract.py ('sft', 2) rc 0
+02:18:32 toy/scripts/t2_train.py ('sft', 3) rc 0
+02:20:36 toy/scripts/t3_extract.py ('sft', 3) rc 0
+03:33:22 toy/scripts/t2_train.py ('sft', 4) rc 0
+03:35:26 toy/scripts/t3_extract.py ('sft', 4) rc 0
+04:43:06 toy/scripts/t2_train.py ('dpo', 0) rc 0
+04:45:15 toy/scripts/t3_extract.py ('dpo', 0) rc 0
+05:38:40 toy/scripts/t2_train.py ('dpo', 1) rc 0
+05:40:39 toy/scripts/t3_extract.py ('dpo', 1) rc 0
+06:34:20 toy/scripts/t2_train.py ('dpo', 2) rc 0
+06:36:29 toy/scripts/t3_extract.py ('dpo', 2) rc 0
+QUEUE DONE

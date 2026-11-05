@@ -1,0 +1,3 @@
+06:37:26 toy/scripts/t5_grpo.py ('gate',) rc 0
+{'base_pass_rate': 0.04, 'n': 200, 'run_arm': False}
+RL arm not run: base pass rate outside [5%,60%]

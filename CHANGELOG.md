@@ -24,3 +24,4 @@
 - step 14 (exploratory): 1B controls colour + 7B smoothness diagnostic.
 - step 15 (exploratory): synthetic positive control for the smooth null (readouts i, ii, iii-old, iii).
 - final adjudication 2026-11-04 in REPORT v2 (kill ledger, hypothesis UNTESTED), ISSUES.md OPEN-1, CLAUDE.md BROKEN-if row for colour verdicts.
+- toy: seed-replicate null analysis + picture + REPORT-toy (SmolLM2-360M; SFT x5, DPO x3; F-T1..F-T4 not fired, RL entry gate fired at 0.04).

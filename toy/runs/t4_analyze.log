@@ -1,0 +1,5 @@
+real dpo 512 s
+real sft 770 s
+cal dpo 1043 s
+cal sft 1868 s
+DONE {"F_T2": {"stages_used": ["dpo", "sft"], "median_norm_D_stage": 0.0106839217177191, "median_norm_D_seed": 0.0051222823940002896, "fires": false}, "F_T3": {"power_at_0_10": 1.0, "size_at_0": 0.0, "fires": false}}

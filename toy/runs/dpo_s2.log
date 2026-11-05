@@ -1,0 +1,67 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:04<19:17,  4.01s/it]Loading weights:  34%|███▍      | 99/290 [00:04<00:05, 33.97it/s]Loading weights:  54%|█████▍    | 157/290 [00:06<00:04, 32.32it/s]Loading weights:  66%|██████▌   | 190/290 [00:06<00:03, 33.22it/s]Loading weights:  73%|███████▎  | 212/290 [00:07<00:02, 32.17it/s]Loading weights:  78%|███████▊  | 227/290 [00:08<00:01, 33.31it/s]Loading weights:  82%|████████▏ | 238/290 [00:08<00:01, 30.39it/s]Loading weights:  85%|████████▌ | 247/290 [00:08<00:01, 31.73it/s]Loading weights:  88%|████████▊ | 255/290 [00:09<00:01, 32.30it/s]Loading weights:  90%|█████████ | 261/290 [00:09<00:00, 33.26it/s]Loading weights:  92%|█████████▏| 267/290 [00:09<00:00, 35.95it/s]Loading weights:  94%|█████████▍| 273/290 [00:09<00:00, 32.89it/s]Loading weights:  97%|█████████▋| 282/290 [00:09<00:00, 33.81it/s]Loading weights: 100%|██████████| 290/290 [00:09<00:00, 29.45it/s]
+step 1/62 loss 0.6931 acc 0.25 gnorm 10.185 t 53s
+step 2/62 loss 0.6929 acc 0.50 gnorm 10.657 t 115s
+step 3/62 loss 0.6934 acc 0.50 gnorm 10.415 t 164s
+step 4/62 loss 0.6916 acc 0.69 gnorm 10.188 t 208s
+step 5/62 loss 0.6916 acc 0.44 gnorm 10.716 t 257s
+step 6/62 loss 0.6903 acc 0.69 gnorm 12.283 t 307s
+step 7/62 loss 0.6910 acc 0.56 gnorm 11.206 t 365s
+step 8/62 loss 0.6919 acc 0.50 gnorm 9.802 t 419s
+step 9/62 loss 0.6826 acc 0.69 gnorm 12.630 t 474s
+step 10/62 loss 0.6917 acc 0.56 gnorm 11.474 t 521s
+step 11/62 loss 0.6851 acc 0.44 gnorm 10.165 t 578s
+step 12/62 loss 0.6933 acc 0.50 gnorm 10.268 t 625s
+step 13/62 loss 0.6767 acc 0.81 gnorm 11.071 t 672s
+step 14/62 loss 0.6913 acc 0.69 gnorm 8.648 t 725s
+step 15/62 loss 0.6710 acc 0.75 gnorm 11.697 t 779s
+step 16/62 loss 0.6693 acc 0.69 gnorm 10.004 t 826s
+step 17/62 loss 0.6918 acc 0.44 gnorm 10.582 t 878s
+step 18/62 loss 0.6876 acc 0.56 gnorm 11.201 t 929s
+step 19/62 loss 0.6942 acc 0.56 gnorm 13.421 t 982s
+step 20/62 loss 0.6935 acc 0.44 gnorm 12.510 t 1035s
+step 21/62 loss 0.6585 acc 0.81 gnorm 12.079 t 1093s
+step 22/62 loss 0.6730 acc 0.69 gnorm 14.262 t 1145s
+step 23/62 loss 0.6584 acc 0.81 gnorm 11.417 t 1197s
+step 24/62 loss 0.6679 acc 0.75 gnorm 11.874 t 1256s
+step 25/62 loss 0.6692 acc 0.69 gnorm 13.839 t 1317s
+step 26/62 loss 0.6890 acc 0.50 gnorm 10.180 t 1372s
+step 27/62 loss 0.6857 acc 0.62 gnorm 9.955 t 1424s
+step 28/62 loss 0.6671 acc 0.88 gnorm 15.940 t 1473s
+step 29/62 loss 0.6900 acc 0.56 gnorm 9.301 t 1527s
+step 30/62 loss 0.7054 acc 0.38 gnorm 10.411 t 1576s
+step 31/62 loss 0.6817 acc 0.62 gnorm 10.376 t 1618s
+step 32/62 loss 0.7088 acc 0.56 gnorm 15.047 t 1671s
+step 33/62 loss 0.6845 acc 0.44 gnorm 12.252 t 1725s
+step 34/62 loss 0.7053 acc 0.38 gnorm 10.536 t 1775s
+step 35/62 loss 0.6870 acc 0.50 gnorm 9.456 t 1828s
+step 36/62 loss 0.6721 acc 0.62 gnorm 11.432 t 1875s
+step 37/62 loss 0.6765 acc 0.69 gnorm 11.064 t 1926s
+step 38/62 loss 0.6982 acc 0.56 gnorm 12.253 t 1981s
+step 39/62 loss 0.6628 acc 0.69 gnorm 10.468 t 2035s
+step 40/62 loss 0.6919 acc 0.56 gnorm 11.387 t 2081s
+step 41/62 loss 0.6814 acc 0.56 gnorm 9.102 t 2138s
+step 42/62 loss 0.6777 acc 0.69 gnorm 10.344 t 2193s
+step 43/62 loss 0.6702 acc 0.56 gnorm 12.920 t 2249s
+step 44/62 loss 0.6737 acc 0.44 gnorm 10.192 t 2305s
+step 45/62 loss 0.6636 acc 0.69 gnorm 11.066 t 2359s
+step 46/62 loss 0.6756 acc 0.75 gnorm 10.256 t 2405s
+step 47/62 loss 0.6735 acc 0.69 gnorm 11.261 t 2450s
+step 48/62 loss 0.6816 acc 0.56 gnorm 13.547 t 2500s
+step 49/62 loss 0.6743 acc 0.50 gnorm 13.479 t 2551s
+step 50/62 loss 0.6556 acc 0.81 gnorm 9.738 t 2602s
+step 51/62 loss 0.6703 acc 0.69 gnorm 9.198 t 2647s
+step 52/62 loss 0.7102 acc 0.56 gnorm 10.144 t 2691s
+step 53/62 loss 0.6511 acc 0.56 gnorm 11.196 t 2739s
+step 54/62 loss 0.6698 acc 0.62 gnorm 11.162 t 2791s
+step 55/62 loss 0.6583 acc 0.56 gnorm 10.917 t 2842s
+step 56/62 loss 0.6887 acc 0.44 gnorm 10.968 t 2886s
+step 57/62 loss 0.7079 acc 0.44 gnorm 12.277 t 2934s
+step 58/62 loss 0.6943 acc 0.38 gnorm 10.722 t 2984s
+step 59/62 loss 0.6443 acc 0.62 gnorm 12.471 t 3028s
+step 60/62 loss 0.6631 acc 0.62 gnorm 11.375 t 3082s
+step 61/62 loss 0.7165 acc 0.50 gnorm 14.132 t 3137s
+step 62/62 loss 0.6436 acc 0.69 gnorm 9.245 t 3196s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:08<00:00,  8.41s/it]Writing model shards: 100%|██████████| 1/1 [00:08<00:00,  8.41s/it]
+SAVED /mnt/e/toy-residency/dpo_s2 wall 3204s VmHWM 10899648 kB
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 39/290 [00:00<00:00, 386.31it/s]Loading weights:  27%|██▋       | 78/290 [00:00<00:00, 278.98it/s]Loading weights:  37%|███▋      | 108/290 [00:00<00:00, 237.78it/s]Loading weights:  46%|████▌     | 133/290 [00:00<00:00, 223.61it/s]Loading weights:  67%|██████▋   | 195/290 [00:00<00:00, 337.84it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 419.78it/s]
+EXTRACTED dpo 2 {'closure_rel': 5.509742777576321e-07, 'reextract_rel': 5.509742777576321e-07, 'n': 10} 124 s; weights deleted
