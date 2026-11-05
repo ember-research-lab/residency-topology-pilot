@@ -1,0 +1,127 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:03<17:34,  3.65s/it]Loading weights:  35%|███▌      | 102/290 [00:03<00:05, 36.40it/s]Loading weights:  44%|████▍     | 127/290 [00:04<00:04, 37.09it/s]Loading weights:  49%|████▉     | 143/290 [00:04<00:03, 37.95it/s]Loading weights:  53%|█████▎    | 154/290 [00:05<00:03, 38.34it/s]Loading weights:  56%|█████▌    | 163/290 [00:05<00:03, 38.42it/s]Loading weights:  59%|█████▊    | 170/290 [00:05<00:03, 36.68it/s]Loading weights:  61%|██████    | 176/290 [00:05<00:03, 34.05it/s]Loading weights:  63%|██████▎   | 183/290 [00:06<00:03, 33.76it/s]Loading weights:  66%|██████▌   | 192/290 [00:06<00:02, 35.34it/s]Loading weights:  69%|██████▊   | 199/290 [00:06<00:02, 38.83it/s]Loading weights:  70%|███████   | 204/290 [00:06<00:02, 34.81it/s]Loading weights:  72%|███████▏  | 210/290 [00:06<00:02, 34.87it/s]Loading weights:  76%|███████▌  | 219/290 [00:07<00:01, 35.85it/s]Loading weights:  78%|███████▊  | 225/290 [00:07<00:01, 39.08it/s]Loading weights:  79%|███████▉  | 230/290 [00:07<00:01, 34.16it/s]Loading weights:  81%|████████  | 234/290 [00:07<00:01, 34.41it/s]Loading weights:  82%|████████▏ | 238/290 [00:07<00:01, 32.89it/s]Loading weights:  85%|████████▍ | 246/290 [00:07<00:01, 34.23it/s]Loading weights:  88%|████████▊ | 255/290 [00:08<00:00, 36.10it/s]Loading weights:  91%|█████████ | 264/290 [00:08<00:00, 35.77it/s]Loading weights:  93%|█████████▎| 270/290 [00:08<00:00, 39.67it/s]Loading weights:  95%|█████████▍| 275/290 [00:08<00:00, 37.00it/s]Loading weights:  97%|█████████▋| 282/290 [00:08<00:00, 35.08it/s]Loading weights: 100%|██████████| 290/290 [00:08<00:00, 32.69it/s]
+step 1/122 loss 2.2580 gnorm 3.005 lr 4.00e-06 t 39s
+step 2/122 loss 2.1984 gnorm 2.021 lr 8.00e-06 t 77s
+step 3/122 loss 2.4261 gnorm 2.025 lr 1.20e-05 t 113s
+step 4/122 loss 2.3344 gnorm 2.076 lr 1.60e-05 t 150s
+step 5/122 loss 2.1022 gnorm 2.375 lr 2.00e-05 t 185s
+step 6/122 loss 2.2492 gnorm 2.053 lr 2.00e-05 t 221s
+step 7/122 loss 2.3514 gnorm 1.907 lr 2.00e-05 t 257s
+step 8/122 loss 2.2631 gnorm 2.055 lr 2.00e-05 t 293s
+step 9/122 loss 2.4288 gnorm 2.458 lr 2.00e-05 t 328s
+step 10/122 loss 2.5850 gnorm 2.763 lr 1.99e-05 t 364s
+step 11/122 loss 2.3872 gnorm 2.014 lr 1.99e-05 t 399s
+step 12/122 loss 1.6691 gnorm 1.826 lr 1.99e-05 t 434s
+step 13/122 loss 2.0972 gnorm 1.751 lr 1.98e-05 t 470s
+step 14/122 loss 2.3733 gnorm 2.201 lr 1.98e-05 t 505s
+step 15/122 loss 2.3182 gnorm 2.353 lr 1.97e-05 t 540s
+step 16/122 loss 2.1125 gnorm 2.069 lr 1.97e-05 t 576s
+step 17/122 loss 2.7590 gnorm 2.978 lr 1.96e-05 t 612s
+step 18/122 loss 1.9847 gnorm 1.780 lr 1.95e-05 t 647s
+step 19/122 loss 2.3610 gnorm 1.752 lr 1.95e-05 t 682s
+step 20/122 loss 2.3191 gnorm 1.926 lr 1.94e-05 t 718s
+step 21/122 loss 2.3995 gnorm 2.465 lr 1.93e-05 t 753s
+step 22/122 loss 2.5047 gnorm 2.369 lr 1.92e-05 t 789s
+step 23/122 loss 1.8795 gnorm 2.288 lr 1.91e-05 t 828s
+step 24/122 loss 2.1443 gnorm 1.903 lr 1.90e-05 t 865s
+step 25/122 loss 2.1252 gnorm 1.737 lr 1.89e-05 t 902s
+step 26/122 loss 2.2933 gnorm 1.749 lr 1.87e-05 t 935s
+step 27/122 loss 1.9035 gnorm 1.822 lr 1.86e-05 t 973s
+step 28/122 loss 2.3977 gnorm 2.131 lr 1.85e-05 t 1009s
+step 29/122 loss 2.3301 gnorm 2.883 lr 1.83e-05 t 1044s
+step 30/122 loss 2.1466 gnorm 2.528 lr 1.82e-05 t 1080s
+step 31/122 loss 2.1589 gnorm 2.301 lr 1.80e-05 t 1115s
+step 32/122 loss 2.1419 gnorm 2.124 lr 1.79e-05 t 1150s
+step 33/122 loss 2.0312 gnorm 1.765 lr 1.77e-05 t 1186s
+step 34/122 loss 2.0085 gnorm 1.764 lr 1.76e-05 t 1222s
+step 35/122 loss 2.1507 gnorm 2.714 lr 1.74e-05 t 1257s
+step 36/122 loss 2.4982 gnorm 2.477 lr 1.72e-05 t 1292s
+step 37/122 loss 2.4077 gnorm 1.795 lr 1.71e-05 t 1328s
+step 38/122 loss 2.1204 gnorm 2.025 lr 1.69e-05 t 1363s
+step 39/122 loss 1.9056 gnorm 1.739 lr 1.67e-05 t 1398s
+step 40/122 loss 1.9811 gnorm 1.541 lr 1.65e-05 t 1434s
+step 41/122 loss 2.2376 gnorm 1.773 lr 1.63e-05 t 1469s
+step 42/122 loss 2.6512 gnorm 2.110 lr 1.61e-05 t 1505s
+step 43/122 loss 2.4265 gnorm 1.678 lr 1.59e-05 t 1540s
+step 44/122 loss 1.8415 gnorm 1.857 lr 1.57e-05 t 1575s
+step 45/122 loss 2.4876 gnorm 2.677 lr 1.55e-05 t 1611s
+step 46/122 loss 2.1571 gnorm 1.723 lr 1.53e-05 t 1646s
+step 47/122 loss 2.3695 gnorm 2.546 lr 1.51e-05 t 1681s
+step 48/122 loss 2.1588 gnorm 1.926 lr 1.49e-05 t 1717s
+step 49/122 loss 2.3597 gnorm 2.002 lr 1.46e-05 t 1753s
+step 50/122 loss 2.3671 gnorm 2.108 lr 1.44e-05 t 1794s
+step 51/122 loss 2.1698 gnorm 1.885 lr 1.42e-05 t 1832s
+step 52/122 loss 2.4301 gnorm 2.596 lr 1.40e-05 t 1868s
+step 53/122 loss 1.9728 gnorm 2.248 lr 1.37e-05 t 1904s
+step 54/122 loss 1.7722 gnorm 1.638 lr 1.35e-05 t 1940s
+step 55/122 loss 2.2680 gnorm 2.358 lr 1.33e-05 t 1975s
+step 56/122 loss 1.9217 gnorm 3.568 lr 1.30e-05 t 2011s
+step 57/122 loss 2.4378 gnorm 2.497 lr 1.28e-05 t 2047s
+step 58/122 loss 2.3568 gnorm 2.364 lr 1.26e-05 t 2083s
+step 59/122 loss 2.1743 gnorm 2.157 lr 1.23e-05 t 2119s
+step 60/122 loss 2.0929 gnorm 1.918 lr 1.21e-05 t 2155s
+step 61/122 loss 1.7297 gnorm 1.590 lr 1.18e-05 t 2190s
+step 62/122 loss 2.5915 gnorm 1.828 lr 1.16e-05 t 2226s
+step 63/122 loss 2.2873 gnorm 2.174 lr 1.14e-05 t 2261s
+step 64/122 loss 2.2456 gnorm 1.867 lr 1.11e-05 t 2296s
+step 65/122 loss 2.1590 gnorm 2.017 lr 1.09e-05 t 2331s
+step 66/122 loss 2.0294 gnorm 2.810 lr 1.06e-05 t 2367s
+step 67/122 loss 2.5773 gnorm 2.294 lr 1.04e-05 t 2402s
+step 68/122 loss 2.1815 gnorm 2.078 lr 1.02e-05 t 2440s
+step 69/122 loss 2.0556 gnorm 2.263 lr 9.92e-06 t 2475s
+step 70/122 loss 2.2236 gnorm 2.834 lr 9.68e-06 t 2511s
+step 71/122 loss 2.0526 gnorm 1.893 lr 9.44e-06 t 2546s
+step 72/122 loss 2.1892 gnorm 2.446 lr 9.20e-06 t 2581s
+step 73/122 loss 2.0162 gnorm 1.677 lr 8.96e-06 t 2616s
+step 74/122 loss 1.9623 gnorm 1.921 lr 8.73e-06 t 2651s
+step 75/122 loss 2.5360 gnorm 1.870 lr 8.50e-06 t 2686s
+step 76/122 loss 2.2330 gnorm 2.610 lr 8.26e-06 t 2723s
+step 77/122 loss 1.9677 gnorm 2.592 lr 8.04e-06 t 2761s
+step 78/122 loss 2.2329 gnorm 2.229 lr 7.81e-06 t 2798s
+step 79/122 loss 2.0147 gnorm 1.570 lr 7.58e-06 t 2833s
+step 80/122 loss 1.9634 gnorm 2.084 lr 7.36e-06 t 2869s
+step 81/122 loss 2.1327 gnorm 2.513 lr 7.14e-06 t 2904s
+step 82/122 loss 2.3679 gnorm 1.668 lr 6.92e-06 t 2940s
+step 83/122 loss 2.0722 gnorm 1.972 lr 6.71e-06 t 2975s
+step 84/122 loss 2.2080 gnorm 1.926 lr 6.50e-06 t 3011s
+step 85/122 loss 2.5216 gnorm 2.580 lr 6.29e-06 t 3046s
+step 86/122 loss 2.3293 gnorm 1.697 lr 6.09e-06 t 3080s
+step 87/122 loss 2.5987 gnorm 2.121 lr 5.89e-06 t 3116s
+step 88/122 loss 2.0928 gnorm 1.569 lr 5.69e-06 t 3153s
+step 89/122 loss 2.1131 gnorm 2.412 lr 5.50e-06 t 3188s
+step 90/122 loss 1.9187 gnorm 1.699 lr 5.31e-06 t 3223s
+step 91/122 loss 1.8415 gnorm 1.774 lr 5.12e-06 t 3260s
+step 92/122 loss 1.9651 gnorm 1.837 lr 4.94e-06 t 3296s
+step 93/122 loss 2.2889 gnorm 2.416 lr 4.77e-06 t 3334s
+step 94/122 loss 1.8305 gnorm 1.895 lr 4.59e-06 t 3372s
+step 95/122 loss 1.8981 gnorm 2.188 lr 4.43e-06 t 3408s
+step 96/122 loss 2.2580 gnorm 1.796 lr 4.26e-06 t 3444s
+step 97/122 loss 2.2930 gnorm 1.938 lr 4.11e-06 t 3479s
+step 98/122 loss 2.2873 gnorm 2.005 lr 3.95e-06 t 3514s
+step 99/122 loss 2.0699 gnorm 2.064 lr 3.81e-06 t 3550s
+step 100/122 loss 2.3174 gnorm 2.005 lr 3.66e-06 t 3585s
+step 101/122 loss 1.8743 gnorm 1.785 lr 3.53e-06 t 3620s
+step 102/122 loss 1.8477 gnorm 2.141 lr 3.39e-06 t 3656s
+step 103/122 loss 2.2888 gnorm 2.096 lr 3.27e-06 t 3702s
+step 104/122 loss 2.1159 gnorm 2.189 lr 3.15e-06 t 3751s
+step 105/122 loss 2.1011 gnorm 1.726 lr 3.03e-06 t 3789s
+step 106/122 loss 2.2550 gnorm 1.605 lr 2.92e-06 t 3824s
+step 107/122 loss 2.2096 gnorm 1.733 lr 2.82e-06 t 3859s
+step 108/122 loss 2.1279 gnorm 1.728 lr 2.72e-06 t 3895s
+step 109/122 loss 2.0381 gnorm 1.589 lr 2.63e-06 t 3930s
+step 110/122 loss 2.2698 gnorm 2.091 lr 2.54e-06 t 3965s
+step 111/122 loss 2.2439 gnorm 1.679 lr 2.46e-06 t 4001s
+step 112/122 loss 2.0400 gnorm 2.323 lr 2.39e-06 t 4036s
+step 113/122 loss 1.5371 gnorm 1.974 lr 2.32e-06 t 4071s
+step 114/122 loss 2.1212 gnorm 2.201 lr 2.26e-06 t 4107s
+step 115/122 loss 2.3035 gnorm 1.677 lr 2.21e-06 t 4145s
+step 116/122 loss 2.0932 gnorm 1.783 lr 2.16e-06 t 4180s
+step 117/122 loss 1.9458 gnorm 1.826 lr 2.12e-06 t 4216s
+step 118/122 loss 1.5969 gnorm 1.545 lr 2.08e-06 t 4251s
+step 119/122 loss 2.3349 gnorm 1.871 lr 2.05e-06 t 4286s
+step 120/122 loss 2.2886 gnorm 2.429 lr 2.03e-06 t 4322s
+step 121/122 loss 2.3665 gnorm 1.981 lr 2.01e-06 t 4358s
+step 122/122 loss 1.9286 gnorm 1.867 lr 2.00e-06 t 4393s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:07<00:00,  7.03s/it]Writing model shards: 100%|██████████| 1/1 [00:07<00:00,  7.03s/it]
+SAVED /mnt/e/toy-residency/sftre_s1 wall 4419s VmHWM 11021708 kB
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 41/290 [00:00<00:00, 404.48it/s]Loading weights:  28%|██▊       | 82/290 [00:00<00:00, 291.23it/s]Loading weights:  40%|████      | 116/290 [00:00<00:00, 305.93it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 625.76it/s]
+EXTRACTED sftre 1 {'closure_rel': 6.124125206952158e-07, 'reextract_rel': 6.124125206952158e-07, 'n': 10} 113 s; weights kept

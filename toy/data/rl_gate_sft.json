@@ -1,0 +1,17 @@
+{
+ "0": {
+  "parent_pass_rate": 0.035,
+  "n": 200,
+  "run_arm": false
+ },
+ "1": {
+  "parent_pass_rate": 0.035,
+  "n": 200,
+  "run_arm": false
+ },
+ "2": {
+  "parent_pass_rate": 0.04,
+  "n": 200,
+  "run_arm": false
+ }
+}

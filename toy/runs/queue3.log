@@ -1,0 +1,14 @@
+12:16:13 toy/scripts/t2_train.py ('sft', 0, 'sftre') rc 0
+12:18:21 toy/scripts/t3_extract.py ('sftre', 0) rc 0
+13:32:15 toy/scripts/t2_train.py ('sft', 1, 'sftre') rc 0
+13:34:12 toy/scripts/t3_extract.py ('sftre', 1) rc 0
+14:48:28 toy/scripts/t2_train.py ('sft', 2, 'sftre') rc 0
+14:50:25 toy/scripts/t3_extract.py ('sftre', 2) rc 0
+14:51:00 toy/scripts/t5_grpo.py ('gate_sft', 0) rc 0
+14:51:34 toy/scripts/t5_grpo.py ('gate_sft', 1) rc 0
+14:51:50 toy/scripts/t5_grpo.py ('gate_sft', 2) rc 0
+14:51:50 gate {"0": {"parent_pass_rate": 0.035, "n": 200, "run_arm": false}, "1": {"parent_pass_rate": 0.035, "n": 200, "run_arm": false}, "2": {"parent_pass_rate": 0.04, "n": 200, "run_arm": false}}
+14:51:50 seed 0: entry gate not passed, GRPO not run
+14:51:50 seed 1: entry gate not passed, GRPO not run
+14:51:50 seed 2: entry gate not passed, GRPO not run
+14:51:50 QUEUE3 DONE

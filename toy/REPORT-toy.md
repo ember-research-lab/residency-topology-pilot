@@ -81,3 +81,14 @@ No claim about "reward prunes" or "imitation activates" at 360M. No world-struct
 
 ## What was not done
 RL arm (gate fired); no LoRA arm; no second size; no chat-template extraction arm; no layer sweep (single l*); no precision null; SFT 500k not ~1M tokens; DPO 283k tokens; pythia gated only, not trained; calibration used the first 3 pairs per stage (SFT has 10); seed-band power with 3-5 seeds is limited; the picture has no GRPO row.
+
+## RL arm (AMENDMENT 2): entry gate fired for all three SFT parents (T1)
+Plan: GRPO from each SFT checkpoint (seeds 0-2), D_RL = H_RL - H_SFT(same seed). SFT weights had been deleted after extraction, so SFT seeds 0-2 were re-trained (`sftre`, same slice, seed, hyper-parameters). **The re-extracted activations are bit-identical to the original `sft_s0..2` (relative difference 0.0 on all four sets)**, so the parents are the same networks (T1).
+
+| SFT parent seed | entry pass rate (n = 200, greedy) | entry gate [5%, 60%] |
+|---|---|---|
+| 0 | 0.035 | fired, arm not run |
+| 1 | 0.035 | fired, arm not run |
+| 2 | 0.040 | fired, arm not run |
+
+No GRPO run was started; there is no post-training pass rate, gain, read-gate verdict or ‖D_RL‖. **RL arm read: NO (not run).** SFT on this slice does not lift 3-digit-arithmetic pass rate above the 5% floor (0.035-0.04 vs base 0.04), so the reward signal is too sparse for 150 steps at this scale (T3). Nothing is claimed about reward vs imitation (kill list). The `rlsft` code path in `t4_analyze.py`/`t6_picture.py` is untested on real data; the analysis and picture above are unchanged. Records: `toy/data/rl_gate_sft.json`, `toy/runs/queue3.log`, `toy/runs/sftre_s*.log`.
