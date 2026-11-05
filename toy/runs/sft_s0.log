@@ -9,3 +9,4 @@ step 7/122 loss 2.3849 gnorm 2.065 lr 2.00e-05 t 268s
 step 8/122 loss 1.8662 gnorm 1.938 lr 2.00e-05 t 305s
 step 9/122 loss 2.6323 gnorm 2.385 lr 2.00e-05 t 361s
 step 10/122 loss 2.4615 gnorm 1.924 lr 1.99e-05 t 472s
+step 11/122 loss 2.3354 gnorm 2.585 lr 1.99e-05 t 518s
