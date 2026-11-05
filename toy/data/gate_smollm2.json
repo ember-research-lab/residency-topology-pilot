@@ -1,0 +1,52 @@
+{
+ "base": "HuggingFaceTB/SmolLM2-360M",
+ "sha": "f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+ "survivors": {
+  "geo": 464,
+  "nouns": 490,
+  "nonce": 466,
+  "fig": 299
+ },
+ "frozen_rows": {
+  "geo": 500,
+  "nouns": 500,
+  "nonce": 500,
+  "fig": 300
+ },
+ "paired_geo_noun_survivors": 454,
+ "L": 32,
+ "l_star": 16,
+ "weights": "float32 as released",
+ "compute": "float32",
+ "closure": {
+  "closure_rel": 5.058489023213042e-07,
+  "reextract_rel": 5.058489023213042e-07,
+  "n": 10
+ },
+ "geo_ridge_r2": 0.6829768632411928,
+ "F_T1": "pass (R2 >= 0.5)",
+ "frozen": {
+  "geo": {
+   "n": 464,
+   "m": 4,
+   "r": 46
+  },
+  "nouns": {
+   "n": 490,
+   "m": 4,
+   "r": 19
+  },
+  "nonce": {
+   "n": 466,
+   "m": 4,
+   "r": 24
+  },
+  "fig": {
+   "n": 299,
+   "m": 4,
+   "r": 29
+  }
+ },
+ "wall_s": 118,
+ "vmhwm_kb": 2456864
+}

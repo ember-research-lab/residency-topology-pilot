@@ -1,0 +1,52 @@
+{
+ "base": "EleutherAI/pythia-410m",
+ "sha": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+ "survivors": {
+  "geo": 476,
+  "nouns": 492,
+  "nonce": 479,
+  "fig": 300
+ },
+ "frozen_rows": {
+  "geo": 500,
+  "nouns": 500,
+  "nonce": 500,
+  "fig": 300
+ },
+ "paired_geo_noun_survivors": 468,
+ "L": 24,
+ "l_star": 12,
+ "weights": "float32 as released",
+ "compute": "float32",
+ "closure": {
+  "closure_rel": 6.722192438246566e-07,
+  "reextract_rel": 6.722192438246566e-07,
+  "n": 10
+ },
+ "geo_ridge_r2": 0.5943533463880295,
+ "F_T1": "pass (R2 >= 0.5)",
+ "frozen": {
+  "geo": {
+   "n": 476,
+   "m": 4,
+   "r": 47
+  },
+  "nouns": {
+   "n": 492,
+   "m": 5,
+   "r": 49
+  },
+  "nonce": {
+   "n": 479,
+   "m": 6,
+   "r": 47
+  },
+  "fig": {
+   "n": 300,
+   "m": 4,
+   "r": 30
+  }
+ },
+ "wall_s": 110,
+ "vmhwm_kb": 2786952
+}
