@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 d = json.load(open(sys.argv[1])); stem = sys.argv[2]
 SETS = [("geo", "geography (entity)"), ("fig", "figures (entity)"), ("nouns", "C1 nouns (control)"), ("nonce", "C2 nonce (control)")]
 COL = {"geo": "#1b6ca8", "fig": "#1b6ca8", "nouns": "#8a8a8a", "nonce": "#8a8a8a"}
-stages = [s for s in ("sft", "dpo", "grpo") if s in d["stages"]]; rows = [(st, s, lab) for st in stages for s, lab in SETS]
+stages = [s for s in ("sft", "dpo", "grpo", "rlsft") if s in d["stages"]]; rows = [(st, s, lab) for st in stages for s, lab in SETS]
 fig = plt.figure(figsize=(11, 15))
 gs = fig.add_gridspec(len(rows) + 6, 3, hspace=0.9, wspace=0.35)
 fig.suptitle("Toy seed-replicate null, SmolLM2-360M, l*=16: stage displacement vs the seed band\n"

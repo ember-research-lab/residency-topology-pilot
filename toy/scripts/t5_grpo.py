@@ -1,6 +1,8 @@
 """t5: RL arm (PREREG-toy sec.1 + AMENDMENT 1). Modes (under the cap):
   gate            base pass rate on the 200 held-out items (greedy, first-integer exact match) -> toy/data/rl_gate.json; arm runs only if 5% <= rate <= 60%
   train <seed>    TRL GRPOTrainer from the base, 150 steps, wall budget 4 h -> /mnt/e/toy-residency/grpo_s<seed>, final held-out pass rate -> toy/runs/grpo_s<seed>.json
+  gate_sft <seed>   AMENDMENT 2: pass rate of the re-trained SFT parent /mnt/e/toy-residency/sftre_s<seed> -> toy/data/rl_gate_sft.json (entry gate per seed)
+  train_sft <seed>  AMENDMENT 2: GRPO from that SFT parent (same hyper-parameters), -> /mnt/e/toy-residency/rlsft_s<seed>, toy/runs/rlsft_s<seed>.json (read gate: >= 10 points over the parent)
   smoke           2 steps on a tiny random Llama (API check only; no base weights)
 """
 import json, re, sys, time, pathlib
@@ -31,6 +33,10 @@ def vmhwm(): return int([l for l in open("/proc/self/status") if l.startswith("V
 if mode == "gate":
     r = pass_rate(T.load(snap), arith["heldout"]); out = dict(base_pass_rate=r, n=200, run_arm=bool(0.05 <= r <= 0.60))
     json.dump(out, open("toy/data/rl_gate.json", "w")); print(out); sys.exit(0)
+SFTRE = "/mnt/e/toy-residency/sftre_s"
+if mode == "gate_sft":
+    sd = sys.argv[2]; f = pathlib.Path("toy/data/rl_gate_sft.json"); g = json.load(open(f)) if f.exists() else {}
+    r = pass_rate(T.load(SFTRE + sd), arith["heldout"]); g[sd] = dict(parent_pass_rate=r, n=200, run_arm=bool(0.05 <= r <= 0.60)); json.dump(g, open(f, "w"), indent=1); print(sd, g[sd]); sys.exit(0)
 from trl import GRPOConfig, GRPOTrainer
 def rf(prompts, completions, answer, **kw): return [reward_of(c if isinstance(c, str) else c[0]["content"], a) for c, a in zip(completions, answer)]
 class Budget(TrainerCallback):
@@ -43,6 +49,10 @@ if mode == "smoke":
     from transformers import LlamaConfig, LlamaForCausalLM
     model = LlamaForCausalLM(LlamaConfig(vocab_size=len(tok), hidden_size=64, intermediate_size=128, num_hidden_layers=2, num_attention_heads=4, num_key_value_heads=4, max_position_embeddings=64, tie_word_embeddings=True))
     seed, steps, pbs = 0, 2, 16
+elif mode == "train_sft":
+    seed, steps, pbs = int(sys.argv[2]), 150, 64
+    assert json.load(open("toy/data/rl_gate_sft.json"))[str(seed)]["run_arm"], "AMENDMENT 2 entry gate: SFT pass rate outside [5%,60%]; arm not run for this seed"
+    model = T.load(SFTRE + str(seed)); torch.manual_seed(seed)
 else:
     seed, steps, pbs = int(sys.argv[2]), 150, 64
     assert json.load(open("toy/data/rl_gate.json"))["run_arm"], "RL gate: base pass rate outside [5%,60%]; arm not run"
@@ -58,8 +68,10 @@ t0 = time.time(); trainer.train(); w = time.time() - t0
 if mode == "smoke": print("SMOKE OK", round(w), "s"); sys.exit(0)
 if bud.hit and trainer.state.global_step < steps: sys.exit(f"ARM STOPPED: 4 h wall budget hit at step {trainer.state.global_step}/{steps}")
 rewards = [l["reward"] for l in trainer.state.log_history if "reward" in l]
-final = pass_rate(trainer.model, arith["heldout"]); base = json.load(open("toy/data/rl_gate.json"))["base_pass_rate"]
-od = pathlib.Path(f"/mnt/e/toy-residency/grpo_s{seed}"); trainer.model.save_pretrained(od)
-json.dump(dict(stage="grpo", seed=seed, wall_s=round(w), vmhwm_kb=vmhwm(), steps=steps, base_pass_rate=base, final_pass_rate=final, gain_points=100 * (final - base),
-               train_reward_first10=float(np.mean(rewards[:10])), train_reward_last10=float(np.mean(rewards[-10:]))), open(f"toy/runs/grpo_s{seed}.json", "w"))
+final = pass_rate(trainer.model, arith["heldout"])
+base = json.load(open("toy/data/rl_gate_sft.json"))[str(seed)]["parent_pass_rate"] if mode == "train_sft" else json.load(open("toy/data/rl_gate.json"))["base_pass_rate"]
+nm = "rlsft" if mode == "train_sft" else "grpo"
+od = pathlib.Path(f"/mnt/e/toy-residency/{nm}_s{seed}"); trainer.model.save_pretrained(od)
+json.dump(dict(stage=nm, seed=seed, wall_s=round(w), vmhwm_kb=vmhwm(), steps=steps, base_pass_rate=base, final_pass_rate=final, gain_points=100 * (final - base),
+               train_reward_first10=float(np.mean(rewards[:10])), train_reward_last10=float(np.mean(rewards[-10:]))), open(f"toy/runs/{nm}_s{seed}.json", "w"))
 print("SAVED", od, "final", final, "base", base, "wall", round(w), flush=True)

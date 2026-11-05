@@ -21,10 +21,13 @@ for j, r in enumerate(base["idx_nouns"]):
 pair_g, pair_n = np.array(pair_g), np.array(pair_n); NP_ = len(pair_g)
 stages = {}
 for f in sorted(glob.glob(f"{runs}/*_s*/acts.npz")):
-    mt = re.search(r"/(sft|dpo|grpo)_s(\d+)/acts.npz", f)
+    mt = re.search(r"/(sft|dpo|grpo|rlsft)_s(\d+)/acts.npz", f)
     if not mt: continue
     st, sd = mt.groups()
-    a = np.load(f); stages.setdefault(st, {})[int(sd)] = {k: a[f"H_{k}"].mean(1).astype(np.float64) for k in T.SETCODE}
+    a = np.load(f); H = {k: a[f"H_{k}"].mean(1).astype(np.float64) for k in T.SETCODE}
+    if st == "rlsft":   # AMENDMENT 2: parent = the re-trained SFT of the same seed; store H_RL - H_SFTre + H_base so that (stored - HB) is the parent-relative D
+        P = np.load(f"{runs}/sftre_s{sd}/acts.npz"); H = {k: H[k] - P[f"H_{k}"].mean(1).astype(np.float64) + HB[k] for k in T.SETCODE}
+    stages.setdefault(st, {})[int(sd)] = H
 if len(sys.argv) > 5: stages = {s: v for s, v in stages.items() if s in sys.argv[5].split(",")}
 def centred(X): return X - X.mean(0)
 def fro(X): return float(np.linalg.norm(centred(X)))
@@ -84,6 +87,7 @@ rng = np.random.default_rng(20261105)
 G_real, N_real = make_paired_draws(rng, B_REAL)
 fullD = {}   # per stage: dict(seeds, D_stage[set], pairs[(i,j)], D_pair[set][pair])
 for st, sd in stages.items():
+    if len(sd) < 2: print("skip", st, "needs >= 2 seeds for a seed band; have", len(sd), flush=True); continue
     seeds = sorted(sd); k = len(seeds); pairs = list(itertools.combinations(seeds, 2))
     Dst = {s: centred(np.mean([sd[i][s] for i in seeds], 0) - HB[s]) for s in T.SETCODE}
     Dpr = {s: [centred(sd[i][s] - sd[j][s]) for i, j in pairs] for s in T.SETCODE}
@@ -137,7 +141,9 @@ for st, fd in fullD.items():
     res["calibration"] = {s: dict(n=len(v), detection_rate=float(np.mean([x["detect"] for x in v])), mean_delta=float(np.mean([x["delta_boot_mean"] for x in v])), reps=v) for s, v in cal.items()}
     json.dump(res, open(outf, "w"), indent=1)
 # ---------- falsifiers
-rd = [st for st in res["stages"] if st != "grpo" or res.get("grpo_read")]
+import os
+res["grpo_read"] = os.path.exists("toy/data/rl_read.flag")   # AMENDMENT 1/2 read gate (>= 10 points over parent), written by the driver of this run after reading toy/runs/rlsft_s*.json
+rd = [st for st in res["stages"] if st not in ("grpo", "rlsft") or res.get("grpo_read")]
 if rd:
     med_st = float(np.median([res["stages"][s]["per_set"]["geo"]["norm_D_stage"] for s in rd])); med_sd = float(np.median([res["stages"][s]["per_set"]["geo"]["norm_D_seed_median"] for s in rd]))
     res["F_T2"] = dict(stages_used=rd, median_norm_D_stage=med_st, median_norm_D_seed=med_sd, fires=bool(med_st <= med_sd))

@@ -21,4 +21,5 @@ for k in sets:   # F-T4: weights identical to base would give identical activati
 od = pathlib.Path(f"toy/runs/{stage}_s{seed}"); od.mkdir(parents=True, exist_ok=True)
 np.savez(od / "acts.npz", **{f"H_{k}": v for k, v in sets.items()})
 json.dump(dict(closure=cl, wall_s=round(time.time() - t0)), open(od / "extract.json", "w"))
-shutil.rmtree(wd); print("EXTRACTED", stage, seed, cl, round(time.time() - t0), "s; weights deleted", flush=True)
+if stage != "sftre": shutil.rmtree(wd)   # sftre = re-trained SFT parents (AMENDMENT 2), kept as the GRPO start points
+print("EXTRACTED", stage, seed, cl, round(time.time() - t0), "s; weights " + ("kept" if stage == "sftre" else "deleted"), flush=True)

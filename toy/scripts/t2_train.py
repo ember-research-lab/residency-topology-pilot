@@ -7,7 +7,7 @@ sys.path.insert(0, "toy")
 import toylib as T
 from rtp import cap
 cap.require_cap()
-stage, seed = sys.argv[1], int(sys.argv[2])
+stage, seed = sys.argv[1], int(sys.argv[2]); tag = sys.argv[3] if len(sys.argv) > 3 else stage   # tag: output name (AMENDMENT 2 re-train of SFT parents = "sftre")
 snap = json.load(open("toy/data/bases.json"))["HuggingFaceTB/SmolLM2-360M"]["snapshot"]
 PLAN_S = 3 * 3600
 torch.manual_seed(seed); rng = np.random.default_rng(seed)
@@ -73,8 +73,8 @@ elif stage == "dpo":
         print(f"step {step+1}/{total} loss {tot:.4f} acc {acc:.2f} gnorm {gn:.3f} t {time.time()-t0:.0f}s", flush=True)
 else:
     sys.exit("stage?")
-od = pathlib.Path(f"/mnt/e/toy-residency/{stage}_s{seed}"); od.mkdir(parents=True, exist_ok=True)
+od = pathlib.Path(f"/mnt/e/toy-residency/{tag}_s{seed}"); od.mkdir(parents=True, exist_ok=True)
 model.save_pretrained(od)
 w = time.time() - t0
-json.dump(dict(stage=stage, seed=seed, wall_s=round(w), vmhwm_kb=vmhwm(), steps=total), open(f"toy/runs/{stage}_s{seed}.json", "w"))
+json.dump(dict(stage=stage, seed=seed, wall_s=round(w), vmhwm_kb=vmhwm(), steps=total), open(f"toy/runs/{tag}_s{seed}.json", "w"))
 print(f"SAVED {od} wall {w:.0f}s VmHWM {vmhwm()} kB", flush=True)
