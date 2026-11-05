@@ -1,0 +1,10 @@
+{
+ "HuggingFaceTB/SmolLM2-360M": {
+  "sha": "f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--HuggingFaceTB--SmolLM2-360M/snapshots/f8027fd0eaeea54caa13c31d31b9fdc459c38b49"
+ },
+ "EleutherAI/pythia-410m": {
+  "sha": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "snapshot": "/mnt/e/ai-models/huggingface_cache/hub/models--EleutherAI--pythia-410m/snapshots/9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+ }
+}
