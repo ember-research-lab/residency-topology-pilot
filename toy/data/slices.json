@@ -1,0 +1,32 @@
+{
+ "sft": {
+  "dataset": "allenai/tulu-3-sft-mixture",
+  "revision": "b14afda60f1bbebe55d5d2fa1e4df5042f97f8be",
+  "shard": "data/train-00000-of-00006.parquet",
+  "perm_seed": 20261104,
+  "examples": 1764,
+  "tokens": 499712,
+  "sequences": 976,
+  "loss_tokens": 219283,
+  "sha256_token_ids": "74d330e38aa7457fcca52fa4fd1713bd5862274e39db8b8313067f242da6ccbc",
+  "sha256_labels": "8dd43d2a6a6c08d6768d6b46ee439dcac6a926e923443d5019259a128c6990ef"
+ },
+ "dpo": {
+  "dataset": "allenai/llama-3.1-tulu-3-8b-preference-mixture",
+  "revision": "78a6f00785946cd24276c5dd075f83a143a3b1e6",
+  "shard": "data/train-00000-of-00004.parquet",
+  "perm_seed": 20261104,
+  "pairs": 1000,
+  "tokens_chosen_plus_rejected": 282770,
+  "sha256": "468026127d1ebe1934a87d55fbd67594b7a3494f0087c1ca45d03c2a41ad14e5"
+ },
+ "arith": {
+  "train": 2000,
+  "heldout": 200,
+  "gen_seeds": [
+   12345,
+   54321
+  ],
+  "sha256": "f5df5ed0af7caa1df4f8e4746baf155869d0aadd05da8bd4daa9953a10e288c7"
+ }
+}
