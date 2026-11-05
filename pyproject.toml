@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Preregistered CPU pilot: imitation activates, reward prunes (entity-graph colour of post-training displacements)"
 requires-python = ">=3.12"
 dependencies = [
+    "datasets>=5.1.0",
     "huggingface-hub>=2.4.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
