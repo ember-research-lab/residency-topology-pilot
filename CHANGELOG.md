@@ -25,3 +25,4 @@
 - step 15 (exploratory): synthetic positive control for the smooth null (readouts i, ii, iii-old, iii).
 - final adjudication 2026-11-04 in REPORT v2 (kill ledger, hypothesis UNTESTED), ISSUES.md OPEN-1, CLAUDE.md BROKEN-if row for colour verdicts.
 - toy: seed-replicate null analysis + picture + REPORT-toy (SmolLM2-360M; SFT x5, DPO x3; F-T1..F-T4 not fired, RL entry gate fired at 0.04).
+- Publication prep: MIT `LICENSE`, `README.md`, third-party data notice `data/entities/source/NOTICE.md` with the upstream licence text beside it.
