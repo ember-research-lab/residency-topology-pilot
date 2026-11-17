@@ -33,7 +33,7 @@ Model downloads are large and are not part of the tests.
 
 - The work was done with AI coding agents under human direction; commits carry co-author trailers. `ember-lab-admin` is the lab's account and stands for the human lead throughout.
 - Before publication the history was rewritten once: a personal name was replaced by the lab account name, home-directory paths were made relative, and private session links were removed from commit messages. Commit order, authorship, dates and all other content are unchanged. Commit ids cited inside the reports are the pre-publication ids; `HISTORY-MAP.tsv` maps them to the published ids.
-- The documents cite some internal lab notes (`DECISIONS-…`, `RECORD-…`, `LIT-…`) that are not in this repository. Run records and some scripts contain the machine's model-cache path.
+- The documents cite some internal lab notes (`DECISIONS-…`, `RECORD-…`, `LIT-…`, `PREMORTEM-…`) that are not in this repository. The documents also name some paths that are not in this repository: `runs/lineage/` (copies are in `data/lineage/`), `toy/frozen.json`, `~/ember-review/...` and `~/.claude/hooks/...`. Run records and some scripts contain the machine's model-cache path.
 - `CLAUDE.md` is the instruction file the agents worked under.
 
 ## Licence
